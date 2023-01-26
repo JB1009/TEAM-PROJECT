@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      margin-top: 70px;
+    }
+
+    table {
+      margin: 0 auto;
+      width: 1200px;
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 1200px;
+      margin-top: 50px;
+    }
+
+    td,
+    th {
+      border: 1px solid black;
+      text-align: left;
+      padding: 8px;
+      text-align: center;
+      height: 28px;
+      font-size: 20px;
+    }
+
+    th {
+      background-color: #ffe4b5
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1>회원가입</h1>
+
+    <input id="userId" type="text" placeholder="아이디">
+    <input id="userPassword" type="text" placeholder="비밀번호">
+    <input id="userName" type="text" placeholder="이름">
+    <input id="userEmail" type="text" placeholder="이메일">
+    <input id="userTel" type="text" placeholder="전화번호">
+    <input id="userBirth" type="date" placeholder="생년월일">
+    <input id="userGender" type="text" placeholder="성별">
+    <input id="userGrade" type="int" placeholder="등급">
+    <input id="userNickname" type="text" placeholder="닉네임">
+    <button onclick="doJoin()">회원가입</button>
+
+    <h1>삭제</h1>
+
+    <input id="deleteUserNumber" type="text" placeholder="유저 번호">
+    <button onclick="doDelete()">삭제</button>
+  </div>
+  <div>
+    <h1>수정</h1>
+    <input id="updateUserNumber" type="text" placeholder="유저 번호">
+    <input id="updateUserId" type="text" placeholder="아이디">
+    <button type="button" onclick="doUpdate()">수정하기</button>
+  </div>
+
+  <div>
+    <div id="users">
+      <h1>멤버 게시판</h1>
+      <div>
+        <table>
+          <th>번호</th>
+          <th>아이디</th>
+          <th>비밀번호</th>
+          <th>이름</th>
+          <th>이메일</th>
+          <th>연락처</th>
+          <th>생년월일</th>
+          <th>성별</th>
+          <th>등급</th>
+          <th>닉네임</th>
+          <th>회원가입 날짜</th>
+          <th>마지막 접속 IP</th>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+
+  callAPI();
+  // 조회
+  function callAPI() {
+
+    $.ajax({
+      url: '/allUsers',
+      type: 'GET',
+      contentType: 'application/json',
+      dataType: 'json',
+      success: function (response) {
+        for (var i in response) {
+          tr = $('<tr></tr>');
+
+          var userNumber = $('<td>' + response[i].userNumber + '</td>');
+          var userId = $('<td>' + response[i].userId + '</td>');
+          var userPassword = $('<td>' + response[i].userPassword + '</td>');
+          var userName = $('<td>' + response[i].userName + '</td>');
+          var userEmail = $('<td>' + response[i].userEmail + '</td>');
+          var userTel = $('<td>' + response[i].userTel + '</td>');
+          var userBirth = $('<td>' + response[i].userBirth + '</td>');
+          var userGender = $('<td>' + response[i].userGender + '</td>');
+          var userGrade = $('<td>' + response[i].userGrade + '</td>');
+          var userNickname = $('<td>' + response[i].userNickname + '</td>');
+          var userJoinDate = $('<td>' + response[i].userJoinDate + '</td>');
+          var userConnectionIp = $('<td>' + response[i].userConnectionIp + '</td>');
+
+          tr.append(userNumber);
+          tr.append(userId);
+          tr.append(userPassword);
+          tr.append(userName);
+          tr.append(userEmail);
+          tr.append(userTel);
+          tr.append(userBirth);
+          tr.append(userGender);
+          tr.append(userGrade);
+          tr.append(userNickname);
+          tr.append(userJoinDate);
+          tr.append(userConnectionIp);
+
+          $("#users").append(tr);
+        }
+      }
+    });
+  }
+
+  // 회원가입
+  function doJoin() {
+    var userId = $('#userId').val();
+    var userPassword = $('#userPassword').val();
+    var userName = $('#userName').val();
+    var userEmail = $('#userEmail').val();
+    var userTel = $('#userTel').val();
+    var userBirth = $('#userBirth').val();
+    var userGender = $('#userGender').val();
+    var userGrade = $('#userGrade').val();
+    var userNickname = $('#userNickname').val();
+
+    var japData = {
+      userId: userId,
+      userPassword: userPassword,
+      userName: userName,
+      userEmail: userEmail,
+      userTel: userTel,
+      userBirth: userBirth,
+      userGender: userGender,
+      userGrade: userGrade,
+      userNickname: userNickname
+    };
+    console.log(japData)
+    $.ajax({
+      url: '/user/join',
+      type: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify(japData),
+      dataType: 'json',
+      success: function (response) {
+        alert('등록 완료');
+        // console.log(response)
+        // location.reload();
+      },
+    });
+  }
+
+  // 삭제
+  function doDelete() {
+    var deleteUserNumber = $("#deleteUserNumber").val();
+
+    $.ajax({
+      url: '/user/secession/' + deleteUserNumber,
+      type: 'DELETE',
+      dataType: 'json',
+      success: function (response) {
+        alert("삭제");
+        location.reload();
+      }
+    });
+  }
+
+  // 수정
+  function doUpdate() {
+
+    var num = $('#updateUserNumber').val();
+    var id = $('#updateUserId').val();
+
+
+    var data = {
+      userNumber: num,
+      userId: id,
+    };
+
+    $.ajax({
+      url: '/user/modify',
+      type: 'PATCH',
+      contentType: 'application/json',
+      data: JSON.stringify(data),
+      dataType: 'json',
+      success: function (response) {
+        console.log(response)
+        alert('수정');
+        location.reload();
+      },
+    });
+  }
+
+</script>
+
+</html>

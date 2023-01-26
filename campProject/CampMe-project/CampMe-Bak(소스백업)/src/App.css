@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+/* Link 스타일 제거 */
+a{
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+
+@media only screen and (max-width: 620px){
+  .container {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      width: 390px;
+      height: 100vh;
+  }
+}

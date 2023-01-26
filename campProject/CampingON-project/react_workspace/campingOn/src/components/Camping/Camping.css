@@ -1,0 +1,27 @@
+.peopleHandlerButton {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: white;
+}
+.peopleResearch {
+  width: 40px;
+  text-align: center;
+  line-height: 1.5;
+}
+.displayNone {
+  display: none;
+}
+.rowFlexBoxOnly {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cssNoneButton {
+  height: 30px;
+  line-height: 30px;
+  border: none;
+  background: none;
+  font-size: 35px;
+}

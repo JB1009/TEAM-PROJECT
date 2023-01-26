@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #141414;
+}
+
+.container {
+  position: relative;
+  height: auto;
+}
+
+.site-title {
+  text-align: center;
+  font-size: 38px;
+  color: #e50914;
+  font-weight: 400;
+}
+
+.movie-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.series-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  flex-basis: 17%;
+  cursor: pointer;
+}
+
+.poster {
+  width: 100px;
+  height: auto;
+}
+
+.movie-list {
+  padding: 20px;
+  background-color: #141414;
+}
+
+.site-title {
+  text-align: center;
+  font-size: 38px;
+  color: #e50914;
+  font-weight: 400;
+}
+.title {
+  text-align: center;
+  font-size: 22px;
+  color: white;
+  font-weight: 400;
+}
+.title h2 {
+  color: #e50914;
+  font-size: 60px;
+}
+
+.year {
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* 영화 상세정보 css */
+.movie-section {
+  z-index: 1;
+  position: absolute;
+  visibility: hidden;
+  background-color: #141414;
+  top: 100px;
+  display: flex;
+  width: auto;
+  margin: 100px auto;
+  justify-content: space-between;
+  padding: 40px 0;
+  color: #fff;
+  font-weight: 400;
+  border: 1px solid #e3e6f0;
+  border-radius: 0.35rem;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.back {
+  flex-basis: 10%;
+}
+.section-left {
+  flex-basis: 55%;
+}
+.section-right {
+  flex-basis: 25%;
+}
+
+.back a {
+  text-decoration: none;
+  color: #e74a3b;
+  font-size: 22px;
+  font-weight: 600;
+}
+.movie-title {
+  font-size: 40px;
+  color: #fff;
+}
+.movie-rating {
+  padding-left: 5px;
+  margin-top: 20px;
+  color: #79b8f3;
+  display: flex;
+}
+.movie-rating span {
+  margin-right: 20px;
+}
+.movie-plot {
+  margin-top: 20px;
+  line-height: 2rem;
+}
+
+.movie-info > div span:first-child {
+  padding: 10px 0;
+  color: #fff;
+  font-weight: 600;
+  width: 100px;
+  display: inline-block;
+}
+.movie-info > div span {
+  color: #79b8f3;
+}
+.fa-star {
+  color: #ff9300;
+}
+.fa-thumbs-up {
+  color: #fafafa;
+}
+.fa-film {
+  color: rgb(191, 213, 214);
+}
+.fa-calendar {
+  color: peachpuff;
+}
+.section-right {
+  margin-left: 30px;
+}

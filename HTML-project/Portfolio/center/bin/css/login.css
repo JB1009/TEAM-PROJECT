@@ -1,0 +1,143 @@
+#wrap{width: 100%;
+    height: auto;}
+
+#top{width: 1200px;
+   height: 80px;
+   margin: 0 auto;
+   display: flex;}
+
+#logo img{padding-top: 10px;
+        width: 240px;
+        margin-left: 40px;}     
+
+#top_menu ul{display: flex;}
+
+#top_menu ul li{list-style-type: none;
+              font-size: 16px;
+              font-weight: 700;
+              margin-right: 30px;}
+
+#main_logo{width:600px;}
+#main_menu:hover  .event{cursor: pointer;}    
+#main_logo img{width: 200px;
+               float: right;}
+
+               #menu{width: 1000px;
+                /* height: 80px; */
+                position: relative;
+                margin-top: 30px;
+                font-size: 15px;
+                }
+            
+            #menu ul{list-style: none;
+                   padding: 0;
+                   margin: 0;
+                   position: relative;}
+            
+            #main_menu{width: 1000px;
+                     height: 40px;
+                     position: relative;
+                     }
+            
+            #main_menu>li{width: 200px;
+                        height: 40px;
+                        line-height: 40px;
+                        float: left;
+                        text-align: center;
+                        position: relative;}
+            
+            
+            #main_menu .sub{display: none;
+                            }
+            
+                    #main_menu:hover .sub{display: block;
+                                background-color: whitesmoke;
+                                height: 240px;
+                                z-index: 1;}
+            
+            .sub1 li{float: left;
+                     margin-left: 70px;
+                     font-size: 10px;}     
+                     
+            .sub2 li{float: left;
+                margin-left: 55px;
+                font-size: 10px;}  
+                
+            .sub3 li{float: left;
+                margin-left: 58px;
+                font-size: 10px;}  
+                
+            .sub4 li{float: left;
+                margin-left: 68px;
+                font-size: 10px;}  
+                
+            .sub5 li{float: left;
+                margin-left: 65px;
+                font-size: 10px;}
+#mid{width: 1000px;
+     height: auto;
+     margin: 50px auto;}
+
+.mid_login{width: 350px;
+           height: 40px;
+           display: flex;
+           margin: 30px auto;
+           border: 1px solid #999;
+           border-radius: 20px;}
+
+.mid_login div{margin: 0 auto;
+               width: 120px;
+               color: #999;
+               margin-top: 10px;}
+
+
+.mid_login input{width: 220px;
+                 border: none;
+                 border-radius: 20px;
+                 text-align: center;}
+
+.LG{width: 500px;
+    height: 50px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 800;
+    border-bottom:1px solid #999;}
+
+.HW{font-weight: 500;
+    font-size: 23px;}
+
+.end{width: 70px;
+     margin: 0 auto;
+     }
+
+.end a{text-decoration: none;
+       color: black;}
+
+.bottom{width: 1200px;
+        font-size: 11px;
+        margin:50px auto;}
+  
+.bot{margin-left: 20px;
+    border-top: 1px solid #777;
+    width: 1070px;}
+  
+.bot_top{margin-top: 20px;}
+  
+.bot a{text-decoration: none;
+       color: black; 
+       margin-right: 10px;}
+  
+.a_tag{width: 20px;
+       padding: 2px;
+       border-radius: 100px;
+       background: #777;}
+  
+.bot_mid{margin-top: 5px;}
+
+
+
+
+
+
+

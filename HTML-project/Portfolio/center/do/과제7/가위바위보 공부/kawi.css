@@ -1,0 +1,104 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#main_wrap{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+.rsp_wrap{
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 50px;
+}
+.game_title{
+    width: 500px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 50px;
+    margin: 30px auto;
+}
+.rsp_img{
+    width: 300px;
+    height: 300px;
+    line-height: 250px;
+    background-color: antiquewhite;
+    border-radius: 300px;
+    text-align: center;
+    font-size: 220px;
+}
+.com_wrap{
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+#result1, #result2{
+    width: 300px;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+    font-size: 60px;
+}
+.user_wrap{
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.rock{
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+}
+.scissors{
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+}
+.paper{
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+}
+.user_wrap button{
+    width: 300px;
+    height: 300px;
+    line-height: 300px;
+    margin: 0;
+    padding: 0;
+    border-radius: 300px;
+    border: 0;
+    font-size: 180px;
+    cursor: pointer;
+}
+#rock_bt{
+    background-color: gold;
+}
+#scissors_bt{
+    background-color: aquamarine;
+}
+#paper_bt{
+    background-color: lightcoral;
+}
+#rock_bt:hover {
+    transition: 0.5s;
+    font-size: 220px;
+}
+#scissors_bt:hover {
+    transition: 0.5s;
+    font-size: 220px;
+}
+#paper_bt:hover {
+    transition: 0.5s;
+    font-size: 220px;
+}

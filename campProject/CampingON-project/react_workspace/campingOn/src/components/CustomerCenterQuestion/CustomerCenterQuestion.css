@@ -1,0 +1,16 @@
+.inputQnA {
+  font-size: 18px;
+  line-height: 30px;
+  width: 85%;
+  padding: 0 10px;
+  margin: 5px 0;
+}
+.inputQnA::placeholder {
+  color: gray;
+}
+textarea {
+  height: 300px;
+}
+.checkboxQnA {
+  width: 100%;
+}

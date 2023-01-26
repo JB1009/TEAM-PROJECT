@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            margin-top: 70px;
+        }
+
+        table {
+            width: 1200px;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 1200px;
+            margin-top: 50px;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            text-align: left;
+            padding: 8px;
+            text-align: center;
+            height: 28px;
+            font-size: 20px;
+        }
+
+        th {
+            background-color: #ffe4b5
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <div>
+            <h1>추가</h1>
+            <div>
+                <input id="addressComment" type="text" placeholder="댓글">
+                <button onclick="addressComment()">댓글 추가</button>
+            </div>
+        </div>
+
+        <div>
+            <h1>삭제</h1>
+            <div>
+                <input id="deleteCommentNumber" type="text" placeholder="댓글 번호">
+                <button onclick="doDeleteComment()">삭제</button>
+            </div>
+        </div>
+
+        <div>
+            <h1>수정</h1>
+            <div>
+                <input id="UpdateCommentNumber" type="text" placeholder="댓글 번호">
+                <input id="UpdateCommentText" type="text" placeholder="내용 수정">
+                <button onclick="doUpdateComment()">수정</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div id="comment">
+            <h1>멤버 게시판</h1>
+            <div>
+                <table>
+                    <th>댓글 번호</th>
+                    <th>날짜</th>
+                    <th>내용</th>
+                    <th>게시물 번호</th>
+                    <th>유저 번호</th>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+
+    callAPI();
+    // 조회
+    function callAPI() {
+
+        $.ajax({
+            url: '/api/v1/comment',
+            type: 'GET',
+            contentType: 'application/json',
+            dataType: 'json',
+            success: function (response) {
+                for (var i in response) {
+                    tr = $('<tr></tr>');
+
+                    var commentNumber = $('<td>' + response[i].commentNumber + '</td>');
+                    var commentDate = $('<td id="commentDate">' + response[i].commentDate + '</td>');
+                    var commentText = $('<td>' + response[i].commentText + '</td>');
+                    var postNumber = $('<td id="postNumbers">' + response[i].post.postNumber + '</td>');
+                    var userNumber = $('<td id="userNumbers">' + response[i].user.userNumber + '</td>');
+
+                    tr.append(commentNumber);
+                    tr.append(commentDate);
+                    tr.append(commentText);
+                    tr.append(postNumber);
+                    tr.append(userNumber);
+
+                    $("#comment").append(tr);
+                }
+            }
+        });
+    }
+
+    // 댓글 추가
+    function addressComment() {
+        var addressComment = $('#addressComment').val();
+
+        var japData = {
+            commentText: addressComment,
+
+        };
+        console.log(japData)
+        $.ajax({
+            url: '/api/v1/comment',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(japData),
+            dataType: 'json',
+            success: function (response) {
+                alert('등록 완료');
+                location.reload();
+            },
+        });
+    }
+
+    // 삭제
+    function doDeleteComment() {
+        var deleteCommentNumber = $("#deleteCommentNumber").val();
+
+        $.ajax({
+            url: '/api/v1/comment/' + deleteCommentNumber,
+            type: 'DELETE',
+            dataType: 'json',
+            success: function (response) {
+                alert("삭제");
+                location.reload();
+            }
+        });
+    }
+
+    // 수정
+    function doUpdateComment() {
+
+        var UpdateCommentNumber = $('#UpdateCommentNumber').val();
+        var UpdateCommentText = $('#UpdateCommentText').val();
+        var updateCommentDate = $("#commentDate").text();
+        var updatepostNumbers = $("#postNumbers").text();
+        var updateuserNumbers = $("#userNumbers").text();
+
+        var data = {
+            commentNumber: UpdateCommentNumber,
+            commentText: UpdateCommentText,
+            commentDate: updateCommentDate,
+            post : {
+                postNumber : updatepostNumbers
+            },
+            user : {
+                userNumber : updateuserNumbers
+            }
+            
+        };
+
+        $.ajax({
+            url: '/api/v1/comment',
+            type: 'PATCH',
+            contentType: 'application/json',
+            data: JSON.stringify(data),
+            dataType: 'json',
+            success: function (response) {
+                console.log(response)
+                alert('수정');
+                location.reload();
+            },
+        });
+    }
+
+</script>
+
+</html>

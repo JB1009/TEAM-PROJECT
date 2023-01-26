@@ -1,0 +1,13 @@
+.subscriberTable {
+  font-size: 15px;
+}
+.showCampName:hover {
+  background-color: var(--secondary-color);
+}
+.showCampName {
+  text-align: left;
+  border-bottom: 2px solid var(--secondary-color);
+  width: 85%;
+  margin: 10px auto;
+  padding: 0 2.5%;
+}

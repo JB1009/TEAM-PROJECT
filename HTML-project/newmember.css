@@ -1,0 +1,359 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f3f3f3;
+}
+/* 메인 head , title */
+#dm_wrap {
+  width: 100%;
+  background: #f3f3f3;
+  overflow: hidden;
+}
+.main_head {
+  padding: 30px 0;
+  text-align: center;
+}
+.logo {
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+}
+.main_title {
+  position: relative;
+  padding-top: 10px;
+}
+.main_title::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  width: 100px;
+  height: 1px;
+  margin-left: -50px;
+  background: #455964;
+}
+.main_title h2 {
+  color: #455964;
+  font-size: 60px;
+  line-height: 1.2;
+  font-weight: 500;
+  font-family: "NanumSquare", sans-serif;
+}
+.main_title p {
+  display: block;
+  margin-top: 10px;
+  color: #aaa;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+  font-family: "NanumSquare", sans-serif;
+}
+.top_menu {
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.all_header {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.bt1 {
+  float: left;
+  width: 120px;
+  height: 30px;
+  border: 0px;
+  border-radius: 8px;
+  background-color: #464646;
+  opacity: 0.5;
+  color: white;
+  margin-right: 10px;
+}
+.bt1 a {
+  text-decoration: none;
+  color: white;
+}
+.bt1:hover {
+  cursor: pointer;
+  opacity: 1;
+  transition: 1.2s
+}
+.newmember {
+  opacity: 1;
+}
+.home {
+  float: right;
+}
+/* 내용 */
+.section {
+  border-top: 1px solid #eee;
+  background: #fff;
+}
+.content {
+  height: 100%;
+}
+#sub_cnt {
+  display: block;
+  min-height: 500px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 70px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #fff;
+}
+.careers_cnt {
+  display: block;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.new_h3_label {
+  margin-bottom: 20px;
+  font-size: 2.1875em;
+  color: #333;
+  line-height: 1.42;
+  word-break: keep-all;
+  font-weight: 400;
+  text-align: center;
+}
+.career_job_new {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 138px;
+}
+.career_job_new dl {
+  display: flex;
+  margin: 0;
+}
+.career_job_new dl > * {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgb(197, 197, 197);
+  padding: 53px 0;
+}
+.career_job_new dl > dt {
+  width: 25.83%;
+  border-top: 1px solid #000;
+}
+.career_job_new dl > dt .tit {
+  padding-left: 17px;
+}
+.career_job_new dl > dt .tit h4 {
+  font-size: 16px;
+  line-height: 1;
+  color: #00a0e9;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+  margin-bottom: 17px;
+}
+.career_job_new dl > dt .tit h3 {
+  font-size: 25px;
+  line-height: 1;
+  color: #333;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+.career_job_new dl > dd {
+  width: calc(100%);
+}
+.career_job_new dl > dd > ol {
+  display: flex;
+  list-style-type: none;
+}
+.career_job_new dl > dd > ol > li:first-child {
+  padding-left: 40px;
+}
+.career_job_new dl > dd > ol > li {
+  width: 50%;
+  box-sizing: border-box;
+}
+.career_job_new dl > dd > ol > li h5 {
+  position: relative;
+  font-size: 22px;
+  line-height: 1;
+  color: #333;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  padding-left: 21px;
+  margin-bottom: 15px;
+  margin-top: -2px;
+}
+.career_job_new dl > dd > ol > li h5:before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: #00a0e9;
+  border-radius: 50%;
+  left: 2px;
+  top: 9px;
+}
+.career_job_new dl > dd > ol > li > ul {
+  list-style-type: none;
+}
+.career_job_new dl > dd > ol > li > ul > li {
+  position: relative;
+  font-size: 16px;
+  line-height: 30px;
+  color: #666;
+  letter-spacing: -0.03em;
+  padding-left: 12px;
+}
+.career_job_new dl > dd > ol > li > ul > li:before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 2px;
+  background: #666;
+  left: 1px;
+  top: 15px;
+}
+.h3_label {
+  margin: 0 0 30px;
+  font-size: 1.75em;
+  font-weight: 400;
+  color: #333;
+  text-align: center;
+}
+.center {
+  text-align: center !important;
+}
+.career_process_intro {
+  line-height: 1.875em;
+  margin: 0 0 60px;
+  padding: 0 18%;
+  font-size: 0.9375em;
+  color: #666;
+  word-break: keep-all;
+}
+.career_process {
+  display: block;
+}
+.career_process:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.career_process:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.career_process li {
+  display: block;
+  float: left;
+  width: 48%;
+  margin: 0 0 20px;
+}
+.career_process li .icon {
+  float: left;
+}
+.career_process li .icon img {
+  vertical-align: middle;
+  font-family: "Arial", sans-serif;
+}
+.career_process li .title {
+  position: relative;
+  float: left;
+  width: 69%;
+  padding: 45px 0 15px 20px;
+  font-size: 1.25em;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}
+.career_process li .title > img {
+  position: absolute;
+  right: 0;
+  top: 47px;
+}
+.career_process li .text {
+  float: left;
+  width: 69%;
+  line-height: 1.875em;
+  padding-left: 17px;
+  padding-right: 0;
+  font-size: 0.9375em;
+  color: #666;
+  word-break: keep-all;
+  box-sizing: border-box;
+}
+.career_process li:nth-child(2n) {
+  margin-left: 4%;
+}
+.career_process li:nth-child(2n) {
+  margin-left: 4%;
+}
+/* foot */
+#footwrap {
+  border-top: 1px solid #455964;
+}
+#foot {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px 15px 20px 15px;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#foot address {
+  color: #455964;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+  font-style: normal;
+}
+#foot address span {
+  display: inline-block;
+}
+#foot .copyright {
+  margin-top: 5px;
+  color: #090909;
+  font-size: 11px;
+  line-height: 13px;
+}
+.foot_logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+@media all and (max-width: 390px) {
+  .careers_cnt {
+    height: auto;
+  }
+  .sub_cnt {
+    width: 100%;
+    height: 3000px;
+  }
+  .career_process {
+    padding: 0;
+    padding-left: 10px;
+  }
+  .career_job_new dl > dd > ol > li:first-child {
+    padding-left: 0;
+    border-right: 1px solid lightgray;
+  }
+  .career_job_new dl > dd > ol > li > ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .career_job_new dl > dt .tit {
+    padding-left: 8px;
+  }
+  .career_job_new dl > dt .tit h3 {
+    font-size: 13px;
+  }
+  .career_job_new dl > dd > ol > li > ul > li {
+    position: relative;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .career_process li {
+    display: block;
+    float: left;
+    width: 48%;
+    margin: 0 0 20px;
+}
+}

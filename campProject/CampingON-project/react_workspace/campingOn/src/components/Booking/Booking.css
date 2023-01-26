@@ -1,0 +1,113 @@
+.rowFlexBoxBookingRoom {
+  margin: 0 auto;
+  width: 88%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.rowFlexBoxBooking {
+  margin-bottom: 10px;
+}
+.bookingRoomsBox {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.peopleInfoBooking {
+  margin: 0 auto;
+  width: 90%;
+  height: 190px;
+}
+.peopleInfoBox {
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 90%;
+  height: 30px;
+  line-height: 30px;
+}
+.bookingLabel {
+  font-size: 20px;
+  display: inline-block;
+  width: 27%;
+}
+.bookingInput {
+  padding-left: 3%;
+  width: 65%;
+  float: right;
+  height: 30px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.peopleInfoBox input:focus,
+.bookingTextArea:focus {
+  outline: none;
+}
+.bookingTextArea {
+  padding-top: 2%;
+  height: 70px;
+  resize: none;
+  font-size: 15px;
+}
+input::placeholder,
+textarea::placeholder {
+  color: lightgray;
+}
+.bookingAgreeBox {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.react-datepicker {
+  position: fixed;
+  top: 160px;
+  left: 0px;
+  width: 680px;
+  height: 385px;
+  border: transparent;
+  border-radius: 15px;
+}
+
+.react-datepicker__input-container > input {
+  position: absolute;
+  text-align: center;
+  color: transparent;
+  font-size: 13px;
+  left: 50%;
+  top: 70px;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 57px;
+  border: transparent;
+  border-radius: 35px;
+  background-color: transparent;
+}
+.react-datepicker__input-container > input:focus {
+  outline: white;
+}
+
+.react-datepicker__header {
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: transparent;
+  border: transparent;
+}
+
+.react-datepicker__close-icon::after {
+  position: fixed;
+  right: 870px;
+  top: 110px;
+  width: 10px;
+  height: 10px;
+  font-size: 10px;
+  background-color: #a3a2a2;
+}
+.peopleResearchInput {
+  width: 40px;
+  text-align: center;
+  line-height: 1.5;
+  border: none;
+}
+.peopleResearchInput:focus {
+  outline: none;
+}

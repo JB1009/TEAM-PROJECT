@@ -1,0 +1,166 @@
+.boardSection {
+  width: 100%;
+  height: 80vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.boardContainer {
+  width: 1200px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.recentOrders {
+  height: 80%;
+}
+.details {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+table {
+  table-layout: fixed;
+}
+.details table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  table-layout: fixed;
+}
+.BoardTitle {
+  width: 60%;
+}
+.cardHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.write {
+  width: 80px;
+  height: 30px;
+  font-size: 15px;
+  border: none;
+  background: #85c89a;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.write:hover {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+}
+
+.details table thead th {
+  text-align: center;
+  font-weight: 600;
+}
+
+.details table tbody td {
+  text-align: center;
+  padding: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre-line;
+}
+
+.Data tr {
+  height: 80px;
+}
+
+.details table tr {
+  width: 100%;
+  color: var(--black1);
+  border-bottom: 1px solid #85c89a;
+}
+
+.details table tbody tr:hover {
+  background: var(--black2);
+  color: var(--white);
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.notice {
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 768px) {
+  .boardSection {
+    width: 90%;
+    height: auto;
+  }
+
+  .boardContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .cardHeader {
+    font-size: 12px;
+  }
+
+  .details table thead th {
+    font-size: 14px;
+  }
+
+  .boardTitle {
+    width: 50%;
+  }
+  .details {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .BoardNum,
+  .writeDate,
+  .lookUp {
+    display: none;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .boardSection {
+    width: 90%;
+  }
+
+  .boardContainer {
+    width: 100%;
+  }
+
+  .details table thead th {
+    font-size: 14px;
+  }
+
+  .boardTitle {
+    width: 50%;
+  }
+  .details {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .BoardNum {
+    width: 10%;
+  }
+  .writeDate {
+    width: 20%;
+  }
+  .writer {
+    width: 20%;
+  }
+  .lookUp {
+    display: none;
+  }
+}

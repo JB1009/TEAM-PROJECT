@@ -1,0 +1,89 @@
+/*  list.css  */
+
+#item_box{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+#item_listwrap{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+#search_box{
+    width: 1200px;
+    height: 50px;
+    display: flex;
+}
+#search{
+    width: 600px;
+    height: 30px;
+}
+#search_bt{
+    width: 90px;
+    height: 36px;
+}
+#sort_box{
+    display: flex;
+    width: 700px;
+    height: 40px;
+}
+#sort_box p{
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    margin: 0;
+}
+#item_list_box{
+    width: 1200px;
+    height: auto;
+    margin-top: 50px;
+}
+.item_kind a{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+}
+.item_kind a:hover{
+    color: blue;
+}
+.item_wrap{
+    display: flex;
+    width: 1200px;
+    height: 500px;
+    margin-bottom: 20px;
+}
+.item{
+    width: 380px;
+    height: 500px;
+    padding: 0 10px 0 10px;
+}
+.item_img{
+    width:380px;
+    height: 390px;
+}
+.item_img img{
+    max-width: 380px;
+}
+.item_money, .item_title, .item_content{
+    width: 380px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.item_money{
+    font-size: 20px;
+    font-weight: 800;
+}
+/* 상품위에 마우스오버시 */
+.item:hover{
+    border: 1px solid red;
+    cursor:pointer;
+}
+.item:hover .i{
+    text-decoration:underline;
+}

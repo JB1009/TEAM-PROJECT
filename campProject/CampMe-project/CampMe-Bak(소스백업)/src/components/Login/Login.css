@@ -1,0 +1,224 @@
+.App{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+  }
+.header{
+    width: 1200px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.header img{
+    width: 250px;
+    margin: 0 auto;
+}
+.login{
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.home{
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.LoginSection{
+    width: 1200px;
+    margin:  0 auto;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.loginDiv{
+    width: 100%;
+    height: 50vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.LoginBoxDiv{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+}
+.LoginBox{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 0 0 0 50px;
+    border: 1px solid green;
+}
+.Id, .PassWord{
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    border: 1px solid green;
+}
+.Id span, .PassWord span{
+    margin-right: 10px;
+}
+
+.LoginId, .LoginPw{
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    border: 0;
+}
+.LoginButton{
+    width: 83%;
+    height: 25px;
+    background-color: #85c89a;
+    color: white;
+    border: 1px solid #85c89a;
+}
+.LoginButton:hover{
+    cursor: pointer;
+}
+.LoginMenu{
+    width: 80%;
+    height: 80px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.LoginMenu span::after{
+    padding: 0 14px;
+    content: 'l';
+}
+.LoginMenu ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.Footer{
+    width: 1200px;
+    margin:  0 auto;
+    height: 10vh;
+    font-size: 12px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+@media only screen and (max-width: 620px){
+    .container {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        width: 390px;
+        height: 100vh;
+    }
+    .header{
+        width: 390px;
+        height: 10vh;
+        display: flex;
+    }
+    .header img{
+        width: 150px;
+        margin: 0 auto;
+    }
+    .logo{
+        margin: 0 auto;
+    }
+    .home{
+        text-align: center;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+    .Section{
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .LoginBoxDiv{
+        width: 70%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .LoginBox{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding: 0 0 0 40px;
+        border: 1px solid green;
+    }
+    .Id, .PassWord{
+        width: 80%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        border: 1px solid green;
+    }
+    .Id span, .PassWord span{
+        margin-right: 10px;
+    }
+    .LoginId, .LoginPw{
+        width: 80%;
+        height: 60%;
+        text-align: center;
+    }
+    .LoginButton button{
+        width: 83%;
+        background-color: #85c89a;
+        color: white;
+        border: 1px solid #85c89a;
+    }
+    .LoginMenu{
+        width: 80%;
+        height: 80px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .LoginMenu span::after{
+        padding: 0 14px;
+        content: 'l';
+    }
+    .LoginMenu ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    .Footer{
+        width: 390px;
+        height: 10vh;
+        font-size: 12px;
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+    }
+}

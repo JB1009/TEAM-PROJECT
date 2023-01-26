@@ -1,0 +1,193 @@
+#wrap{width: 100%;
+    height: auto;}
+
+#top{width: 1200px;
+   height: 80px;
+   margin: 0 auto;
+   display: flex;}
+
+#logo img{padding-top: 10px;
+        width: 240px;
+        margin-left: 40px;}     
+
+#top_menu ul{display: flex;}
+
+#top_menu ul li{list-style-type: none;
+              font-size: 16px;
+              font-weight: 700;
+              margin-right: 30px;}
+
+#main_logo{width:600px;}
+#menu{width: 1000px;
+        /* height: 80px; */
+        position: relative;
+        margin-top: 30px;
+        font-size: 15px;
+        }
+    
+    #menu ul{list-style: none;
+           padding: 0;
+           margin: 0;
+           position: relative;}
+    
+    #main_menu{width: 1000px;
+             height: 40px;
+             position: relative;
+             }
+    
+    #main_menu>li{width: 200px;
+                height: 40px;
+                line-height: 40px;
+                float: left;
+                text-align: center;
+                position: relative;}
+    
+    
+    #main_menu .sub{display: none;
+                    }
+
+
+    
+#main_menu:hover .sub{display: block;
+                        background-color: white;
+                        height: 240px;
+                        z-index: 1;
+                        }
+                        #main_menu:hover  .event{cursor: pointer;}      
+    .sub1 li{float: left;
+             margin-left: 70px;
+             font-size: 10px;}     
+             
+    .sub2 li{float: left;
+        margin-left: 55px;
+        font-size: 10px;}  
+        
+    .sub3 li{float: left;
+        margin-left: 58px;
+        font-size: 10px;}  
+        
+    .sub4 li{float: left;
+        margin-left: 68px;
+        font-size: 10px;}  
+        
+    .sub5 li{float: left;
+        margin-left: 65px;
+        font-size: 10px;}
+
+#main_logo img{width: 200px;
+             margin-right: 50px;
+             float: right;}
+
+#mid{width: 1200px;
+     margin: 0 auto;
+     display: flex;}
+             
+             #login{
+                  width: 300px;
+                  height: 550px;
+                  margin-top: 30px;
+                  margin-left: 20px;}
+             
+             .id{display: flex;
+               padding: 0 20px;
+               margin-top: 20px ;}
+             
+             .id div{font-size: 14px;
+                   font-weight: 600;
+                   margin-left: 5px;}
+             
+             .id input{border-radius: 5px;
+                     border: 1px solid #999;
+                     margin-left: 20px;
+                     width: 170px;
+                     text-align: center;}
+             
+             .login{height: 20px;
+                  position: relative;}
+             
+             .pw{display: flex;
+               margin-top: 10px;}
+                   
+             .pw div{font-size: 14px;
+                   font-weight: 600;
+                   margin-left: 24px;}
+                   
+             .pw input{width: 170px;
+                     border-radius: 5px;
+                     margin-left: 7px;
+                     text-align: center;
+                     border: 1px solid #999;}
+                   
+             .menu_login{width: 240px;
+                       border: 1px solid #999;
+                       border-radius: 5px;
+                       margin-left: 20px;
+                       margin-top: 10px;
+                       text-align: center;}
+             
+             .menu_login a{text-decoration: none;
+                         color: #999;}
+             
+             .menu_tap{width: 300px;}
+             
+             .menu_tap div{width: 240px;
+                         border-radius: 20px;
+                         border: 1px solid #999;
+                         margin-left: 20px;
+                         margin-top: 50px;
+                         text-align: center;             
+                         padding: 8px 0;}
+             
+             .menu_tap div a{text-decoration: none;
+                           color: #999;}
+             
+             .id_search{width: 240px;
+                      margin-left: 25px;
+                      margin-top: 10px;}
+             
+             .id_search a{text-decoration: none;
+                        color: black;}
+             
+             .mainpic{position: relative;
+                    max-width: 1200px;
+                    margin-top: 50px;}
+             
+             .mainpic .sidebox a img{max-width: 840px;}    
+             .bottom{width: 1200px;
+                font-size: 11px;
+                margin:0 auto;}
+          
+          .bot{margin-left: 20px;
+            border-top: 1px solid #777;
+            width: 1070px;}
+          
+          .bot_top{margin-top: 20px;}
+          
+          .bot a{text-decoration: none;color: black; margin-right: 10px;}
+          
+          .a_tag{width: 20px;
+               padding: 2px;
+               border-radius: 100px;
+               
+               background: #777;}
+          
+          .bot_mid{margin-top: 5px;}
+
+.main_img{width: 800px;
+          height: auto;
+          margin-top: 30px;
+          margin-bottom: 30px;} 
+
+.img img{width: 180px;
+         height: 180px;}
+
+.img{text-align: center;}
+
+.main_img01{width: 800px;
+            height: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;}
+            
+.img div{font-size: 15px;
+         margin-top: 5px;
+         margin-bottom:10px;}            

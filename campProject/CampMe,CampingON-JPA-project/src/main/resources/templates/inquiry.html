@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <div>
+      <h1>문의 등록</h1>
+    </div>
+    <div>
+      <!-- <input id="" type="text" placeholder="문의 글 종류"> -->
+      <input id="inquiryTitle" type="text" placeholder="제목">
+      <input id="inquiryText" type="text" placeholder="내용">
+      <button onclick="doJoin()">등록</button>
+
+    </div>
+    <div>
+      <div id="inquiry">
+        <h1>멤버 게시판</h1>
+        <div>
+          <table>
+            <th>문의 글 고유 값</th>
+            <th>글 종류</th>
+            <th>제목</th>
+            <th>내용</th>
+            <th>작성 날짜</th>
+            <th>유저 고유 값</th>
+            <th>답변 일자</th>
+            <th>답변 내용</th>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+
+  // 문의하기
+  function doJoin() {
+    var inquiryTitle = $('#inquiryTitle').val();
+    var inquiryText = $('#inquiryText').val();
+
+    var japData = {
+      inquiryTitle: inquiryTitle,
+      inquiryText: inquiryText,
+
+    };
+
+    $.ajax({
+      url: '/inquiry',
+      type: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify(japData),
+      dataType: 'json',
+      success: function (response) {
+        alert('등록 완료');
+        // console.log(response)
+        // location.reload();
+      },
+    });
+  }
+  
+</script>
+
+</html>

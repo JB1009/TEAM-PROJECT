@@ -1,0 +1,191 @@
+/* 부모 div */
+.headerContainer {
+  width: 100%;
+  height: 10vh;
+  align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.header {
+  width: 1200px;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+/* header 로고 */
+.header img {
+  width: 250px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+/* header 로그인 link */
+.HeaderMenu {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 8vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.HeaderTitle {
+  width: 200px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+}
+.HeaderButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+}
+.HeaderButton button {
+  /* border: 2px solid #85c89a; */
+  background-color: white;
+  color: green;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 300;
+  transition: 0.3s;
+}
+.HeaderButton button:hover {
+  border: 1px solid #85c89a;
+  background-color: green;
+  color: white;
+  font-size: 15px;
+}
+.HeaderLogin button {
+  border: 2px solid #85c89a;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+.HeaderLogin button:hover {
+  border: 2px solid #85c89a;
+  background-color: #85c89a;
+  color: white;
+  font-size: 17px;
+}
+
+/* Link 스타일 제거 */
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+/* 웹 모바일 버전 반응형 */
+@media only screen and (max-width: 768px) {
+  .header {
+    width: 90%;
+    height: 10vh;
+  }
+  .header img {
+    width: 100px;
+    height: 50px;
+  }
+  .HeaderMenu {
+    width: 250px;
+    justify-content: center;
+  }
+  .HeaderTitle {
+    font-size: 14px;
+  }
+  .HeaderTitle:hover {
+    cursor: pointer;
+  }
+  .HeaderButton {
+    width: 100%;
+  }
+  .HeaderButton button {
+    width: auto;
+    height: 20px;
+    background-color: #85c89a;
+    font-size: 12px;
+  }
+  .HeaderButton button:hover {
+    font-size: 12px;
+  }
+  .HeaderLogin button {
+    height: 30px;
+    border: 1px solid #85c89a;
+    background-color: #85c89a;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+  }
+  .HeaderLogin button:hover {
+    border: 2px solid #85c89a;
+    background-color: #85c89a;
+    color: white;
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .header {
+    width: 90%;
+    height: 10vh;
+  }
+  .header img {
+    width: 200px;
+  }
+  .HeaderMenu {
+    width: 230px;
+    justify-content: center;
+  }
+  .HeaderTitle {
+    font-size: 15px;
+  }
+  .HeaderTitle:hover {
+    cursor: pointer;
+  }
+  .HeaderButton {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .HeaderButton button {
+    height: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 13px;
+    color: green;
+    border: none;
+  }
+  .HeaderButton button:hover {
+    border: 1px solid #85c89a;
+    background-color: #85c89a;
+    color: white;
+    font-size: 12px;
+  }
+  .HeaderLogin button {
+    width: 70px;
+    height: 30px;
+    border: 1px solid #85c89a;
+    background-color: #85c89a;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+  }
+  .HeaderLogin button:hover {
+    border: 2px solid #85c89a;
+    background-color: #85c89a;
+    color: white;
+    font-size: 15px;
+  }
+}

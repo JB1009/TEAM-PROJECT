@@ -1,0 +1,115 @@
+.titlePayment {
+  margin: 0;
+  padding: 2%;
+  width: 96%;
+  font-size: 20px;
+  background: var(--secondary-color);
+  color: var(--font-primary);
+}
+.productInfoPayment,
+.bookingInfoPayment,
+.amountPayment,
+.paymentOption,
+.simplicityPayment,
+.commonPayment,
+.onSitePayment {
+  margin: 0 auto;
+  width: 94%;
+  padding: 3%;
+}
+.productNamePayment {
+  margin: 0 auto;
+  margin-bottom: 5px;
+  width: 90%;
+  font-size: 25px;
+}
+.reservationDatePayment {
+  margin: 0 auto;
+  padding: 2%;
+  width: 90%;
+  height: 30px;
+  font-size: 20px;
+  background: lightgrey;
+  border-radius: 7px;
+  text-align: center;
+}
+.bookingTablePayment,
+.amountTablePayment {
+  border: none;
+  width: 90%;
+  table-layout: fixed;
+}
+.bookingTablePayment tr td,
+.amountTablePayment tr td {
+  padding: 0;
+  height: 30px;
+  line-height: 30px;
+  border: none;
+  font-size: 20px;
+  word-break: break-all;
+}
+.tableTitlePayment {
+  width: 25%;
+}
+.amountPayment {
+  width: 90%;
+  display: flex;
+}
+.amountTitlePayment {
+  width: 25%;
+  font-size: 20px;
+}
+.amountTableBoxPayment {
+  margin: 0 auto;
+  width: 100%;
+}
+.amountTablePayment tr td {
+  text-align: right;
+  width: 50%;
+}
+.subTitlePayment {
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 20px;
+}
+.paymentBox {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.clickPayment {
+  margin: 0;
+  margin-right: 2.5%;
+  margin-bottom: 2%;
+  width: 30%;
+  height: 37px;
+  line-height: 37px;
+  font-size: 17px;
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.paymentDate:focus {
+  outline: none;
+}
+
+/* 버튼 */
+.buttonBoxPayment {
+  margin: 0 auto;
+  margin-top: 5%;
+  padding: 2%;
+  width: 90%;
+  text-align: center;
+}
+.buttonPayment {
+  font-size: 25px;
+  height: 35px;
+  width: 90%;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}

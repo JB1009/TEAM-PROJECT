@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빽다방</title>
+    <style>
+
+        .header {
+            background-color: none;
+            flex-basis: 20%;
+            margin-bottom: 2px;
+        }
+
+        .center {
+            background-color: none;
+            /* 아이템도 flex가 될 수 있다.
+               flex를 사용함으로써 컨테이너와 같이 아이템을 사용할 수 있게됨. */
+            flex-basis: 90%;
+            margin: 0;
+            padding: 0;
+            justify-content: space-around;
+            width: auto;
+            height: auto;
+            margin-top: 5px;
+        }
+
+        .section {
+            background-color: none;
+            flex-basis: 60%;
+            border-bottom: 1px solid black;
+            display: flex;
+            width: auto;
+            height: auto;
+            flex-direction: column;
+        }
+
+        .article {
+            background-color: none;
+            flex-basis: auto;
+            justify-content: space-around;
+            display: flex;
+            padding-bottom: 10px;
+        }
+
+        .benner {
+            width: auto;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .footer {
+            background-color: none;
+            width: 1200px;
+            height: auto;
+            padding: 30px 0 0 0;
+            color: #262626;
+            font-size: 0.812rem;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #footer_img {
+            width: 179px;
+            height: 47px;
+        }
+
+        #mask {
+            width: 100%;
+            height: auto;
+            font-size: 12pt;
+            color: black;
+            border-bottom: 1px solid #071F60;
+        }
+
+        #search_wrap {
+            width: 1200px;
+            height: 100px;
+            margin: 0 auto;
+        }
+
+        #menu_wrap {
+            width: 100%;
+            height: 100px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #wrap {
+            display: flex;
+            justify-content: space-around;
+            background-color: none;
+            padding-left: 3%;
+            padding-top: 3%;
+        }
+
+        .search_form {
+            width: 100%;
+            height: 100px;
+        }
+
+        .container {
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .container img {
+            width: AUTO;
+            height: auto;
+            object-fit: scale-down;
+        }
+
+        .container img:hover {
+            cursor: pointer;
+        }
+
+        #search_word {
+            height: 40px;
+            width: 400px;
+            font-size: 35px;
+        }
+
+        .search_bt>button {
+            height: auto;
+            width: auto;
+            font-size: 30px;
+            border: 0;
+            background: #240dee;
+            color: white;
+        }
+
+        .search_bt>button:hover {
+            cursor: pointer;
+        }
+
+        .search {
+            display: flex;
+            border: 2px solid #240dee;
+            margin-top: 6px;
+            height: 40px;
+        }
+
+        #menu_wrap2 {
+            margin: 0 auto;
+            width: 1200px;
+            height: 100px;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #menu_wrap2 img {
+            width: 194px;
+            height: 64px;
+        }
+
+        .menu_list {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            text-align: center;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        #menu_ul {
+            margin: 0 auto;
+            padding: 0;
+            list-style-type: none;
+            width: 1200px;
+            height: 100px;
+            font-size: 15px;
+            font-weight: 800;
+            /* margin-left: 10px; */
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .menu_nav {
+            margin-right: 20px;
+            height: 30px;
+            line-height: 30px;
+            color: black;
+            text-align: center;
+            padding: 20px;
+            transition: 0.8s;
+        }
+
+        .menu_nav:hover {
+            cursor: pointer;
+            border-top: 3px solid #071F60;
+            border-bottom: 3px solid #071F60;
+            font-size: 20px;
+        }
+
+        .coffe_box {
+            margin-bottom: 40px;
+            width: 1225px;
+            height: auto;
+            padding-bottom: 20px;
+            background-color: none;
+            text-align: center;
+            border: 2px solid #071F60;
+            border-radius: 10px;
+        }
+
+        .coffe_box h1 {
+            text-align: center;
+        }
+
+        #coffe_ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            width: 1000px;
+            height: 30px;
+            font-size: 15px;
+            font-weight: 800;
+            display: flex;
+            font-weight: bold;
+        }
+
+        #coffe_ul2 {
+            padding: 0;
+            list-style-type: none;
+            width: 1000px;
+            height: 30px;
+            font-size: 15px;
+            font-weight: 800;
+            display: flex;
+            margin-top: 400px;
+        }
+
+        #coffe_ul3 {
+            padding: 0;
+            list-style-type: none;
+            width: 1000px;
+            height: 30px;
+            font-size: 15px;
+            font-weight: 800;
+            display: flex;
+            margin-top: 400px;
+        }
+
+        #coffe_ul4 {
+            padding: 0;
+            list-style-type: none;
+            width: 1000px;
+            height: 30px;
+            font-size: 15px;
+            font-weight: 800;
+            display: flex;
+            margin-top: 400px;
+            margin-bottom: 400px;
+        }
+
+        .coffe_li {
+            margin-right: 20px;
+            height: 30px;
+            line-height: 30px;
+            color: black;
+            text-align: center;
+        }
+
+        .coffe_box>ul>li {
+            float: left;
+            width: 25%;
+            padding: 20px;
+            border-left: 1px solid transparent;
+            border-top: 1px solid transparent;
+        }
+
+        .coffe_div {
+            border: 2px solid #071F60;
+            border-radius: 10px;
+            transition: 0.7s;
+        }
+
+        .coffe_div:hover {
+            cursor: pointer;
+            background-color: yellow;
+            transform: scale(1.05);
+            transition: all 1.0s;
+        }
+
+        .coffe_li img {
+            width: 245px;
+            height: 320px;
+        }
+
+        p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding: 0;
+            margin: 0;
+        }
+
+        #contents {
+            background-color: none;
+            width: 700px;
+            height: 800px;
+            margin-right: 20px;
+        }
+
+        .contentst ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            width: 150px;
+            height: 200px;
+            background-color: #071F60;
+            color: white;
+            font-size: 15pt;
+            text-align: center;
+        }
+
+        #sub {
+            background-color: none;
+            width: 280px;
+            height: 800px;
+        }
+
+        #main_main {
+            width: 600px;
+            height: 800px;
+            background-color: none;
+        }
+
+        #main_box {
+            background-color: none;
+            border: 2px solid #071F60;
+            margin: 100px auto;
+            width: 400px;
+            height: 550px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        select {
+            width: 400px;
+            height: 30px;
+            border-radius: 10px;
+        }
+
+        .input_box {
+            margin-bottom: 20px;
+        }
+
+        .radio {
+            margin-bottom: 20px;
+            font-size: 15pt;
+        }
+
+        #number {
+            width: 390px;
+            height: 30px;
+            border-radius: 10px;
+        }
+
+        textarea {
+            width: 350px;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        button {
+            width: 400px;
+            height: 35px;
+            background-color: rgb(44, 89, 240);
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            background-color: white;
+            color: blue;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .benner img {
+            width: 1890px;
+            height: auto;
+            top: 50%;
+        }
+
+        .juso ul {
+            list-style-type: none;
+            margin: 0 auto;
+            font-size: 8pt;
+            margin-top: 5px;
+            margin-left: 0;
+            align-items: center;
+        }
+
+        .juso {
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        .juso span:after {
+            padding: 0 14px;
+            content: 'l';
+        }
+
+        .asd {
+            width: 150px;
+        }
+
+        /* .footer_div {text-align: center;} */
+
+
+        .juso4 {
+            margin-top: 40px;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div id="mask">
+                <div id="search_wrap">
+                    <div class="search_form">
+                        <div id="menu_wrap2">
+                            <div class="menu_list">
+                                <div class="container"><img src="7.jpg"></div>
+                                <ul id="menu_ul">
+                                    <li class="menu_nav">빽다방</li>
+                                    <li class="menu_nav">메뉴</li>
+                                    <li class="menu_nav">소식</li>
+                                    <li class="menu_nav">커뮤니티</li>
+                                    <li class="menu_nav">매장안내</li>
+                                    <li class="menu_nav">창업안내</li>
+                                    <li class="menu_nav">고객의 소리</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <div class="section">
+                <article class="article">
+                    <div class="benner">
+                        <img onClick="location.href='https://paikdabang.com/menu/menu_coffee/'" src="main_sec2.jpg">
+                        <img onClick="location.href='https://paikdabang.com/about/story/'" src="스커피.jpg">
+                    </div>
+                </article>
+                <article class="article">
+                    <div id="wrap">
+                        <div class="coffe_box">
+                            <h1>빽다방 메뉴보기</h1>
+                            <ul id="coffe_ul">
+                                <li class="coffe_li">
+                                    <div class="coffe_div">
+                                        <img src="원조커피.jpg">
+                                        <p>원조커피 (ICED)</p>
+                                    </div>
+                                </li>
+                                <li class="coffe_li">
+                                    <div class="coffe_div">
+                                        <img src="HOT-원조커피.jpg">
+                                        <p>원조커피 (HOT)</p>
+                                    </div>
+                                </li>
+                                <li class="coffe_li">
+                                    <div class="coffe_div">
+                                        <img src="ICED-달달연유라떼.jpg">
+                                        <p>달달연유라떼 (ICED)</p>
+                                    </div>
+                                </li>
+                                <li class="coffe_li">
+                                    <div class="coffe_div">
+                                        <img src="HOT-달달연유라떼.jpg">
+                                        <p>달달연유라떼 (HOT)</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul id="coffe_ul2">
+                                <li class="coffe_li">
+                                    <div class="coffe_div">
+                                        <img src="빽s-라떼ICED.jpg">
+                                        <p>빽's 카페라떼 (ICED)</p>
+                                    </div>
+                                </li>
+                                <li class="coffe_li">
+                                    <div class="coffe_div">
+                                        <img src="HOT-빽s라떼.jpg">
+                                        <p>빽's 카페라떼 (HOT)</p>
+                                    </div>
+                                </li>
+                                <li class="coffe_li">
+                                    <div class="coffe_div">
+                                        <img src="디카페인-콜드브루.jpg">
+                                        <p>디카페인 콜드브루</p>
+                                    </div>
+                                </li>
+                                <li class="coffe_li">
+                                    <div class="coffe_div">
+                                        <img src="디카페인 콜드브루라떼.jpg">
+                                        <p>디카페인 콜드브루라떼</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul id="coffe_ul3">
+                                <li class="coffe_li">
+                                    <div class="coffe_div">
+                                        <img src="ICED-카페모카.jpg">
+                                        <p>카페모카 (ICED)</p>
+                                    </div>
+                                </li>
+                                <li class="coffe_li">
+                                    <div class="coffe_div">
+                                        <img src="HOT-카페모카.jpg">
+                                        <p>카페모카 (HOT)</p>
+                                    </div>
+                                </li>
+                                <li class="coffe_li">
+                                    <div class="coffe_div">
+                                        <img src="ICED-카라멜마키아또.jpg">
+                                        <p>카라멜마키아또 (ICED)</p>
+                                    </div>
+                                </li>
+                                <li class="coffe_li">
+                                    <div class="coffe_div">
+                                        <img src="HOT-카라멜마키아또.jpg">
+                                        <p>카라멜마키아또 (HOT)</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul id="coffe_ul4">
+                                <li class="coffe_li">
+                                    <div class="coffe_div">
+                                        <img src="ICED-바닐라라떼.jpg">
+                                        <p>바닐라라떼 (ICED)</p>
+                                    </div>
+                                </li>
+                                <li class="coffe_li">
+                                    <div class="coffe_div">
+                                        <img src="HOT-바닐라라떼.jpg">
+                                        <p>바닐라라떼 (HOT)</p>
+                                    </div>
+                                </li>
+                                <li class="coffe_li">
+                                    <div class="coffe_div">
+                                        <img src="코코넛라떼ICED.jpg">
+                                        <p>코코넛카페라떼 (ICED)</p>
+                                    </div>
+                                </li>
+                                <li class="coffe_li">
+                                    <div class="coffe_div">
+                                        <img src="코코넛라떼hot.jpg">
+                                        <p>코코넛카페라떼 (HOT)</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="main_main">
+                        <div id="main_box">
+                            <h1>빽다방 주문하기</h1>
+                            <div class="input_box">
+                                <select>
+                                    <option>메뉴를 선택해주세요.</option>
+                                    <option>원조커피</option>
+                                    <option>달달연유라떼</option>
+                                    <option>빽's 카페라떼</option>
+                                    <option>디카페인 콜드브루</option>
+                                    <option>디카페인 콜드브루라떼</option>
+                                    <option>카페모카</option>
+                                    <option>카라멜마키아또</option>
+                                    <option>바닐라라떼</option>
+                                    <option>코코넛카페라떼</option>
+                                </select>
+                            </div>
+                            <div class="radio">
+                                ICED : <input type="radio" name="ICED">
+                                HOT : <input type="radio" name="ICED">
+                            </div>
+                            <div class="radio">
+                                L size : <input type="radio" name="size">
+                                M size : <input type="radio" name="size">
+                            </div>
+                            <div class="input_box">
+                                <input type="number" id="number" placeholder="수량을 입력해주세요.">
+                            </div>
+                            <div class="input_box">
+                                <textarea cols="50" rows="10" placeholder="추가 사항이 있으면 적어주세요."></textarea>
+                            </div>
+                            <div class="input_box">
+                                <button onclick="test03()">주문 완료</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer_div">
+                <img id="footer_img" onClick="location.href='https://www.theborn.co.kr/'" src="footer.jpg">
+                <div class="juso">
+                    <ul class="juso1">
+                        <span>(주)더본코리아</span>
+                        <span>사업자등록번호 211-86-00870</span>
+                        <a>대표이사 백종원</a>
+                    </ul>
+                    <ul class="juso2">
+                        <span>주소: 서울시 강남구 봉은사로 1길 39 유성빌딩 5~6층</span>
+                        <a>팩스: 02-511-3864</a>
+                    </ul>
+                    <ul class="juso3">
+                        <span>본사 대표전화: 02-549-3864</span>
+                        <span>가맹상담전화: 02-3447-0410</span>
+                        <a>고객센터: 1544-2360</a>
+                    </ul>
+                    <div class="juso4">
+                        <a>OPYRIGHTⓒ 2018 THEBORN KOREA INC. ALL RIGHTS RESERVED</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</body>
+<script>
+    function test03() {
+        alert("주문이 완료되었습니다.");
+    }
+</script>
+
+</html>

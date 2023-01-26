@@ -1,0 +1,114 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 1300px;
+    height: 100vh;
+    margin: 0 auto;
+}
+.header{
+    flex-basis: 10%;
+    color: #fff;
+    display: flex;
+    height: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.logo{
+    flex-basis: 20%;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    color: black;
+    align-items: center;
+    text-align: center;
+    height: 0 auto;
+    padding-top: 25px;
+}
+.logo img{
+    width: 100%;
+    margin-top: 20px;
+}
+.header_img{
+    flex-basis: 80%;
+    border: 1px solid black;
+    color: black;
+    width: 1200px;
+}
+.header_img img{
+    width: 1000px;
+    padding-left: 40px;
+    padding-top: 5px;
+}
+.center{
+    flex-basis: 80%;
+    /* 아이템도 flex가 될 수 있다. */
+    display: flex;
+    height: 600px;
+}
+.login{
+    margin: 50px auto;
+    height: 500px;
+    width: 450px;
+}
+.login_box{
+    display: flex;
+}
+.login_box p{
+    width: 150px;
+    height: 20px;
+    text-align: right;
+    margin-right: 20px;
+}
+.login_box input {
+    width: 250px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1;
+}
+.login_box{
+    align-items: center;
+}
+button{
+    width: 450px;
+    border-radius: 5px;
+    background-color: lightgreen;
+    border: 1px solid lightgreen;
+    color: white;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    margin-top: 60px;
+}
+button:hover{
+    cursor: pointer;
+}
+a{
+    text-decoration-line: none;
+    color: black;
+    font-weight: 700;
+}
+.section{
+    background-color: azure;
+    flex-basis: 100%;  
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    height: 600px;
+}
+.article{
+    flex-basis: 40%;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.article img{
+    width: 800px;
+}

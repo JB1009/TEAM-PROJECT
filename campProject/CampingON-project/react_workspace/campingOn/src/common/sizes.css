@@ -1,0 +1,223 @@
+.companyContentsList {
+  width: 100%;
+  height: auto;
+  /* margin: 20px auto; */
+}
+.companyContents {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  border-bottom: 3px solid rgb(176, 230, 176);
+}
+.researchBox {
+  width: 90%;
+  height: auto;
+  padding: 10px;
+  margin: 20px auto;
+  box-shadow: 0px 0px 1px 1px lightgray;
+  border-radius: 10px;
+  text-align: center;
+}
+.researchBox div {
+  margin: 10px 0;
+}
+.researchTitle {
+  font-size: 25px;
+  font-weight: 400;
+}
+.date {
+  font-size: 15px;
+}
+.researchName {
+  color: var(--font-secondary);
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+  font-size: 20px;
+}
+.researchNameLeft {
+  color: var(--font-secondary);
+  display: inline-block;
+  width: 90%;
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+  font-size: 20px;
+}
+.checkboxLabel {
+  width: 55px;
+  text-align: left;
+}
+.checkboxLabelLong {
+  width: 70px;
+  text-align: left;
+}
+.researchShortName {
+  width: 40px;
+  height: 25px;
+  line-height: 25px;
+}
+
+.researchButton {
+  width: 90%;
+  padding: 2%;
+  margin: 10px 0;
+  background-color: var(--primary-color);
+  color: var(--font-primary);
+  border: 0;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 20px;
+}
+.rowFlexBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+.rowFlexBoxLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  padding: 0 10px;
+}
+
+.checkBoxBorder {
+  border: 1px solid grey;
+  width: 20px;
+  height: 20px;
+  margin: 0 15px;
+}
+
+.spacing {
+  width: 20px;
+}
+.companyContentsUnderBar {
+  width: 90%;
+  height: 45px;
+  line-height: 50px;
+  padding: 0 5%;
+  background-color: rgb(176, 230, 176);
+}
+.companyContentsTitle {
+  font-size: 30px;
+}
+.companyContentsInfoH2 {
+  font-size: 22px;
+  line-height: 45px;
+  /* font-weight: 500; */
+}
+.companyContentsInfoP {
+  color: gray;
+  font-size: 17px;
+  height: 50px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+.companyContentsText {
+  height: 160px;
+  padding: 10px 20px;
+}
+.companyContentsImg img {
+  width: 100%;
+  height: 180px;
+}
+.companyContentsImg {
+  width: 100%;
+  height: 180px;
+}
+.companyContentsRowFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.companyContentsHeart {
+  width: 45px;
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .researchBox {
+    font-size: 20px;
+  }
+  .rowFlexBoxTablet {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+  }
+  .researchTitle {
+    font-size: 30px;
+  }
+  .researchName {
+    font-size: 25px;
+    width: 150px;
+  }
+  .researchNameLeft {
+    font-size: 25px;
+  }
+  .researchShortName {
+    font-size: 25px;
+    width: 70px;
+  }
+  .checkboxLabel {
+    width: 65px;
+  }
+  .checkboxLabelLong {
+    width: 85px;
+  }
+  .researchInput {
+    width: 70%;
+    height: 35px;
+  }
+  .date {
+    width: 33.5%;
+    height: 35px;
+    font-size: 20px;
+  }
+  .researchButton {
+    font-size: 30px;
+  }
+  .companyContentsUnderBar {
+    height: 60px;
+    line-height: 70px;
+  }
+  .companyContentsList {
+    flex-direction: row;
+  }
+  .companyContentsTitle {
+    font-size: 35px;
+  }
+  .companyContentsImg {
+    width: 50%;
+    height: 250px;
+  }
+  .companyContents {
+    flex-direction: row;
+  }
+  .companyContentsText {
+    width: 50%;
+    height: 210px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .contentsRowFlexDesktop {
+    display: flex;
+    flex-direction: row;
+  }
+  .contentsMap {
+    width: 68%;
+    margin: 2% 0 0 2%;
+    height: 100vh;
+  }
+  .showContentsCamping {
+    width: 30%;
+  }
+  .companyContentsCampingListAll {
+    height: 52vh;
+    overflow: auto;
+  }
+  .companyContentsCampingListAll::-webkit-scrollbar {
+    display: none;
+  }
+}

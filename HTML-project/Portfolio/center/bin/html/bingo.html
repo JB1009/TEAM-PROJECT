@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #wrap {
+            width: 100%;
+            height: auto;
+            margin: 100px auto;
+        }
+
+        p {
+            text-align: center;
+            width: 50px;
+            margin: 20px auto;
+            color: lightskyblue;
+            /* font-size: 15px; */
+        }
+
+        #main {
+            width: 1400px;
+            height: 700px;
+            margin: 30px auto;
+            display: flex;
+        }
+
+        #user_main {
+            width: 600px;
+            height: 700px;
+
+        }
+
+        #com_main {
+            width: 600px;
+            height: 700px;
+
+        }
+
+        #button_wrap {
+            width: 200px;
+            height: 700px;
+            position: relative;
+            text-align: center;
+        }
+
+        #button {
+            cursor: pointer;
+            width: 100px;
+            height: 40px;
+            border-radius: 7px;
+            border: 1px solid lightcoral;
+            background: white;
+            color: lightcoral;
+            position: absolute;
+            top: 43%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #button:hover {
+            background: lightcoral;
+            color: white;
+        }
+
+        #button2 {
+            cursor: pointer;
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+            border: 1px solid lightcoral;
+            background: white;
+            color: lightcoral;
+            position: absolute;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #button2:hover {
+            background: lightcoral;
+            color: white;
+        }
+
+        .user_bingo,
+        .com_bingo {
+            width: 600px;
+            height: 120px;
+            display: flex;
+        }
+
+        .user_bingo div,
+        .com_bingo div {
+            text-align: center;
+            line-height: 110px;
+            height: 110px;
+            width: 110px;
+            background: lightskyblue;
+            border: 1px solid deepskyblue;
+            color: whitesmoke;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        .user_bingo div:hover {
+            cursor: pointer;
+            color: rgba(242, 158, 250, 0.404);
+            background-color: lightpink;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="main">
+            <div id="user_main">
+                <p class="p">유저</p>
+                <div class="user_bingo">
+                    <div id="user_num1" onclick="user(1)"></div>
+                    <div id="user_num2" onclick="user(2)"></div>
+                    <div id="user_num3" onclick="user(3)"></div>
+                    <div id="user_num4" onclick="user(4)"></div>
+                    <div id="user_num5" onclick="user(5)"></div>
+                </div>
+                <div class="user_bingo">
+                    <div id="user_num6" onclick="user(6)"></div>
+                    <div id="user_num7" onclick="user(7)"></div>
+                    <div id="user_num8" onclick="user(8)"></div>
+                    <div id="user_num9" onclick="user(9)"></div>
+                    <div id="user_num10" onclick="user(10)"></div>
+                </div>
+                <div class="user_bingo">
+                    <div id="user_num11" onclick="user(11)"></div>
+                    <div id="user_num12" onclick="user(12)"></div>
+                    <div id="user_num13" onclick="user(13)"></div>
+                    <div id="user_num14" onclick="user(14)"></div>
+                    <div id="user_num15" onclick="user(15)"></div>
+                </div>
+                <div class="user_bingo">
+                    <div id="user_num16" onclick="user(16)"></div>
+                    <div id="user_num17" onclick="user(17)"></div>
+                    <div id="user_num18" onclick="user(18)"></div>
+                    <div id="user_num19" onclick="user(19)"></div>
+                    <div id="user_num20" onclick="user(20)"></div>
+                </div>
+                <div class="user_bingo">
+                    <div id="user_num21" onclick="user(21)"></div>
+                    <div id="user_num22" onclick="user(22)"></div>
+                    <div id="user_num23" onclick="user(23)"></div>
+                    <div id="user_num24" onclick="user(24)"></div>
+                    <div id="user_num25" onclick="user(25)"></div>
+                </div>
+            </div>
+            <div id="button_wrap">
+                <button onclick="che()" id="button">시작</button>
+                <button onclick="rety()" id="button2">다시하기</button>
+            </div>
+            <div id="com_main">
+                <p>컴퓨터</p>
+                <div class="com_bingo">
+                    <div id="com_num1"></div>
+                    <div id="com_num2"></div>
+                    <div id="com_num3"></div>
+                    <div id="com_num4"></div>
+                    <div id="com_num5"></div>
+                </div>
+                <div class="com_bingo">
+                    <div id="com_num6"></div>
+                    <div id="com_num7"></div>
+                    <div id="com_num8"></div>
+                    <div id="com_num9"></div>
+                    <div id="com_num10"></div>
+                </div>
+                <div class="com_bingo">
+                    <div id="com_num11"></div>
+                    <div id="com_num12"></div>
+                    <div id="com_num13"></div>
+                    <div id="com_num14"></div>
+                    <div id="com_num15"></div>
+                </div>
+                <div class="com_bingo">
+                    <div id="com_num16"></div>
+                    <div id="com_num17"></div>
+                    <div id="com_num18"></div>
+                    <div id="com_num19"></div>
+                    <div id="com_num20"></div>
+                </div>
+                <div class="com_bingo">
+                    <div id="com_num21"></div>
+                    <div id="com_num22"></div>
+                    <div id="com_num23"></div>
+                    <div id="com_num24"></div>
+                    <div id="com_num25"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var user_num = [];
+    var user_div = [];
+    var com_num = [];
+    var com_div = [];
+    var count = 1;
+    var user_check = [];
+    var com_check = [];
+    var flag = 0;
+    var tr = false;
+
+    for (var i = 0; i < 25; i++) {
+        user_check[i] = false;
+        com_check[i] = false;
+    }
+    function str() {
+        user_num = [];
+        user_div = [];
+        com_num = [];
+        com_div = [];
+        count = 1;
+        user_check = [];
+        com_check = [];
+        for (var i = 0; i < 25; i++) {
+            user_check[i] = false;
+            com_check[i] = false;
+        }
+        while (user_num.length < 25) {
+            var ran = parseInt(Math.random() * 100) + 1;
+            if (user_num.indexOf(ran) < 0) {
+                user_num.push(ran);
+            }
+            while (com_num.length < 25) {
+                var ran = parseInt(Math.random() * 100) + 1;
+                if (com_num.indexOf(ran) < 0) {
+                    com_num.push(ran);
+                }
+            }
+            for (var i = 0; i < 25; i++) {
+                user_div[i] = document.getElementById("user_num" + (i + 1));
+                com_div[i] = document.getElementById("com_num" + (i + 1));
+            }
+            for (var i = 0; i < com_div.length; i++) {
+                user_div[i].value = user_num[i];
+                user_div[i].innerHTML = user_num[i];
+                com_div[i].value = com_num[i];
+                com_div[i].innerHTML = com_num[i];
+                com_div[i].style.background = "lightskyblue";
+                user_div[i].style.background = "lightskyblue";
+            }
+        }
+        flag = 1;
+    }
+    function che() {
+        tr = true;
+        if (flag == 0) {
+            str();
+        } else {
+            alert("한번만 눌러주세요.");
+
+        }
+        // confirm("다시하겠습니까?")
+    }
+    function rety() {
+        if (flag == 1) {
+            str();
+            tr = true;
+        }
+
+
+    }
+
+    function user_bingo_check(name) {
+
+        // for(var i=0;i<25;i++){
+        var audio1 = new Audio('Correct 1.mp3');
+        audio1.currentTime = 0;
+
+        if ((name[0] && name[1] && name[2] && name[3] && name[4]) == true || (name[0] && name[5] && name[10] && name[15] && name[20]) == true ||
+            (name[0] && name[6] && name[12] && name[18] && name[24]) == true || (name[4] && name[8] && name[12] && name[16] && name[20]) == true) {
+            audio1.play();
+            alert("유저 빙고 승리");
+            tr = false;
+        }
+        if ((name[5] && name[6] && name[7] && name[8] && name[9]) == true || (name[1] && name[6] && name[11] && name[16] && name[21]) == true) {
+
+            audio1.play();
+            alert("유저 빙고 승리");
+            tr = false;
+        }
+        if ((name[10] && name[11] && name[12] && name[13] && name[14]) == true || (name[2] && name[7] && name[12] && name[17] && name[22]) == true) {
+            audio1.play();
+            alert("유저 빙고 승리");
+            tr = false;
+        }
+        if ((name[15] && name[16] && name[17] && name[18] && name[19]) == true || (name[3] && name[8] && name[13] && name[18] && name[23]) == true) {
+            audio1.play();
+            alert("유저 빙고 승리");
+            tr = false;
+        }
+        if ((name[20] && name[21] && name[22] && name[23] && name[24]) == true || (name[4] && name[9] && name[14] && name[19] && name[24]) == true) {
+            audio1.play();
+            alert("유저 빙고 승리");
+            tr = false;
+        }
+
+        // if(name[0])
+        // }    
+
+    }
+    function com_bingo_check(name) {
+
+        // for(var i=0;i<25;i++){
+        var audio1 = new Audio('Boom 3.mp3');
+        if ((name[0] && name[1] && name[2] && name[3] && name[4]) == true || (name[0] && name[5] && name[10] && name[15] && name[20]) == true ||
+            (name[0] && name[6] && name[12] && name[18] && name[24]) == true || (name[4] && name[8] && name[12] && name[16] && name[20]) == true) {
+            audio1.play();
+            alert("컴퓨터 빙고 패배");
+        }
+        if ((name[5] && name[6] && name[7] && name[8] && name[9]) == true || (name[1] && name[6] && name[11] && name[16] && name[21]) == true) {
+            audio1.play();
+            alert("컴퓨터 빙고 패배");
+        }
+        if ((name[10] && name[11] && name[12] && name[13] && name[14]) == true || (name[2] && name[7] && name[12] && name[17] && name[22]) == true) {
+            audio1.play();
+            alert("컴퓨터 빙고 패배");
+        }
+        if ((name[15] && name[16] && name[17] && name[18] && name[19]) == true || (name[3] && name[8] && name[13] && name[18] && name[23]) == true) {
+            audio1.play();
+            alert("컴퓨터 빙고 패배");
+        }
+        if ((name[20] && name[21] && name[22] && name[23] && name[24]) == true || (name[4] && name[9] && name[14] && name[19] && name[24]) == true) {
+            audio1.play();
+            alert("컴퓨터 빙고 패배");
+        }
+
+        // if(name[0])
+        // }    
+
+    }
+
+    function user(a) {
+
+        // var audio = new Audio('tfile2.mp3');
+
+
+        if (tr != true) {
+            alert("시작버튼을 누르세요");
+            return false;
+        }
+        if(user_div[a-1].style.background == "lightpink"){
+            return;
+        }
+        var user_number = document.getElementById("user_num" + a);
+        for (var i = 1; i < 26; i++) {
+            var com_number = document.getElementById("com_num" + i);
+            user_number.style.background = 'lightpink';
+            // audio.play();
+            if (user_number.value == com_number.value) {
+                com_number.style.background = 'lightpink';
+
+                com_check[i - 1] = true;
+
+                console.log(com_check);
+            }
+            user_check[a - 1] = true;
+
+            // console.log(user_check);
+        }
+        user_bingo_check(user_check);
+        com_bingo_check(com_check);
+        com_bingo_click(a);
+
+    }
+
+
+    function com_bingo_click(a) {
+        var user_num = document.getElementById("user_num" + a).value;
+
+        com_num[com_random];
+        for (var i in com_div) {
+            var com_random = Math.floor(Math.random() * 24);
+            if (com_div[i].value == com_num[com_random]) {
+                if (com_div[i].style.background != "lightpink") {
+                    com_div[i].style.background = "lightpink";
+                    for(var j in user_div){
+                        // alert("asd");
+                        if(user_div[j].value == com_div[i].value){
+                            user_check[j] = true;
+                            user_div[j].style.background = "lightpink";
+                        }
+                    }
+                    // alert(com_num[i]);
+                    break;
+                }
+            }
+        }
+
+
+    }
+
+
+
+</script>
+
+</html>

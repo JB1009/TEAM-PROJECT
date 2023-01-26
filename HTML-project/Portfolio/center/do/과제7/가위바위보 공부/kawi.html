@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위 바위 보!</title>
+    <link rel="stylesheet" type="text/css" href="kawi.css">
+</head>
+<body onload="textChange()">
+    <div id="main_wrap">
+        <div class="rsp_wrap">
+            <div class="game_title">가위 바위 보!</div>
+            <div class="com_wrap">
+                <div id="result1"></div>
+                <div class="rsp_img" id="rspChange">✊</div>
+                <div id="result2"></div>
+            </div>
+            <div class="user_wrap">
+                <div class="rock">
+                    <button id="rock_bt" onclick="clicks(this)">✊</button>
+                </div>
+                <div class="scissors">
+                    <button id="scissors_bt" onclick="clicks(this)">✌</button>
+                </div>
+                <div class="paper">
+                    <button id="paper_bt" onclick="clicks(this)">🖐</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+</body>
+<script>
+    //***가위바위보 스크립트 시작***
+    var rsp_count = 0; // 3가지 가위바위보 이미지를 돌리기위한 변수
+    var rsp_text = document.getElementById("rspChange"); // 3가지 가위바위보 이미지를 출력할 img태그의 id값 저장
+    var result1 = document.getElementById("result1"); // 결과를 저장할 div태그의 id값 저장1
+    var result2 = document.getElementById("result2"); // 결과를 저장할 div태그의 id값 저장1
+    var rsp_animate; // setTimeout을 사용하기위한 변수
+    var isRsp = false; // 이미지가 돌아가기전에 게임 시작를 방지하기위한 변수
+    //**3가지 가위바위보 이미지 반복 스크립트 시작**
+    function textChange(){ // body태그에 onload 이벤트를 사용하여
+                           // 브라우저가 실행될때 실행되는 이벤트
+        result1.innerHTML = ""; // 시작할때마다 결과 초기화1
+        result2.innerHTML = ""; // 시작할때마다 결과 초기화2
+        isRsp = false; // 게임을 시작할수있는 변수 저장
+        if(rsp_count == 0){
+            rsp_text.innerHTML = "✊"; // 3가지 가위바위보 텍스트(또는 이미지)를 출력
+            rsp_count++; // 다음 텍스트(또는 이미지) 출력을 위한 +1 연산
+        }
+        else if(rsp_count == 1){
+            rsp_text.innerHTML = "✌"; // 3가지 가위바위보 텍스트(또는 이미지)를 출력
+            rsp_count++; // 다음 텍스트(또는 이미지) 출력을 위한 +1 연산
+        }
+        else{
+            rsp_text.innerHTML = "🖐"; // 3가지 가위바위보 텍스트(또는 이미지)를 출력
+            rsp_count = 0; // 처음 텍스트(또는 이미지)로 돌아가기 위한 변수 초기값으로 대입
+        }
+        rsp_animate = setTimeout(textChange,100); // setTimeout()메소드를 사용하여 textChange()를 1번더 실행
+                                                  // 즉 정지시키는 clearTimeout()을 실행하기전까진 무한 반복
+                                                  // setTimeout(메소드 또는 함수, 지연시간)
+                                                  // setTimeout(textChange, 100) 의미는 100ms(0.1초) 뒤에 
+                                                  // textChange()메소드를 실행해라
+    }
+    //**3가지 가위바위보 이미지 반복 스크립트 종료**
+
+    //**유저 가위바위보 클릭 스크립트 시작**
+    function clicks(rsp){ // clicks(rsp)안에 rsp의 의미는 매개변수로
+                          //onclick="clicks(this)"에 자기 자신을 가르키기 위한 매개변수
+        if(isRsp == true){
+            return; // 메소드를 여기서 종료한다.
+        }
+        clearTimeout(rsp_animate); // 3가지 가위바위보 이미지를 반복하는 textChange()메소드 정지
+        isRsp = true; // 게임이 시작되었다는 변수 대입
+        var com = Math.floor(Math.random()*3)+1; // 컴퓨터 가위바위보 값 랜덤 저장
+        var user = rsp.id; // rsp의 id값을 저장
+        if(user == "rock_bt"){ // 변수 user에 저장되어 있는 값이 "rock_bt"면 아래 내용 실행
+            if(com == 0){ // 컴퓨터는 0 = 바위, 1 = 가위, 2 = 보로 정리
+                rsp_text.innerHTML = "✊"; // 3가지 가위바위보 이미지가 반복되는 텍스트(또는 이미지)태그에
+                                           // 컴퓨터 값에 맞는 텍스트(또는 이미지) 출력
+                result1.innerHTML = "비겼다🤝"; // 결과 div태그에 결과값 출력
+                result2.innerHTML = "비겼다🤝"; // 결과 div태그에 결과값 출력
+            }
+            else if(com == 1){
+                rsp_text.innerHTML = "✌";
+                result1.innerHTML = "이겼다👍";
+                result2.innerHTML = "이겼다👍";
+            }
+            else{
+                rsp_text.innerHTML = "🖐";
+                result1.innerHTML = "😭졌다😭";
+                result2.innerHTML = "😭졌다😭";
+            }
+        }
+        if(user == "scissors_bt"){
+            if(com == 0){
+                rsp_text.innerHTML = "✊";
+                result1.innerHTML = "😭졌다😭";
+                result2.innerHTML = "😭졌다😭";
+            }
+            else if(com == 1){
+                rsp_text.innerHTML = "✌";
+                result1.innerHTML = "비겼다🤝";
+                result2.innerHTML = "비겼다🤝";
+            }
+            else{
+                rsp_text.innerHTML = "🖐";
+                result1.innerHTML = "이겼다👍";
+                result2.innerHTML = "이겼다👍";
+            }
+        }
+        if(user == "paper_bt"){
+            if(com == 0){
+                rsp_text.innerHTML = "✊";
+                result1.innerHTML = "이겼다👍";
+                result2.innerHTML = "이겼다👍";
+            }
+            else if(com == 1){
+                rsp_text.innerHTML = "✌";
+                result1.innerHTML = "😭졌다😭";
+                result2.innerHTML = "😭졌다😭";
+            }
+            else{
+                rsp_text.innerHTML = "🖐";
+                result1.innerHTML = "비겼다🤝";
+                result2.innerHTML = "비겼다🤝";
+            }
+        }
+        rsp_animate = setTimeout(textChange,2000); // clearTimeout()메소드로 정지된
+                                                   // 3가지 가위바위보 이미지 반복 실행
+    }
+    //**유저 가위바위보 클릭 스크립트 종료**
+
+    //***가위바위보 스크립트 종료***
+</script>
+</html>

@@ -1,0 +1,41 @@
+body{margin: 0;
+     padding: 0;
+     box-sizing: border-box;}
+
+.container{display: flex;
+           flex-direction: column;
+           width: 100%;
+           height: 100vh;}
+
+.header{
+        height: 100px;
+        display: flex;}
+
+.head_left{background: rgb(172, 56, 56);
+           width: 2000px;
+            height: 50px;}
+
+.head_h{margin: 0 auto;
+        width: 1000px;
+        height: 100px;
+        display: flex;
+        position: relative;
+        background: #069484;}
+
+.head_h .head_left ul{
+                      list-style-type: none;
+                      display: flex;
+                      }
+
+.login{float: right;
+       position: absolute;
+       display: block;}               
+
+
+
+
+
+
+
+
+

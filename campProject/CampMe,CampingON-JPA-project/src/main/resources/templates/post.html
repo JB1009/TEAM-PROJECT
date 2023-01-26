@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div>
+    <input type="text" id="postType" placeholder="type">
+    <input type="text" id="postTitle" placeholder="title">
+    <input type="text" id="postText" placeholder="text">
+    <input type="number" id="postKind" placeholder="kind">
+    <input type="number" id="post_user_number" placeholder="user_number">
+    <button onclick="doPost()">게시판추가</button>
+  </div>
+  <div>
+    <input type="text" id="deletePost">
+    <button onclick="doDelete()">게시판삭제</button>
+  </div>
+
+  <table style="width:1000px; text-align:center;" id="main">
+    <tr>
+      <th>postNumber</th>
+      <th>postType</th>
+      <th>postTitle</th>
+      <th>postDate</th>
+      <th>postKind</th>
+      <th>userNumber</th>
+    </tr>
+  </table>
+  <div class="pagination">
+    <a class="previous">Previous</a>
+
+    <a>Next</a>
+  </div>
+
+  <div>상세조회</div>
+  <div>
+    <input type="number" id="updatePostNumber">
+    <input type="number" id="updataPostType">
+    <input type="text" id="updataPostTitle">
+    <input type="text" id="updataPostText">
+    <input type="number" id="updataPostKind">
+    <button onclick="doUpdate()"> 게시판 수정 </button>
+  </div>
+  <table style="width:1000px; text-align:center;" class="detailPost">
+    <tr>
+      <th>postNumber</th>
+      <th>postType</th>
+      <th>postTitle</th>
+      <th>postText</th>
+      <th>postDate</th>
+      <th>postKind</th>
+      <th>userNumber</th>
+    </tr>
+    <tr>
+      <td id="detailPostNumber"></td>
+      <td id="detailPostType"></td>
+      <td id="detailPostTitle"></td>
+      <td id="detailPostText"></td>
+      <td id="detailPostDate"></td>
+      <td id="detailPostKind"></td>
+      <td id="detailUserNumber"></td>
+    </tr>
+  </table>
+  <table class="commentArea"></table>
+  <hr>
+  <input type="text" id="comment" placeholder="댓글 입력">
+  <input type="number" id="postNumber" placeholder="게시판 번호 입력">
+  <input type="number" id="userNumber" placeholder="유저 번호 입력">
+  <button onclick="writeComment()">작성</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+<script>
+
+  let offset = 0;
+  let pageSize = 5;
+  let column = 'postNumber';
+  let pageSum = 0;
+  let tr = "";
+
+  doInquire();
+  // 페이징 전 1페이지 조회
+  function doInquire() {
+    $.ajax({
+      url: '/post/pagination?offset=0&pageSize=5&column=postNumber',
+      type: 'GET',
+      dataType: 'json',
+      success: function (response) {
+
+        console.log(response.list.content.length);
+        for (var i = 0; i < response.list.content.length; i++) {
+          // 공지사항 데이터만 필요할 경우
+          // if(response[i].postType == 1)
+
+          // 게시판의 자유게시판내용이 필요할경우
+          // if(response[i].postType == 2 && response[i].postkind == 1)
+
+          // tr td 생성
+          tr = $("<tr class='seenPost' onclick='doDetail(" + response.list.content[i].postNumber + ")'> </tr>");
+          postNumber = $("<td>" + response.list.content[i].postNumber + "</td>");
+          postType = $("<td>" + response.list.content[i].postType + "</td>");
+          postTitle = $("<td>" + response.list.content[i].postTitle + "</td>");
+
+          // 년 월 일까지만 나올수잇게 split 활용
+          postDate = $("<td id='getPostDate'>" + response.list.content[i].postDate.split("T")[0] + "</td>");
+          postKind = $("<td>" + response.list.content[i].postKind + "</td>");
+          userNumber = $("<td id='getUserNumber'>" + response.list.content[i].user.userNumber + "</td>");
+
+          tr.append(postNumber);
+          tr.append(postType);
+          tr.append(postTitle);
+          tr.append(postDate);
+          tr.append(postKind);
+          tr.append(userNumber);
+
+
+
+          // a = $("<a onclick='doJoin("+(i)+")'>"+(i+1)+"</a>")
+
+          // $(".previous").append(a);
+
+          // table id = main 에 tr 데이터 적용
+          $("#main").append(tr);
+
+        }
+
+      },
+    });
+    // 페이징 전용 ajax
+    $.ajax({
+      url: '/post/paging',
+      type: 'GET',
+      dataType: 'json',
+      success: function (response) {
+        for (var i = 0; i < response.length; i++) {
+          if (i % pageSize == 0) {
+            a = $("<a onclick='doJoin(" + (i / pageSize) + ")'>" + Math.ceil((i + 1) / pageSize) + "</a>");
+            $(".previous").append(a);
+          }
+        }
+      },
+    });
+  }
+
+
+  // 게시판 추가
+  function doPost() {
+
+    post_type = $("#postType").val();
+    post_title = $("#postTitle").val();
+    post_text = $("#postText").val();
+    post_kind = $("#postKind").val();
+    post_user_number = $("#post_user_number").val();
+
+    var jsonData = {
+      postType: post_type,
+      postTitle: post_title,
+      postText: post_text,
+      postKind: post_kind,
+      user: {
+        userNumber: post_user_number
+      }
+    }
+
+
+
+    $.ajax({
+      url: '/post/write',
+      type: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify(jsonData),
+      dataType: 'json',
+      success: function (response) {
+        alert("추가완료!");
+        location.reload();
+      },
+    });
+  }
+
+  // tr클릭시 상세조회
+  function doDetail(postNumber) {
+    console.log(postNumber)
+    $.ajax({
+      url: '/post/detail/' + postNumber,
+      type: 'GET',
+      dataType: 'json',
+      success: function (response) {
+
+        $('#detailPostNumber').text(response.postNumber);
+        $('#detailPostType').text(response.postType);
+        $('#detailPostTitle').text(response.postTitle);
+        $('#detailPostText').text(response.postText);
+        $('#detailPostKind').text(response.postKind);
+        $('#detailPostDate').text(response.postDate.split("T")[0]);
+        $('#detailUserNumber').text(response.user.userName);
+      },
+    });
+
+    // 게시글에 맞는 댓글 불러오기
+    var table = $('.commentArea');
+    $.ajax({
+      url: '/post/comment/' + postNumber,
+      type: 'GET',
+      dataType: 'json',
+      success: function(response){
+        console.log(response);
+        for(var i=0; i<response.length; i++){
+          table.append('<tr><td>댓글 작성자 : ' + response[i].user.userNickname +' - 댓글 내용 : ' + response[i].commentText + "<button onclick='commentDelete()'>삭제</button></td></tr>");
+        }
+      }
+    });
+  }
+
+
+  // 전체조회 
+  // 페이징,postNumber 기준 정렬
+  function doJoin(offset) {
+    // 페이지가 눌릴떄마다 이전 보여진 데이터 삭제 
+    $("tr").remove(".seenPost")
+    offset = offset; // 페이지 번호 (0부터 시작)
+    pageSize = 5; //한페이지에 보여줄 데이터의 갯수
+    column = 'postNumber'; //정렬할 컬럼명
+
+    $.ajax({
+      url: '/post/pagination?offset=' + offset + '&pageSize=' + pageSize + '&column=' + column + '',
+      type: 'GET',
+      dataType: 'json',
+      success: function (response) {
+
+        for (var i = 0; i < response.list.content.length; i++) {
+
+          // 공지사항 데이터만 필요할 경우
+          // if(response[i].postType == 1)
+
+          // 게시판의 자유게시판내용이 필요할경우
+          // if(response[i].postType == 2 && response[i].postkind == 1)
+
+          // tr td 생성
+
+
+          tr = $("<tr class='seenPost' onclick='doDetail(" + response.list.content[i].postNumber + ")'> </tr>");
+
+          postNumber = $("<td id=''>" + response.list.content[i].postNumber + "</td>");
+          postType = $("<td>" + response.list.content[i].postType + "</td>");
+          postTitle = $("<td>" + response.list.content[i].postTitle + "</td>");
+          // 년 월 일까지만 나올수잇게 split 활용
+          postDate = $("<td id='getPostDate'>" + response.list.content[i].postDate.split("T")[0] + "</td>");
+          // postText = $("<td>" + response.list.content[i].postText + "</td>");
+          postKind = $("<td>" + response.list.content[i].postKind + "</td>");
+          userNumber = $("<td id='getUserNumber'>" + response.list.content[i].user.userNumber + "</td>");
+
+          tr.append(postNumber);
+          tr.append(postType);
+          tr.append(postTitle);
+          tr.append(postDate);
+          // tr.append(postText);
+          tr.append(postKind);
+          tr.append(userNumber);
+
+          // table id = main 에 tr 데이터 적용
+          $("#main").append(tr);
+
+        }
+
+      },
+    });
+
+  }
+
+  // 게시판 삭제
+  function doDelete() {
+    var deletePost = $('#deletePost').val();
+
+    $.ajax({
+      url: '/post/delete/' + deletePost,
+      type: 'DELETE',
+      dataType: 'json',
+      success: function (response) {
+        alert('삭제완료');
+        location.reload();
+      },
+    });
+  }
+  // 게시물 수정
+  function doUpdate() {
+    var updatePostNumber = $("#updatePostNumber").val();
+    var updataPostType = $('#updataPostType').val();
+    var updataPostTitle = $('#updataPostTitle').val();
+    var updataPostText = $('#updataPostText').val();
+    var updataPostKind = $('#updataPostKind').val();
+    var updatePostDate = $("#getPostDate").text();
+    var updateUserNumber = $("#getUserNumber").text();
+    console.log(updatePostDate);
+
+    var jsonData = {
+      postNumber: updatePostNumber,
+      postType: updataPostType,
+      postDate: updatePostDate,
+      postTitle: updataPostTitle,
+      postText: updataPostText,
+      postKind: updataPostKind,
+      user: {
+        userNumber: updateUserNumber
+      }
+    };
+    $.ajax({
+      url: '/post/modify',
+      type: 'PATCH',
+      contentType: 'application/json', //서버에 json 타입으로 보낼 예정(요청)
+      data: JSON.stringify(jsonData),
+      dataType: 'json',
+      success: function (response) {
+        alert('수정완료');
+        location.reload();
+      },
+    });
+  }
+
+  function writeComment(){
+    var postNumber = $('#postNumber').val();
+    var userNumber = $('#userNumber').val();
+    var comment = $('#comment').val();
+
+    console.log(postNumber, userNumber)
+
+    if(postNumber.length <= 0){
+      alert("게시물을 누르세요");
+      return false;
+    }
+
+    var jsonData = {
+      commentText : comment,
+      user: {
+        userNumber : userNumber
+      },
+      post: {
+        postNumber: postNumber
+      }
+    };
+
+    $.ajax({
+      url: '/comment/write',
+      type: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify(jsonData),
+      dataType: 'json',
+      success: function(response){
+        alert('댓글 작성 완료');
+        location.reload
+      }
+    });
+
+
+
+  }
+</script>
+
+</html>

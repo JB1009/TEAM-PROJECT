@@ -1,0 +1,41 @@
+.main-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.slideImgBox {
+  height: auto;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: rgba(128, 128, 128, 0.596);
+}
+
+.slick-prev {
+  left: 5px;
+  z-index: 9999;
+}
+
+.slick-next {
+  right: 5px;
+}
+.slick-dots {
+  margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+}
+@media only screen and (min-width: 1024px) {
+}

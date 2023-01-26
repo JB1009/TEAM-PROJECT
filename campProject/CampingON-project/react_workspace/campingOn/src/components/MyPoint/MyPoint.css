@@ -1,0 +1,71 @@
+.titleFontMyPoint {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  height: 60px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 100;
+  width: 100px;
+  border-bottom: 2px solid black;
+}
+.availableMyPointBox {
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 1%;
+  width: 98%;
+  text-align: center;
+  background: var(--secondary-color);
+}
+.avilableFontMyPoint {
+  height: 30px;
+  line-height: 35px;
+  font-size: 20px;
+}
+.avilableTotalPoint {
+  height: 35px;
+  line-height: 35px;
+  font-size: 25px;
+  font-weight: 700;
+}
+.saveHistoryMyPoint {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 90%;
+}
+.saveTitleMyPoint {
+  width: 100%;
+  display: flex;
+  font-size: 25px;
+  padding: 2%;
+}
+.saveTableMyPoint {
+  margin: 0 auto;
+  width: 100%;
+}
+.fontIconMyPoint {
+  margin-left: 10px;
+}
+.saveTableMyPoint tr td {
+  padding: 0;
+  height: 35px;
+  font-size: 15px;
+  text-align: center;
+}
+.saveTableMyPoint th {
+  height: 35px;
+  border: 1px solid grey;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: rgb(235, 233, 233);
+}
+.saveFirstMyPoint {
+  width: 30%;
+}
+.saveSecondMyPoint {
+  width: 45%;
+}
+.saveThirdMyPoint {
+  width: 25%;
+}

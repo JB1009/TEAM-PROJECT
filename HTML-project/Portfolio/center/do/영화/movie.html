@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>해외영화 사이트</title>
+    <!-- 구글 무료 폰트 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 아이콘 -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../movie/movie.css" />
+  </head>
+  <body>
+    <!-- class이름에 row를 주면 flex를 줄 예정 -->
+
+    <!-- 영화 리스트 -->
+    <div class="container">
+      <!-- 영화 상세정보 -->
+      <div class="movie-section">
+        <div class="back">
+          <!-- 뒤로가기 -->
+          <a href="#" onclick="doClose()">◀ Back to Home</a>
+        </div>
+        <div class="section-left">
+          <!-- 영화 상세정보 -->
+          <!-- 영화 제목 -->
+          <div id="movie-title" class="movie-title"></div>
+          <!-- 영화 평점, 상영시간, 개봉년도 -->
+          <div class="movie-rating">
+            <span
+              >Rating <i class="fa fa-star"></i> : <span id="rating"></span>
+            </span>
+            <span
+              >Votes <i class="fa fa-thumbs-up"></i> : <span id="votes"></span>
+            </span>
+            <span
+              >Runtime <i class="fa fa-film"></i> : <span id="runtime"></span>
+            </span>
+            <span
+              >Year <i class="fa fa-calendar"></i> : <span id="year"></span>
+            </span>
+          </div>
+          <!-- 영화 줄거리 -->
+          <div id="movie-plot" class="movie-plot"></div>
+          <!-- 영화 출연감독, 배우, 장르, 수상내역 -->
+          <div class="movie-info">
+            <div>
+              <span>Director</span>
+              <span id="director"></span>
+            </div>
+            <div>
+              <span>Stars</span>
+              <span id="stars"></span>
+            </div>
+            <div>
+              <span>Generes</span>
+              <span id="generes"></span>
+            </div>
+            <div>
+              <span>Languages</span>
+              <span id="languages"></span>
+            </div>
+            <div>
+              <span>Awards</span>
+              <span id="awards"></span>
+            </div>
+          </div>
+        </div>
+        <div id="poster-img" class="section-right">
+          <!-- 영화 포스터 이미지 -->
+        </div>
+      </div>
+      <div class="movie-list">
+        <div class="site-title">
+          <h2>MUNDO's FLEX</h2>
+        </div>
+        <div class="movie-row">
+          <div class="item" data-tilt onclick="getMovieDetailInfo(this)">
+            <div id="movie-0" class="poster"></div>
+            <h4 id="movie-title-0" class="title"></h4>
+            <p id="movie-year-0" class="year"></p>
+            <input id="movie-id-0" type="hidden" />
+          </div>
+          <div class="item" data-tilt onclick="getMovieDetailInfo(this)">
+            <div id="movie-1" class="poster"></div>
+            <h4 id="movie-title-1" class="title"></h4>
+            <p id="movie-year-1" class="year"></p>
+            <input id="movie-id-1" type="hidden" />
+          </div>
+          <div class="item" data-tilt onclick="getMovieDetailInfo(this)">
+            <div id="movie-2" class="poster"></div>
+            <h4 id="movie-title-2" class="title"></h4>
+            <p id="movie-year-2" class="year"></p>
+            <input id="movie-id-2" type="hidden" />
+          </div>
+          <div class="item" data-tilt onclick="getMovieDetailInfo(this)">
+            <div id="movie-3" class="poster"></div>
+            <h4 id="movie-title-3" class="title"></h4>
+            <p id="movie-year-3" class="year"></p>
+            <input id="movie-id-3" type="hidden" />
+          </div>
+          <div class="item" data-tilt onclick="getMovieDetailInfo(this)">
+            <div id="movie-4" class="poster"></div>
+            <h4 id="movie-title-4" class="title"></h4>
+            <p id="movie-year-4" class="year"></p>
+            <input id="movie-id-4" type="hidden" />
+          </div>
+        </div>
+        <div class="series-row">
+          <div class="item" data-tilt onclick="getMovieDetailInfo(this)">
+            <div id="Series-0" class="poster"></div>
+            <h4 id="series-title-0" class="title"></h4>
+            <p id="series-year-0" class="year"></p>
+            <input id="series-id-0" type="hidden" />
+          </div>
+          <div class="item" data-tilt onclick="getMovieDetailInfo(this)">
+            <div id="Series-1" class="poster"></div>
+            <h4 id="series-title-1" class="title"></h4>
+            <p id="series-year-1" class="year"></p>
+            <input id="series-id-1" type="hidden" />
+          </div>
+          <div class="item" data-tilt onclick="getMovieDetailInfo(this)">
+            <div id="Series-2" class="poster"></div>
+            <h4 id="series-title-2" class="title"></h4>
+            <p id="series-year-2" class="year"></p>
+            <input id="series-id-2" type="hidden" />
+          </div>
+          <div class="item" data-tilt onclick="getMovieDetailInfo(this)">
+            <div id="Series-3" class="poster"></div>
+            <h4 id="series-title-3" class="title"></h4>
+            <p id="series-year-3" class="year"></p>
+            <input id="series-id-3" type="hidden" />
+          </div>
+          <div class="item" data-tilt onclick="getMovieDetailInfo(this)">
+            <div id="Series-4" class="poster"></div>
+            <h4 id="series-title-4" class="title"></h4>
+            <p id="series-year-4" class="year"></p>
+            <input id="series-id-4" type="hidden" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.js"
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"
+  ></script>
+  <script src="../js/vanilla-tilt.js"></script>
+  <script>
+    const API_KEY = '9935f833';
+    initMovie(); // 함수호출
+    initSeries(); // 함수호출
+
+    function initMovie() {
+      var search = 'Shrek';
+      var type = 'movie';
+
+      $.ajax({
+        url:
+          'http://www.omdbapi.com/?apikey=' +
+          API_KEY +
+          '&s=' +
+          search +
+          '&type=' +
+          type +
+          '',
+        type: 'GET',
+        dataType: 'json',
+        success: function (response) {
+          // append : 추가하다.
+          //movie-5
+          for (var i = 0; i < 5; i++) {
+            // 영화 포스터 5개만 가져오기
+            var posterUrl = response.Search[i].Poster;
+            // img 태그 생성 포스터 이미지 경로 src에 넣어주기
+            var html = '<img src="' + posterUrl + '">';
+            // id가 movie-0 ~ movie-4 인 태그에 영화 포스터 사진 append 하기!
+            $('#movie-' + i).append(html);
+            $('#movie-title-' + i).append(response.Search[i].Title);
+            $('#movie-year-' + i).append(response.Search[i].Year);
+            // input hidden에 영화고유 아이디 추가하기!
+            $('#movie-id-' + i).val(response.Search[i].imdbID);
+          }
+        },
+      });
+    }
+
+    function initSeries() {
+      var search = 'The Boss Baby';
+      var type = 'movie';
+      $.ajax({
+        url:
+          'http://www.omdbapi.com/?apikey=' +
+          API_KEY +
+          '&s=' +
+          search +
+          '&type=' +
+          type +
+          '',
+        type: 'GET',
+        dataType: 'json',
+        success: function (response) {
+          // append : 추가하다.
+          //movie-5
+          for (var i = 0; i < 5; i++) {
+            // 영화 포스터 5개만 가져오기
+            var posterUrl = response.Search[i].Poster;
+            // img 태그 생성 포스터 이미지 경로 src에 넣어주기
+            var html = '<img src="' + posterUrl + '">';
+            // id가 movie-0 ~ movie-4 인 태그에 영화 포스터 사진 append 하기!
+            $('#Series-' + i).append(html);
+            $('#series-title-' + i).append(response.Search[i].Title);
+            $('#series-year-' + i).append(response.Search[i].Year);
+            $('#series-id-' + i).val(response.Search[i].imdbID);
+          }
+        },
+      });
+    }
+
+    function getMovieDetailInfo(obj) {
+      //클릭한 영화 고유 아이디 콘솔에 출력하기
+      console.log(obj.children[3].value);
+      var movieId = obj.children[3].value;
+      //http://www.omdbapi.com/?apikey=9935f833&i=tt0433400&plot=full
+      $.ajax({
+        url:
+          'http://www.omdbapi.com/?apikey=' +
+          API_KEY +
+          '&i=' +
+          movieId +
+          '&plot=full',
+        type: 'GET',
+        dataType: 'json',
+        success: function (response) {
+          //영화 상세정보 확인!
+          // console.log(response);
+          // hidden -> visible 변경
+          $('.movie-section').css('visibility', 'visible');
+          $('.movie-list').css('opacity', ' 0.3');
+          // 영화제목
+          $('#movie-title').empty();
+          $('#movie-title').append(response.Tile);
+
+          $('#rating').empty();
+          $('#rating').append(response.imdbRating);
+
+          $('#votes').empty();
+          $('#votes').append(response.imdbVotes);
+
+          $('#runtime').empty();
+          $('#runtime').append(response.Runtime);
+
+          $('#year').empty();
+          $('#year').append(response.Year);
+
+          $('#movie-plot').empty();
+          $('#movie-plot').append(response.Plot);
+
+          $('#director').empty();
+          $('#director').append(response.Director);
+
+          $('#stars').empty();
+          $('#stars').append(response.Actors);
+
+          $('#generes').empty();
+          $('#generes').append(response.Genre);
+
+          $('#languages').empty();
+          $('#languages').append(response.Language);
+
+          $('#awards').empty();
+          $('#awards').append(response.Awards);
+
+          $('#series').empty();
+          $('#series').append(response.Series);
+
+          var html = '<img src="' + response.Poster + '">';
+          $('#poster-img').empty();
+          $('#poster-img').append(html);
+        },
+      });
+    }
+
+    function doClose() {
+      $('.movie-section').css('visibility', 'hidden');
+      $('.movie-list').css('opacity', 1);
+    }
+  </script>
+</html>

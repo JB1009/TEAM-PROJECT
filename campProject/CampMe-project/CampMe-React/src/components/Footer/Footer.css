@@ -1,0 +1,75 @@
+.footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1% 0;
+}
+.footer .Icons img {
+  width: 40px;
+  margin: 5px;
+  cursor: pointer;
+  border: 1px solid #85c89a;
+  border-radius: 10px;
+}
+.waterMark {
+  color: rgb(120, 120, 123);
+  text-align: center;
+  /* padding: 5px; */
+  font-size: 15px;
+}
+.footerInform {
+  padding: 0 8%;
+  font-size: 15px;
+  color: black;
+  line-height: 1.8;
+  text-align: center;
+}
+strong {
+  font-size: 20px;
+}
+.footerInfo {
+  width: 100%;
+}
+.footerInfomation {
+  width: 100%;
+  /* display: flex; */
+  text-align: center;
+}
+.businessInform {
+  width: 90%;
+  margin: 0 auto;
+}
+/* 모바일 */
+@media only screen and (max-width: 768px) {
+  strong {
+    font-size: 18px;
+  }
+  .businessInform {
+    font-size: 15px;
+  }
+}
+/* 태블릿 */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .footer .Icons img {
+    width: 60px;
+    margin: 10px;
+  }
+}
+/* 웹 */
+@media only screen and (min-width: 1024px) {
+  .footer .Icons img {
+    width: 70px;
+    margin: 10px;
+  }
+  strong {
+    font-size: 15px;
+  }
+  .businessInform {
+    width: 800px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+}

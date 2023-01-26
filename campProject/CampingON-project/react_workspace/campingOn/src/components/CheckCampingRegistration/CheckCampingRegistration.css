@@ -1,0 +1,66 @@
+.CheckCampingRegistrationPage {
+  font-size: 20px;
+  text-align: center;
+}
+.registrationTitle {
+  font-size: 25px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+table {
+  width: 90%;
+  border: 1px solid gray;
+  border-collapse: collapse;
+  margin: 5px auto;
+  table-layout: fixed;
+}
+
+table tr td {
+  border: 1px solid gray;
+  height: 40px;
+  padding: 10px;
+  text-align: left;
+}
+.campsiteIntroduction {
+  border: none;
+  height: 110px;
+  display: block;
+  overflow: hidden;
+}
+
+.registrationList {
+  width: 90%;
+  height: 200px;
+  border: none;
+  border-bottom: 1px solid var(--secondary-color);
+  margin: 5px auto;
+}
+.registrationTable tr td {
+  font-size: 17px;
+}
+.registrationList tr td {
+  padding: 0 5px;
+  width: 50%;
+  border: none;
+}
+.registrationImgBox {
+  height: 150px;
+  border-radius: 10px;
+  background-color: aqua;
+}
+.showRegistration {
+  width: 90%;
+  height: 30px;
+  line-height: 30px;
+  background-color: rgb(149, 210, 149);
+  margin: 5px auto;
+}
+.crudButton {
+  font-size: 18px;
+  border: none;
+  background: none;
+  margin-left: 5px;
+}
+.crudButton:hover {
+  color: var(--primary-color);
+}

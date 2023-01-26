@@ -1,0 +1,305 @@
+.boardDetailBox {
+  width: 100%;
+  height: 95%;
+  margin: 3% 0;
+}
+
+.boardDetailSection {
+  width: 94%;
+  height: auto;
+  border: 2px solid #85c89a;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 3%;
+}
+.boardDetailInfomation {
+  width: 92%;
+  padding: 0 4%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.boardDetailTitle {
+  height: 50px;
+  line-height: 50px;
+  text-align: left;
+  font-size: 25px;
+  font-weight: 800;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.boardDetailDate {
+  text-align: right;
+  height: 50px;
+}
+.boardDetailDate button {
+  border: none;
+  background: white;
+  cursor: pointer;
+}
+.boardDetailDate button:hover {
+  color: #85c89a;
+}
+.boardDetailKind {
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+}
+.boardDetailNickname {
+  height: 30px;
+  line-height: 30px;
+  text-align: right;
+  font-size: 17px;
+  font-weight: 600;
+}
+.boardDetailText {
+  width: 92%;
+  height: auto;
+  padding: 2% 4%;
+  border-top: 1px solid lightgray;
+  margin-top: 2%;
+}
+
+.boardDetailFooter {
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+  margin: 10px auto;
+  border: 1px solid #85c89a;
+  border-radius: 10px;
+}
+
+.boardDetailCommentBox {
+  width: 90%;
+  height: auto;
+  padding: 2%;
+  border: 1px solid #85c89a;
+  border-radius: 10px;
+  margin: 3%;
+  display: flex;
+  align-items: center;
+}
+
+.comment {
+  width: 92%;
+  height: 80px;
+  padding: 2%;
+  outline: none;
+  border: 0;
+  resize: none;
+}
+
+.commentsubmit {
+  width: 8%;
+  height: 13vh;
+  background: #85c89a;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.commentsubmit:hover {
+  background: green;
+  color: white;
+}
+
+.commentArea {
+  width: 94%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.commentArea hr {
+  opacity: 0.7;
+}
+
+.commentTable {
+  width: 100%;
+  height: auto;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.tableComment {
+  width: 70%;
+}
+.commentTable thead {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+.commentTable thead th {
+  padding: 10px 0;
+}
+.commentTable tbody td {
+  border-bottom: 1px solid lightgray;
+  padding: 5px;
+}
+
+.commentText {
+  text-align: left;
+  overflow: hidden;
+  white-space: pre-line;
+  text-overflow: ellipsis;
+}
+
+td.textOverDefault {
+  white-space: normal; /*기본값*/
+
+  text-overflow: clip; /*기본값*/
+}
+.commentWriter,
+.commentDate {
+  text-align: center;
+}
+.commentDelete button {
+  background: white;
+  border: none;
+}
+.commentDelete button:hover {
+  cursor: pointer;
+  color: #85c89a;
+}
+.tableDate {
+  width: 12%;
+}
+.tableNickname {
+  width: 10%;
+}
+@media only screen and (max-width: 768px) {
+  .boardDetailBox {
+    width: 90%;
+    height: 95%;
+    margin: 2%;
+  }
+  .boardDetailSection {
+    width: 94%;
+    height: auto;
+    border: 2px solid #85c89a;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 3%;
+  }
+
+  .boardDetailTitle {
+    width: 75%;
+    height: auto;
+    line-height: 50px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .boardDetailDate {
+    width: 90px;
+    text-align: right;
+    height: 50px;
+  }
+  .boardDetailFooter {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+    border: 1px solid #85c89a;
+    border-radius: 10px;
+  }
+  .boardDetailCommentBox {
+    width: 90%;
+    height: auto;
+    padding: 2%;
+    border: 1px solid #85c89a;
+    border-radius: 10px;
+    margin: 3%;
+    display: flex;
+    align-items: center;
+  }
+  .commentsubmit {
+    width: 30%;
+    height: 10vh;
+    background: #85c89a;
+    border-radius: 10px;
+    border: 0;
+    font-size: 17px;
+  }
+  .tableComment {
+    width: 55%;
+  }
+  .tableNickname {
+    width: 30%;
+  }
+  .tableDate {
+    display: none;
+  }
+  .commentDate {
+    display: none;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .boardDetailBox {
+    width: 90%;
+    height: 95%;
+    margin: 2%;
+  }
+  .boardDetailSection {
+    width: 94%;
+    height: auto;
+    border: 2px solid #85c89a;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 3%;
+  }
+
+  .boardDetailTitle {
+    width: 75%;
+    height: auto;
+    line-height: 50px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .boardDetailDate {
+    width: 90px;
+    text-align: right;
+    height: 50px;
+  }
+  .boardDetailFooter {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+    border: 1px solid #85c89a;
+    border-radius: 10px;
+  }
+  .boardDetailCommentBox {
+    width: 90%;
+    height: auto;
+    padding: 2%;
+    border: 1px solid #85c89a;
+    border-radius: 10px;
+    margin: 3%;
+    display: flex;
+    align-items: center;
+  }
+  .commentsubmit {
+    width: 10%;
+    height: 10vh;
+    background: #85c89a;
+    border-radius: 10px;
+    border: 0;
+    font-size: 17px;
+  }
+  .tableComment {
+    width: 60%;
+  }
+  .tableNickname {
+    width: 15%;
+  }
+  .tableDate {
+    width: 15%;
+  }
+  .commentDelete {
+    align-items: center;
+  }
+  .commentDelete button {
+    width: 80%;
+    border-radius: 5px;
+  }
+}

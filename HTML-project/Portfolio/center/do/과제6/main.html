@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main.html</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a href="main.html"><img src="main_logo.jpg"></a>
+            </div>
+            <div class="header_img">
+                <a href="main.html"><img src="main_sub_img.jpg"></a>
+            </div>
+        </div>
+        <div class="center">
+            <div class="nav">
+                <div class="login">
+                    <div class="login_box">
+                        <div class="id">
+                            <p>아이디</p>
+                        </div>
+                        <div>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="login_box">
+                        <div class="pw">
+                            <p>비밀번호</p>
+                        </div>
+                        <div>
+                            <input type="password">
+                        </div>
+                    </div>
+                    <button onclick="location.href='main_login.html'">로그인</button><br>
+                    <div class="join_bt">
+                        <a href="join.html">회원가입</a>
+                        <a href="">아이디/비밀번호 찾기</a>
+                    </div>
+                </div>
+                    <ul>
+                        <li><a onclick="menu()">컴퓨터</a></li>
+                        <li><a onclick="menu()">냉장고</a></li>
+                        <li><a onclick="menu()">TV</a></li>
+                        <li><a onclick="menu()">에어컨</a></li>
+                    </ul>
+            </div>
+            <div class="section">
+                <div class="article">
+                    <div class="slidebox">
+                        <input type="radio" name="slide" id="slide01" checked>
+                        <input type="radio" name="slide" id="slide02">
+                        <input type="radio" name="slide" id="slide03">
+                        <ul class="slidelist">
+                            <li class="slideitem">
+                                <a>
+                                    <label for="slide03" class="prev"></label>
+                                    <img onclick="location.href='join.html'" src="center1.jpg.jpg">
+                                    <label for="slide02" class="next"></label>
+                                </a>
+                            </li>
+                            <li class="slideitem">
+                                <a>
+                                    <label for="slide01" class="prev"></label>
+                                    <img src="center2.jpg.jpg">
+                                    <label for="slide03" class="next"></label>
+                                </a>
+                            </li>
+                            <li class="slideitem">
+                                <a>
+                                    <label for="slide02" class="prev"></label>
+                                    <img src="center3.jpg.png">
+                                    <label for="slide01" class="next"></label>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function menu() {
+        alert("로그인 후 이용가능합니다.^,^")
+    }
+</script>
+
+</html>

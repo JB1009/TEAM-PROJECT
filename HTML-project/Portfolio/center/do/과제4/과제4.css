@@ -1,0 +1,91 @@
+
+/* board_list.css */
+
+#board_mask{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+#board_wrap{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+.btitle{
+    font-size: 25pt;
+    text-align: center;
+    width: 1200px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+.board_list_wrap{
+    width: 1200px;
+    height: 600px;
+}
+.write{
+    height: auto;
+    line-height: 40px;
+    font-size: 18pt;
+}
+.write2{
+    height: auto;
+    line-height: 40px;
+}
+#board_list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 1200px;
+    height: 2000px;
+    margin-top: 20px;
+}
+.bli{
+    display: flex;
+    width: 1200px;
+    height: 80px;
+    line-height: 45px;
+    border: 1px solid blue;
+    text-align: center;
+    align-items: center;
+}
+/* 첫번째 li태그 스타일 */
+.board_title{
+    font-weight: 700;
+    font-size: 13pt;
+}
+.board_title div{
+    height: 45px;
+    line-height: 45px;
+}
+/* 게시판 각 항목별 스타일 */
+.main{
+    font-size: 12pt;
+}
+.num0{width: 5%;}
+.title0{width: 45%; text-align: left;}
+.writer0{width: 5%;}
+.write_date0{width: 45%; text-align: left;}
+.hit0{width: 5%;}
+
+.num{width: 5%;}
+.title{width: 45%;}
+.writer{width: 5%;}
+.write_date{width: 45%;}
+.hit{width: 5%;}
+
+.pp1{width: 5%;}
+.pp2{width: 45%;}
+.pp3{width: 5%; }
+.pp4{width: 45%; text-align: left;}
+.pp5{width: 5%;}
+
+#dd{
+    font-size: 15pt;
+    margin-left: 10px;
+}
+#dd1{
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+    font-size: 15pt;
+}

@@ -1,0 +1,189 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 0 auto;
+    height: 0 auto;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 1300px;
+    height: 100vh;
+    margin: 0 auto;
+}
+.header{
+    flex-basis: 10%;
+    color: #fff;
+    display: flex;
+    height: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.logo{
+    flex-basis: 20%;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    color: black;
+    align-items: center;
+    text-align: center;
+    height: 0 auto;
+    padding-top: 25px;
+}
+.logo img{
+    width: 100%;
+    margin-top: 20px;
+}
+.header_img{
+    flex-basis: 80%;
+    border: 1px solid black;
+    color: black;
+    width: 100%;
+}
+.header_img img{
+    width: 1000px;
+    padding-left: 40px;
+    padding-top: 5px;
+}
+.center{
+    flex-basis: 80%;
+    /* 아이템도 flex가 될 수 있다. */
+    display: flex;
+    height: 600px;
+}
+.nav{
+    background-color: rgb(186, 196, 216);
+    flex-basis: 20%;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-left: 10px;
+    height: 600px;
+}
+.nav ul{
+    margin-right: 30px;
+    margin-left: 20px;
+    padding: 0;
+}
+.nav ul li{
+    list-style-type: none;
+    background-color: lightgreen;
+    border: 1px solid lightgreen;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+.nav ul li a{
+    text-decoration-line: none;
+    color: white;
+}
+.nav ul li:hover{
+    cursor: pointer;
+}
+.id{
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 20px;
+}
+.my{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.my a{
+    text-decoration-line: none;
+    color: black;
+    font-weight: 700;
+}
+input{
+    width: 130px;
+}
+button{
+    width: 200px;
+    border-radius: 5px;
+    background-color: lightgreen;
+    border: 1px solid lightgreen;
+    color: white;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+button:hover{
+    cursor: pointer;
+}
+.join_bt a{
+    text-decoration-line: none;
+    color: black;
+    font-weight: 700;
+}
+.section{
+    background-color: azure;
+    flex-basis: 80%;  
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    height: 600px;
+}
+.article{
+    flex-basis: 80%;
+    width: 80%;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 110px;
+}
+/* 리셋 CSS */
+* {margin:0;padding:0;box-sizing:border-box;}
+ul, li {list-style:none;}
+
+/* 슬라이드 Style */
+.slidebox {max-width:400px;margin:0 auto;}
+.slidebox .slidelist {white-space:nowrap;font-size:0;overflow:hidden;}
+.slidebox .slidelist .slideitem {position:relative;display:inline-block;vertical-align:middle;width:100%;transition:all 1s;}
+.slidebox .slidelist .slideitem > a {display:block;width:auto;position:relative;}
+.slidebox .slidelist .slideitem > a img {max-width:100%;}
+.slidebox .slidelist .slideitem > a label {position:absolute;top:50%;transform:translateY(-50%);padding:20px;border-radius:50%;cursor:pointer;}
+.slidebox .slidelist .slideitem > a label.prev {left:20px;background:#333 url('left-arrow.png') center center / 50% no-repeat;}
+.slidebox .slidelist .slideitem > a label.next {right:20px;background:#333 url('right-arrow.png') center center / 50% no-repeat;}
+
+
+[name="slide"] {display:none;}
+#slide01:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 15s infinite;}
+#slide02:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide02 15s infinite;}
+#slide03:checked ~ .slidelist .slideitem {transform:translateX(-200%);animation:slide03 15s infinite;}
+
+
+@keyframes slide01 {
+	0% {left:0%;}
+	33% {left:0%;}
+	34% {left:-100%}
+	66% {left:-100%;}
+	67% {left:-200%;}
+	99% {left:-200%;}
+	100% {left:0%;}
+}
+
+@keyframes slide02 {
+	0% {left:0%;}
+	33% {left:0%;}
+	34% {left:-100%;}
+	66% {left:-100%;}
+	67% {left:100%;}
+	99% {left:100%;}
+	100% {left:0%;}
+}
+
+@keyframes slide03 {
+	0% {left:0%;}
+	33% {left:0%;}
+	34% {left:200%;}
+	66% {left:200%;}
+	67% {left:100%;}
+	99% {left:100%;}
+	100% {left:0%;}
+}
+img:hover{
+    cursor: pointer;
+}

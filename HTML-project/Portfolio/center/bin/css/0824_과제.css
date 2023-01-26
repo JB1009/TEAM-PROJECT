@@ -1,0 +1,86 @@
+#board_mask{width: 100%;
+            height: auto;
+            margin-top: 50px;}
+
+#board_wrap{width: 1000px;
+            height: 500px;
+            margin: 0 auto;}
+
+.title{text-align: center;
+       font-size: 20pt;
+       font-weight: 800;}
+
+.sub_title{font-size: 15pt;
+           margin-left:10%;
+           width: 1000px;}
+
+.board_wrap{font-size: 12pt;
+            font-weight: 800;
+            margin-left: 8%;}
+           
+.board_list{list-style-type: none;
+            width: 800px;
+            margin-left: 5%;}
+           
+.board_cont{display: flex;
+           text-align: center;
+           font-size: 8pt;
+           border-top: 1px solid blue;}    
+
+.board_cont1{display: flex;
+             font-size: 12pt;
+             border-top: 1px solid blue;
+            height: auto;
+            align-items: center;}    
+
+.text{margin: 0 auto;
+     font-size: 12pt;
+     font-weight: 800;}
+
+.A{text-align: center;}
+
+.E{font-size: 15pt;
+   margin-top: 5px;}     
+
+.num{width: 5%;}
+
+.유형1{width: 45%;
+}
+
+.표시{width: 5%;
+     float: left;}
+
+.유형2{width: 45%;
+}
+
+.box{width: 10px;
+     height: 10px;}
+
+.합계{display: flex;
+     width: 800px;}
+
+.box1{width: 10px;
+     height: 10px;}
+
+.eng_list{display: flex;
+          height: 50px;
+          border-top: 1px solid blue;
+          border-bottom : 1px solid blue;}    
+
+.eng{font-size: 18pt;
+     font-weight: 400;
+     margin-top: 10px;}
+
+.box2{width: 20px;
+      height: 20px;
+      margin-top: 15px;
+      margin-left: 10px;
+      font-size: 15pt;
+      font-weight: 800;}
+
+.여백{
+     background: #999;
+     height: 50px;}
+
+.board{height: 1px;
+       padding-top: 11px;}

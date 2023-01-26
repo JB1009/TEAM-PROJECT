@@ -1,0 +1,147 @@
+@import "../../common/colors.css";
+.headerWrap {
+  width: 100%;
+  height: 120px;
+  background-color: white;
+  align-items: center;
+  position: relative;
+}
+.header {
+  width: 100%;
+  height: 95px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  position: fixed;
+  padding-top: 30px;
+  background-color: white;
+  z-index: 99999;
+}
+
+.mynotificationWrap {
+  position: absolute;
+  width: 100%;
+  top: 110px;
+  display: flex;
+  margin: 0 auto;
+}
+.mynotificationWrap .notificationWrap {
+  box-shadow: 0px 0px 1px 1px lightgray;
+  border-radius: 10px;
+}
+
+.headerLogo img {
+  width: 170px;
+  margin: 5px;
+  height: auto;
+}
+.headerNavigation {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 40px;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.headerNavigation div {
+  color: var(--font-primary);
+  width: 30px;
+  font-size: 18px;
+}
+.navigationBar {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  list-style: none;
+  flex-direction: row;
+  top: 120px;
+  left: 0;
+  background-color: white;
+  justify-content: space-around;
+  z-index: 1;
+}
+.navigationBar li {
+  color: black;
+  height: 30px;
+  line-height: 30px;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .MenuButton {
+    font-size: 20px;
+    width: 40px;
+    line-height: 43px;
+    height: 40px;
+  }
+  .headerWrap {
+    height: 167px;
+  }
+  .header {
+    position: inherit;
+  }
+  .headerLogo img {
+    width: 300px;
+    margin: 10px;
+  }
+  .headerNavigation {
+    height: 45px;
+  }
+  .headerNavigation div {
+    width: 40px;
+    font-size: 25px;
+  }
+  .navigationBar {
+    top: 200px;
+  }
+  .mynotificationWrap {
+    top: 160px;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    right: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .MenuButton {
+    font-size: 20px;
+    width: 40px;
+    line-height: 43px;
+    height: 40px;
+  }
+  .headerWrap {
+    height: 158px;
+  }
+  .header {
+    position: inherit;
+  }
+
+  .headerLogo img {
+    width: 300px;
+  }
+  .headerNavigation {
+    height: 45px;
+  }
+  .headerNavigation div {
+    width: 45px;
+    font-size: 25px;
+  }
+  .navigationBar {
+    top: 200px;
+    height: 40px;
+    width: 1200px;
+    font-size: 20px;
+  }
+  .navigationBar li {
+    line-height: 40px;
+  }
+  .mynotificationWrap {
+    top: 150px;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    right: -10px;
+  }
+}

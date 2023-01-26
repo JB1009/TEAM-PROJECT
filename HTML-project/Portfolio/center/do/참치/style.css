@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.4s;
+}
+
+.container {
+  margin: auto;
+  width: 1000px;
+  height: auto;
+}
+.banner {
+  width: 1000px;
+  height: 240px;
+  background-image: url(image/img_top_b.jpg);
+  background-position: center;
+  background-size: cover;
+}
+p{
+  font-family: "궁서";
+}
+span{
+  font-family: "궁서";
+}
+.nav {
+  background-color: #ae0000;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding-left: 0px;
+  margin: 0px;
+}
+
+.nav ul li {
+  cursor: pointer;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #c24040;
+  padding: 3%;
+  flex-basis: 25%;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+}
+
+.nav ul li:hover {
+  background-color: #ffffff;
+  color: #4e4e4e;
+}
+
+.section {
+  background-color: rgba(232, 232, 232, 0.5);
+  height: auto;
+}
+.menu-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 280px);
+  gap: 20px;
+  justify-content: center;
+  padding: 2%;
+}
+.menu {
+  border: 1px solid #c1c1c1;
+}
+.menu img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.menu:hover {
+  border: 3px solid black;
+}
+.menu-info {
+  background-color: #fff;
+  padding: 3%;
+}
+.menu-info h6 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+}
+.menu-info p {
+  color: #4b5156;
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #17a2b8;
+}
+.my-menu {
+  height: 50px;
+}
+
+.order {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #777;
+  height: auto;
+}
+
+.order button {
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #82be00;
+  color: #fff;
+  font-size: 26px;
+  width: 280px;
+  height: 60px;
+}
+.order p {
+  color: #fff;
+  font-size: 30px;
+}

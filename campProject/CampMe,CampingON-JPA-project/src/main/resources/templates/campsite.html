@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <input type="text" id="campsiteName" placeholder="캠핑장명">
+    <input type="text" id="campsiteAddress" placeholder="주소">
+    <input type="text" id="campsiteIntroduction" placeholder="소개글">
+    <input type="number" id="campsiteGuide" placeholder="안내글">
+    <input type="number" id="camptype" placeholder="캠핑장타입">
+    <button onclick="doCampsite()">캠핑장추가</button>
+  </div>
+  <div>
+    <input type="text" id="deleteCampsite">
+    <button onclick="doDelete()">캠핑장삭제</button>
+  </div>
+
+  <table style="width:1000px; text-align:center;" id="main">
+    <tr>
+      <th>campsiteName</th>
+      <th>campsiteAddress</th>
+      <th>campsiteIntroduction</th>
+      <th>campsiteGuide</th>
+      <th>camptype</th>
+    </tr>
+  </table>
+  <div class="pagination">
+    <a class="previous">Previous</a>
+
+    <a>Next</a>
+  </div>
+
+  <div>상세조회</div>
+  <div>
+    <input type="number" id="updateCampsiteName">
+    <input type="number" id="updateCampsiteAddress">
+    <input type="text" id="updateCampsiteIntroduction">
+    <input type="text" id="updateCampsiteGuide">
+    <input type="number" id="updateCamptype">
+    <button onclick="doUpdate()"> 캠핑장 수정 </button>
+  </div>
+  <!-- <table style="width:1000px; text-align:center;" class="detailPost">
+    <tr>
+      <th>postNumber</th>
+      <th>postType</th>
+      <th>postTitle</th>
+      <th>postText</th>
+      <th>postDate</th>
+      <th>postKind</th>
+      <th>userNumber</th>
+    </tr>
+    <tr>
+      <td id="detailPostNumber"></td>
+      <td id="detailPostType"></td>
+      <td id="detailPostTitle"></td>
+      <td id="detailPostText"></td>
+      <td id="detailPostDate"></td>
+      <td id="detailPostKind"></td>
+      <td id="detailUserNumber"></td>
+    </tr>
+  </table> -->
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+<script>
+  // 페이징 전 1페이지 조회
+  doCampsite()
+  function doCampsite() {
+    //   $.ajax({
+    //     url: '/post/pagination?offset=0&pageSize=5&column=postNumber',
+    //     type: 'GET',
+    //     dataType: 'json',
+    //     success: function (response) {
+
+    //       console.log(response.list.content.length);
+    //       for (var i = 0; i < response.list.content.length; i++) {
+    //         // 공지사항 데이터만 필요할 경우
+    //         // if(response[i].postType == 1)
+
+    //         // 게시판의 자유게시판내용이 필요할경우
+    //         // if(response[i].postType == 2 && response[i].postkind == 1)
+
+    //         // tr td 생성
+    //         tr = $("<tr class='seenPost' onclick='doDetail(" + response.list.content[i].postNumber + ")'> </tr>");
+    //         postNumber = $("<td>" + response.list.content[i].postNumber + "</td>");
+    //         postType = $("<td>" + response.list.content[i].postType + "</td>");
+    //         postTitle = $("<td>" + response.list.content[i].postTitle + "</td>");
+
+    //         // 년 월 일까지만 나올수잇게 split 활용
+    //         postDate = $("<td id='getPostDate'>" + response.list.content[i].postDate.split("T")[0] + "</td>");
+    //         postKind = $("<td>" + response.list.content[i].postKind + "</td>");
+    //         userNumber = $("<td id='getUserNumber'>" + response.list.content[i].user.userNumber + "</td>");
+
+    //         tr.append(postNumber);
+    //         tr.append(postType);
+    //         tr.append(postTitle);
+    //         tr.append(postDate);
+    //         tr.append(postKind);
+    //         tr.append(userNumber);
+
+
+
+    //         // a = $("<a onclick='doJoin("+(i)+")'>"+(i+1)+"</a>")
+
+    //         // $(".previous").append(a);
+
+    //         // table id = main 에 tr 데이터 적용
+    //         $("#main").append(tr);
+
+    //       }
+
+    //     },
+    //   });
+
+    // 페이징 전용 ajax
+    $.ajax({
+      url: '/campsite/paging',
+      type: 'GET',
+      dataType: 'json',
+      success: function (response) {
+        for (var i = 0; i < response.length; i++) {
+          console.log(response);
+          tr = $("<tr> </tr>");
+
+          campsiteName = $("<td>" + response[i].campsiteName + "</td>");
+          campsiteAddress = $("<td>" + response[i].campsiteAddress + "</td>");
+          campsiteIntroduction = $("<td>" + response[i].campsiteIntroduction + "</td>");
+          campsiteGuide = $("<td id='getPostDate'>" + response[i].campsiteGuide + "</td>");
+          camptype = $("<td>" + response[i].camptype.typeName + "</td>");
+
+          tr.append(campsiteName);
+          tr.append(campsiteAddress);
+          tr.append(campsiteIntroduction);
+          tr.append(campsiteGuide);
+          tr.append(camptype);
+
+          $("#main").append(tr);
+
+          // if (i % pageSize == 0) {
+          //   a = $("<a onclick='doJoin(" + (i / pageSize) + ")'>" + Math.ceil((i + 1) / pageSize) + "</a>");
+          //   $(".previous").append(a);
+          // }
+        }
+      },
+    });
+  }
+
+
+</script>
+
+</html>

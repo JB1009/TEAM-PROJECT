@@ -1,0 +1,80 @@
+.wholeWrapMyInquiryHistory {
+  width: 100%;
+  font-size: 20px;
+}
+.tableMyInquiryHistoryList {
+  margin: 0 auto;
+  width: 90%;
+  border: 1px solid gray;
+  /* border-collapse: collapse; */
+}
+.tableMyInquiryHistoryList tr td {
+  width: 26%;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid gray;
+  padding: 0 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.titleMyInquiryHistory {
+  width: 150px;
+  height: 38px;
+  line-height: 38px;
+  font-size: 25px;
+  padding-left: 5px;
+}
+.checkboxWrapInquiry {
+  margin: 5px;
+  margin-top: 10px;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 4%;
+}
+.checkboxInquiry {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+}
+.col3TdInquiry {
+  width: 100%;
+  position: relative;
+}
+.leftCheckbox {
+  position: absolute;
+  right: 5px;
+}
+.rowFlexBoxInquiry {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.closeButtonInquiry {
+  background: none;
+  border: none;
+  line-height: 20px;
+  font-size: 20px;
+  margin-right: 5%;
+}
+.closeButtonInquiry:hover {
+  font-weight: 600;
+}
+/* 답변 */
+.questionMyInquiry {
+  width: 100%;
+  height: 200px;
+  margin: 5px 0;
+}
+.answerMyInquiry {
+  width: 100%;
+  border: 1px solid lightgray;
+  color: #363434;
+}
+.answerMyInquiryTitle {
+  padding: 5%;
+  background-color: lightgray;
+}
+.answerMyInquiryText {
+  padding: 5%;
+  width: 90%;
+}

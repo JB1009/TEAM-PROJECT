@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{margin: 0;
+             padding: 0;
+             box-sizing: border-box;}
+
+        .wrap{width: 100%;
+              height: auto;
+              margin: 0 auto;}
+              
+        .top{width: 1000px;
+             height: 800px;
+             margin: 0 auto;}     
+             
+        .main{width: 400px;
+              height: 400px;
+              margin: 100px auto;
+              border: 1px solid black;}  
+              
+        .user_num{width: 400px;}
+        
+        .user_num input{width: 370px;
+                        margin-left: 7px;
+                        margin-top: 30px;
+                        padding-left: 10px;
+                        text-align: center;
+                        font-size: 15px;
+                        height: 40px;}
+
+        .com_num{margin-left: 7px;
+                 margin-top: 40px;
+                 border: 1px solid black;
+                 width: 384px;
+                 height: 40px;
+                 line-height: 40px;
+                }
+
+        .com_num div{margin-left: 5px;
+                     text-align: center;
+                     }         
+
+        .result{width: 384px;
+                height: 80px;
+                border: 1px solid black;
+                margin-top: 50px;
+                margin-left: 7px;
+                line-height: 80px;}    
+
+        .result div{margin-left: 5px;
+                    text-align: center;}
+        .bt{
+            width: 100%;
+            height: 80px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        button{
+            width: 70px;
+            height: 30px;
+            margin: 0 auto;
+        }
+                    
+
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="top">
+            <div class="main">
+                <div class="user_num">
+                    <input type="text" placeholder="띄어쓰기로 숫자를 입력해주세요" id="user_num">
+                </div>
+                <div class="com_num">
+                    <div id="comp">로또 결과</div>
+                </div>
+                <div class="bt">
+                    <button onclick="com()">결과는?</button>
+                </div>
+                <div class="result">
+                    <div id="result">당첨</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function com(){
+        var com_number = document.getElementById("comp");
+        var res = document.getElementById("result");
+        var out = "";
+        var out1 = "";
+    
+    
+        // 확인
+        
+        // com_num.innerHTML= lotto_num;
+        // com_number.innerHTML=out;
+        var user = document.getElementById("user_num");
+        var user01 = user.value;
+        var user_number = user01.split(" ");
+       
+        for(var j=0;j<6;j++){
+            if(user_number[j]>= 1 && user_number[j]<=45){
+                for(var d=0;d<6;d++){
+                    if(j != d){
+                        if(user_number[j] == user_number[d]){
+                            alert("중복된 번호를 확인해주세요.")
+                            break;
+                        }else{  
+                            console.log(user_number[j])
+                        }
+                    }
+                }
+            }else{
+                alert("값을 다시입력해주세요");
+                user.focus();
+                user.value= null;
+                return false;
+            }
+        }
+    var lotto_number = [];
+      
+        
+      // var a = [];
+      //    for(var i=0;i<6;i++){
+      //     a = Math.floor(Math.random()*45)+1
+      //         for(var j=0;j<1;j++){
+      //             b = Math.floor(Math.random()*45)+1
+      //             if(a != b){
+      //                 out += a + " ";             
+      //             }
+      //         }
+      //    }
+      var lotto_num = [];
+          while(lotto_num.length<6){
+              var n = parseInt(Math.random()*45)+1;
+              if(lotto_num.indexOf(n)<0){
+                  lotto_num.push(n);
+                  com_number.innerHTML= lotto_num;
+              }else if(user_number == " "){
+                  com_number.innerHTML= "null";
+              }
+          }
+          // 로또 번호 오름차순 정렬
+          lotto_num.sort((a, b) => a - b);
+        var count = 0;
+        user_number.sort((a, b) => a - b);
+        
+        for(var i=0;i<6;i++){
+            for(var j=0;j<6;j++){
+                if(user_number[i] == lotto_num[j]){
+                    count++;
+                }
+                if(count == 0){
+                    res.innerHTML="꽝"
+                }
+                else if(count==1){
+                    res.innerHTML="1개"
+                }
+                else if(count==2){
+                    res.innerHTML="2개"
+                }
+                else if(count==3){
+                    res.innerHTML="3개 5등"
+                }
+                else if(count==4){
+                    res.innerHTML="4개 4등"
+                }
+                else if(count==5){
+                    res.innerHTML="5개 3등"
+                }
+                else if(count==6){
+                    res.innerHTML="6개 1등"
+                   
+                }
+            }
+        }
+    }
+    
+
+</script>
+</html>

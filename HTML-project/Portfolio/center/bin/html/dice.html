@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/dice.css">
+</head>
+<body onload="dice()">
+    <div class="wrap">
+        <div class="main">
+            <p><strong>주사위 게임</strong></p>
+            <div class="dice">컴퓨터
+                <div>
+                    <img src="../img/dice1.png" id="dice" >
+                </div>
+                <div>
+                    <img src="../img/dice2.png" id="dice1">
+                </div>
+                <div>
+                    <img src="../img/dice3.png" id="dice2">
+                </div>
+            </div>  
+            <div class="user">유<br>저  
+                <div>
+                    <img src="../img/dice4.png" id="user">
+                </div>
+                <div>
+                    <img src="../img/dice5.png" id="user1">
+                </div>
+                <div>
+                    <img src="../img/dice6.png" id="user2">
+                </div>
+            </div>
+            <div class="bt">
+                <div>
+                    <button onclick="start()" class="bt1">시작</button>
+                </div>
+                <div>
+                    <button onclick="stop()" class="bt2">멈춤</button>
+                </div>
+            </div>
+               
+            
+            <div id="result">결과는?</div>
+        </div>
+    </div>
+</body>
+<script> 
+    var count = 0;
+    var str;
+    var fis;
+   
+    function start(){ 
+        clearTimeout(str);
+        if(count == 0){
+            document.getElementById("dice").src="../img/dice2.png";
+            document.getElementById("dice1").src="../img/dice3.png";
+            document.getElementById("dice2").src="../img/dice4.png";
+            document.getElementById("user").src="../img/dice5.png";
+            document.getElementById("user1").src="../img/dice6.png";
+            document.getElementById("user2").src="../img/dice1.png";
+            count++;
+        }
+        else if(count == 1){
+            document.getElementById("dice").src="../img/dice3.png";
+            document.getElementById("dice1").src="../img/dice4.png";
+            document.getElementById("dice2").src="../img/dice5.png";
+            document.getElementById("user").src="../img/dice6.png";
+            document.getElementById("user1").src="../img/dice1.png";
+            document.getElementById("user2").src="../img/dice2.png";
+            count++;
+        }
+        else if(count == 2){
+            document.getElementById("dice").src="../img/dice4.png";
+            document.getElementById("dice1").src="../img/dice5.png";
+            document.getElementById("dice2").src="../img/dice6.png";
+            document.getElementById("user").src="../img/dice1.png";
+            document.getElementById("user1").src="../img/dice2.png";
+            document.getElementById("user2").src="../img/dice3.png";
+            count++;
+        }
+        else if(count == 3){
+            document.getElementById("dice").src="../img/dice5.png";
+            document.getElementById("dice1").src="../img/dice6.png";
+            document.getElementById("dice2").src="../img/dice1.png";
+            document.getElementById("user").src="../img/dice2.png";
+            document.getElementById("user1").src="../img/dice3.png";
+            document.getElementById("user2").src="../img/dice4.png";
+            count++;        
+        }
+        else if(count == 4){
+            document.getElementById("dice").src="../img/dice6.png";
+            document.getElementById("dice1").src="../img/dice1.png";
+            document.getElementById("dice2").src="../img/dice2.png";
+            document.getElementById("user").src="../img/dice3.png";
+            document.getElementById("user1").src="../img/dice4.png";
+            document.getElementById("user2").src="../img/dice5.png";
+            count++
+        }
+        else if(count == 5){
+            document.getElementById("dice").src="../img/dice1.png";
+            document.getElementById("dice1").src="../img/dice2.png";
+            document.getElementById("dice2").src="../img/dice3.png";
+            document.getElementById("user").src="../img/dice4.png";
+            document.getElementById("user1").src="../img/dice5.png";
+            document.getElementById("user2").src="../img/dice6.png";
+            count = 0;
+        }
+        str = setTimeout(start,100);
+        var res = document.getElementById("result");
+        res.innerHTML =  " ";
+     
+
+    }
+    function stop(){
+        clearTimeout(str);
+        var com1 = Math.floor(Math.random()*6)+1;
+        var com2 = Math.floor(Math.random()*6)+1;
+        var com3 = Math.floor(Math.random()*6)+1;
+        var user1 = Math.floor(Math.random()*6)+1;
+        var user2 = Math.floor(Math.random()*6)+1;
+        var user3 = Math.floor(Math.random()*6)+1;
+        
+        var com = com1 + com2 + com3;
+        var user = user1 + user2 +user3;
+
+        if(com1 == 1)
+            document.getElementById("dice").src="../img/dice1.png";
+            
+        if(com1 == 2)
+            document.getElementById("dice").src="../img/dice2.png";
+                
+        if(com1 == 3)
+            document.getElementById("dice").src="../img/dice3.png";
+                
+        if(com1 == 4)
+            document.getElementById("dice").src="../img/dice4.png";
+            
+        if(com1 == 5)
+            document.getElementById("dice").src="../img/dice5.png";
+                
+        if(com1 == 6)
+            document.getElementById("dice").src="../img/dice6.png";
+
+            
+        if(com2 == 1)
+            document.getElementById("dice1").src="../img/dice1.png";
+          
+        if(com2 == 2)
+            document.getElementById("dice1").src="../img/dice2.png";
+            
+        if(com2 == 3)
+            document.getElementById("dice1").src="../img/dice3.png";
+            
+        if(com2 == 4)
+            document.getElementById("dice1").src="../img/dice4.png";
+         
+        if(com2 == 5)
+            document.getElementById("dice1").src="../img/dice5.png";
+            
+        if(com2 == 6)
+            document.getElementById("dice1").src="../img/dice6.png";
+
+            
+        if(com3 == 1)
+            document.getElementById("dice2").src="../img/dice1.png";
+          
+        if(com3 == 2)
+            document.getElementById("dice2").src="../img/dice2.png";
+            
+        if(com3 == 3)
+            document.getElementById("dice2").src="../img/dice3.png";
+            
+        if(com3 == 4)
+            document.getElementById("dice2").src="../img/dice4.png";
+         
+        if(com3 == 5)
+            document.getElementById("dice2").src="../img/dice5.png";
+            
+        if(com3 == 6)
+            document.getElementById("dice2").src="../img/dice6.png";
+
+
+        if(user1 == 1)
+            document.getElementById("user").src="../img/dice1.png";
+            
+        if(user1 == 2)
+            document.getElementById("user").src="../img/dice2.png";
+                
+        if(user1 == 3)
+            document.getElementById("user").src="../img/dice3.png";
+                
+        if(user1 == 4)
+            document.getElementById("user").src="../img/dice4.png";
+            
+        if(user1 == 5)
+            document.getElementById("user").src="../img/dice5.png";
+                
+        if(user1 == 6)
+            document.getElementById("user").src="../img/dice6.png";
+
+            
+        if(user2 == 1)
+            document.getElementById("user1").src="../img/dice1.png";
+          
+        if(user2 == 2)
+            document.getElementById("user1").src="../img/dice2.png";
+            
+        if(user2 == 3)
+            document.getElementById("user1").src="../img/dice3.png";
+            
+        if(user2 == 4)
+            document.getElementById("user1").src="../img/dice4.png";
+         
+        if(user2 == 5)
+            document.getElementById("user1").src="../img/dice5.png";
+            
+        if(user2 == 6)
+            document.getElementById("user1").src="../img/dice6.png";
+
+            
+        if(user3 == 1)
+            document.getElementById("user2").src="../img/dice1.png";
+          
+        if(user3 == 2)
+            document.getElementById("user2").src="../img/dice2.png";
+            
+        if(user3 == 3)
+            document.getElementById("user2").src="../img/dice3.png";
+            
+        if(user3 == 4)
+            document.getElementById("user2").src="../img/dice4.png";
+         
+        if(user3 == 5)
+            document.getElementById("user2").src="../img/dice5.png";
+            
+        if(user3 == 6)
+            document.getElementById("user2").src="../img/dice6.png";
+
+
+            var res = document.getElementById("result");    
+            
+        
+            
+           
+            if(com > user){
+                if(user1 == 3 && user2 == 3 && user3 == 3){
+                    res.innerHTML = " com1 : "+com1+" + com2 : "+com2+" + com3 : "+com3+ " 총합 : "+ com +"<br>"+ " user1 : "+ user1 + " + user2 : "+user2 + " + user3 : "+ user3 +" 총합 : "+ user +"<br>"+"이겼습니다."
+                   }
+                else if(user == 3){
+                    res.innerHTML = " com1 : "+com1+" + com2 : "+com2+" + com3 : "+com3+ " 총합 : "+ com +"<br>"+ " user1 : "+ user1 + " + user2 : "+user2 + " + user3 : "+ user3 +" 총합 : "+ user +"<br>"+"이겼습니다."
+                }
+                else{
+                    res.innerHTML = " com1 : "+com1+" + com2 : "+com2+" + com3 : "+com3+ " 총합 : "+ com +"<br>"+ " user1 : "+ user1 + " + user2 : "+user2 + " + user3 : "+ user3 +" 총합 : "+ user +"<br>"+"졌습니다."
+                }
+            }
+            else if(user > com){
+                if(com1 == 3 && com2 == 3 && com3 == 3){
+                    res.innerHTML = " com1 : "+com1+" + com2 : "+com2+" + com3 : "+com3+ " 총합 : "+ com +"<br>"+ " user1 : "+ user1 + " + user2 : "+user2 + " + user3 : "+ user3 +" 총합 : "+ user +"<br>"+"졌습니다."
+                }
+                else if(com == 3){
+                    res.innerHTML = " com1 : "+com1+" + com2 : "+com2+" + com3 : "+com3+ " 총합 : "+ com +"<br>"+ " user1 : "+ user1 + " + user2 : "+user2 + " + user3 : "+ user3 +" 총합 : "+ user +"<br>"+"졌습니다."
+                }
+                else{
+                    res.innerHTML = " com1 : "+com1+" + com2 : "+com2+" + com3 : "+com3+ " 총합 : "+ com +"<br>"+ " user1 : "+ user1 + " + user2 : "+user2 + " + user3 : "+ user3 +" 총합 : "+ user +"<br>"+"이겼습니다."
+                }
+            }
+           else if(com == user){
+                if(com == 3){
+                    if(user == 3){
+                        res.innerHTML = " com1 : "+com1+" + com2 : "+com2+" + com3 : "+com3+ " 총합 : "+ com +"<br>"+ " user1 : "+ user1 + " + user2 : "+user2 + " + user3 : "+ user3 +" 총합 : "+ user +"<br>"+"무승부."
+                    }
+                    else{
+                        res.innerHTML = " com1 : "+com1+" + com2 : "+com2+" + com3 : "+com3+ " 총합 : "+ com +"<br>"+ " user1 : "+ user1 + " + user2 : "+user2 + " + user3 : "+ user3 +" 총합 : "+ user +"<br>"+"졌습니다."
+                    }
+                }
+                else if(user == 3){
+                    res.innerHTML = " com1 : "+com1+" + com2 : "+com2+" + com3 : "+com3+ " 총합 : "+ com +"<br>"+ " user1 : "+ user1 + " + user2 : "+user2 + " + user3 : "+ user3 +" 총합 : "+ user +"<br>"+"이겼습니다."
+                }
+                else{
+                    res.innerHTML = " com1 : "+com1+" + com2 : "+com2+" + com3 : "+com3+ " 총합 : "+ com +"<br>"+ " user1 : "+ user1 + " + user2 : "+user2 + " + user3 : "+ user3 +" 총합 : "+ user +"<br>"+"무승부."
+                }
+           }
+           
+    }
+   //AWS S3:Simple Storage Service 
+   // 1. 파일저장 ,백업
+   // 2. 웹 호스팅 서버로 사용
+   // .pro .io .dev     
+</script>
+</html>

@@ -1,0 +1,24 @@
+.Footer{
+    width: 1200px;
+    height: 10%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+/* Link 스타일 제거 */
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 620px){
+    .Footer{
+        width: 390px;
+        height: 10%;
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+    }
+}

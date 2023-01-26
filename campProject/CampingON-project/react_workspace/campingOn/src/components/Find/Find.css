@@ -1,0 +1,96 @@
+.FindSection {
+  width: 1200px;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FindBox {
+  width: 40%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #85c89a;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.FindBox h1 {
+  text-align: center;
+}
+.FindForm {
+  width: 70%;
+  height: 20vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.FindForm label {
+  text-align: left;
+}
+.FindForm input {
+  height: 30px;
+  border: 1px solid #85c89a;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+.FindButton button {
+  width: 70%;
+  height: 30px;
+  background-color: #85c89a;
+  border: 1px solid #85c89a;
+  border-radius: 10px;
+  transition: all 0.5s;
+  margin: 0 auto;
+}
+.FindButton {
+  width: 70%;
+  height: 30px;
+  /* padding: 10px; */
+  margin: 0 auto;
+}
+.FindButton button {
+  width: 100%;
+  height: 30px;
+}
+.FindButton button:hover {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+}
+.PwFind {
+  width: 80%;
+  height: 8%;
+  border: 2px solid #85c89a;
+  border-radius: 10px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 36px;
+}
+.pwlogin {
+  width: 80%;
+  height: 8%;
+  text-align: right;
+}
+.pwlogin a {
+  color: gray;
+  text-decoration: underline;
+  font-weight: lighter;
+}
+.pwlogin a:hover {
+  cursor: pointer;
+  color: #85c89a;
+}
+@media only screen and (max-width: 620px) {
+  .FindSection {
+    width: 390px;
+  }
+  .FindBox {
+    width: 98%;
+    height: 60%;
+    border: 3px solid #85c89a;
+    border-color: #85c89a;
+  }
+}

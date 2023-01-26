@@ -1,0 +1,23 @@
+.notificationWrap {
+  position: absolute;
+  width: 80%;
+  padding: 5%;
+  margin: 5%;
+  background-color: white;
+
+  z-index: 9999;
+}
+.notificationTitle {
+  font-size: 25px;
+  padding-left: 10px;
+  /* font-weight: 600; */
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.notificationInfo div {
+  width: 90%;
+  margin: 5px 0;
+  padding: 5px 5%;
+  font-size: 18px;
+  background-color: rgb(234, 245, 234);
+}

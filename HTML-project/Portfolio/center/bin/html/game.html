@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/game.css">
+<script>
+    
+</script>
+</head>
+<body onload="textChange()">
+    <div id="main_wrap">
+        <div class="rsp_wrap">
+            <div class="rsp_title">가위 바위 보!</div>
+            <div class="com_wrap">
+                <div id="result1"></div>
+                <div class="rsp_img" id="rspChange">
+                    <img src="바위.jpg" alt="" id="B">
+                </div>
+                <div id="result2"></div>
+            </div>
+            <div class="user_rsp">
+                <div class="rock">
+                    <button id="rock_bt" name="0" onclick="clicks(this)"><img src="../img/바위.jpg" class="R"></button>
+                </div>
+                <div class="scissors">
+                    <button id="scissors_bt" name="1" onclick="clicks(this)"><img src="../img/가위.png" class="R"></button>
+                </div>
+                <div class="paper">
+                    <button id="paper_bt" name="2" onclick="clicks(this)"><img src="../img/보.png" class="R"></button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="dice_wrap">
+
+        </div>
+    </div>
+</body>
+<script>
+    var count = 0;
+  
+    var result1 = document.getElementById("result1");
+    var result2 = document.getElementById("result2");
+    var animate;
+    function textChange(){
+        result1.innerHTML = "";
+        result2.innerHTML = "";
+        if(count == 0){
+            document.getElementById("B").src="../img/보.png";
+            count++;
+        }
+        else if(count == 1){
+            document.getElementById("B").src="../img/가위.png";
+            count++;
+        }
+        else{
+            document.getElementById("B").src="../img/바위.jpg";
+            count = 0;
+        }
+        animate = setTimeout(textChange,100);
+    }
+    function clicks(rsp){
+        clearTimeout(animate);
+         var com = Math.floor(Math.random()*3);
+         var user = rsp.id;
+        if(user == "rock_bt"){
+             if(com == 0){
+                document.getElementById("B").src="../img/바위.jpg";
+                result1.innerHTML = "비";
+                result2.innerHTML = "김";
+            }
+            else if(com == 1){
+                document.getElementById("B").src="../img/가위.png";
+                result1.innerHTML = "★승";
+                result2.innerHTML = "리★";
+            }
+            else{
+                document.getElementById("B").src="../img/보.png";
+                result1.innerHTML = "패";
+                result2.innerHTML = "배";
+             }
+         }
+         if(user == "scissors_bt"){
+             if(com == 0){
+                document.getElementById("B").src="../img/바위.jpg";
+                result1.innerHTML = "패";
+                result2.innerHTML = "배";
+            }
+            else if(com == 1){
+                document.getElementById("B").src="../img/가위.png";
+                result1.innerHTML = "비";
+                result2.innerHTML = "김";
+            }
+             else{
+                 document.getElementById("B").src="../img/보.png";
+                result1.innerHTML = "★승";
+                 result2.innerHTML = "리★";
+            }
+        }
+        if(user == "paper_bt"){
+            if(com == 0){
+                document.getElementById("B").src="../img/바위.jpg";
+                result1.innerHTML = "★승";
+                result2.innerHTML = "리★";
+            }
+            else if(com == 1){
+                document.getElementById("B").src="../img/가위.png";
+                result1.innerHTML = "패";
+                result2.innerHTML = "배";
+            }
+            else{
+                document.getElementById("B").src="../img/보.png";
+                result1.innerHTML = "비";
+                result2.innerHTML = "김";
+            }
+        }
+        animate = setTimeout(textChange,1000);
+    }
+</script>
+</html>

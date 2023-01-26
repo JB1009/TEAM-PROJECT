@@ -1,0 +1,49 @@
+.titleFontCampingHistory {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  height: 60px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 100;
+  width: 130px;
+  border-bottom: 2px solid black;
+}
+.contentsCampingHistory {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: 1px solid grey;
+  border-radius: 8px;
+}
+.contensNameCampingHistory {
+  padding-left: 5%;
+  padding-top: 5%;
+  font-size: 25px;
+}
+.contentsStoryCampingHistory {
+  display: flex;
+  margin: 0 auto;
+  padding: 3%;
+  width: 90%;
+}
+.contentsImgCampingHistory {
+  width: 30%;
+  height: 120px;
+  background-color: aqua;
+}
+.contentstableCampingHistory {
+  margin: 0 auto;
+  margin-left: 12px;
+  width: 70%;
+}
+.contentstableCampingHistory tr td {
+  padding: 0;
+}
+.contentsHeadTitleCampingHistory {
+  width: 70px;
+  text-align: center;
+}
+.contentsIconCampingHistory {
+  text-align: center;
+}

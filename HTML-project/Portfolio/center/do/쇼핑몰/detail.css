@@ -1,0 +1,245 @@
+/*  detail.css  */
+
+/* 상품 페이지 틀 */
+#detail_mask{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+#detail_wrap{
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+#item_detail_wrap{
+    width: 800px;
+    height: auto;
+    position: relative;
+    float: left;
+}
+#item_pay_wrap{
+    width: 197px;
+    height: 500px;
+    border: 1px solid rgb(230, 230, 230);
+    position: fixed;
+    margin-left: 850px;
+}
+
+/* 상품정보 top 부분 */
+.item_main_img{
+    width: 400px;
+    height: 500px;
+    float: left;
+    /* 이미지도 글씨로 보고 text-align ~~ */
+}
+.big{
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+}
+.big img{
+    max-width: 300px;
+    max-height: 400px;
+}
+.small{
+    margin-top: 20px;
+    width: 80px; 
+    height: 80px; 
+    overflow: hidden; 
+    margin: 0 auto;
+}
+.small img{
+    width: 80px;
+}
+.item_main_info{
+    width: 360px;
+    height: 500px;
+    padding: 0 20px 0 20px;
+    position: relative;
+    float: left;
+}
+.item_name_money{
+    width: 380px;
+    height: 50px;
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-weight: 800;
+}
+.item_name{
+    line-height: 30px;
+}
+.item_money{
+    line-height: 20px;
+}
+.delivery_info{
+    width: 360px;
+    height: 100px;
+    line-height: 25px;
+}
+
+/* 오른쪽 사이드바 (구매) */
+#item_pay_top{
+    width: 182px;
+    margin: 3.5px;
+    padding: 3px;
+    height: 130px;
+    border:1px solid rgb(230, 230, 230)
+}
+.item_pay_name{font-weight: 700;}
+.item_among{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.item_among button{
+    width: 30px;
+    height: 36px;
+    margin: 0;
+    background-color: white;
+    border: 1px solid rgb(200, 200 ,200);
+}   
+#am{
+    width: 40px;
+    height: 32px;
+    font-size: 15px;
+    margin: 0;
+    border: 0;
+    border-top: 1px solid rgb(200, 200 ,200);
+    border-bottom: 1px solid rgb(200, 200 ,200);
+}
+#am::-webkit-inner-spin-button , #am::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* 사이드바 하단부 */
+#item_pay_money{
+    margin-top: 200px;
+    width: 100%;
+}
+#item_pay_money span{
+    display: inline-block;
+}
+.total_money{
+    width: 182px;
+    margin: 0 auto;
+    height: 30px;
+    color: red;
+}
+.total{
+    width: 60px;
+    line-height: 30px;
+}
+.pay_money{
+    width: 116.3px;
+    line-height: 30px;
+    text-align: right;
+    font-weight: 700;
+}
+.line_deco{
+    width: 182px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.coupon{
+    width: 182px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 10px;
+}
+.coupon_change{
+    width: 64px;
+}
+.coupon_change button{
+    width: 50px;
+    height: 25px;
+    font-size: 10px;
+    padding: 0;
+    margin-left: 14px;
+    background-color: white;
+    border: 1px solid red;
+    color: red;
+    position: relative;
+    top: -7px;
+}
+.cart_buy{
+    width: 182px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.cart_buy a{
+    text-decoration:  none;
+    display: inline-block;
+    border: 1px solid red;
+}
+#cart{
+    color: red;
+    height: 50px;
+    line-height: 50px;
+}
+#buy{
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    background-color: red;
+}
+#gift{
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    background-color: red;
+    width: 36px;
+    text-align: center;
+}
+#detail_view{
+    width: 800px;
+    height: auto;
+    margin-top: 50px;
+}
+.item_img{
+    width: 800px;
+    height: 300px;
+}
+.item_img img{
+    max-width: 800px;
+    height: 300px;
+}
+.item_detail_img{
+    width: 800px;
+    height:  600px;
+}
+.delivery_img{
+    width: 100%;
+    height: 400px;
+}
+.exchange_return{
+    width: 100%;
+    height: 400px;
+}
+.item_info_post{
+    width: 100%;
+    height: 500px;
+}
+.info_post tr td{
+    border: 1px solid rgb(220,220,220);
+}
+.info_post tr:nth-child(1) td{
+    border-top: 2px solid rgb(150,150,150);
+}
+.info_post tr:nth-child(8) td{
+    border-bottom: 2px solid rgb(150,150,150);
+}
+.title{
+    width: 150px;
+    padding-left: 17px;
+    padding-right: 10px;
+    font-size: 13px;
+    background-color: rgb(240,240,240);
+}
+.content{
+    width: 615px;
+    padding-left: 10px;
+    height: 30px;
+}

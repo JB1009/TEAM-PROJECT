@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/0824_과제.css">
+</head>
+<body>
+    <div id="board_mask">
+        <div id="board_wrap">
+            <div class="title"><p>MBTI 성격유형 간이 시험지</p></div>
+            <div class="sub_title">※ 실시 요령</div>
+            <div class="board_wrap"> 
+                <ol>
+                   <li> 다음 각 번호별로 제시되어 있는 두 개의 문장을 읽고 나에게 보다 많이 해당되는 것에 ○ 합니다.</li>
+                   <li> ○ 개수를 세어 합계란에 쓰고 점수가 큰 쪽의 유형을 □ 안에 씁니다.</li>
+                   <li> □ 안에 쓴 영어 알파벳을 맨 나중에 차례대로 4가지를 붙여 씁니다.</li>
+                </ol>
+            </div>
+            <div class="board_list">
+               <ul>
+                <li class="board_cont"><!--1-->
+                    <div class="num text">번<br>호</div>
+                    <div class="유형1 text E">E 유형</div>
+                    <div class="표시 text">표<br>시</div>
+                    <div class="유형2 text E">I 유형</div>
+                    <div class="표시 text">표<br>시</div>
+                </li>
+                <li class="board_cont1"style="background-color: rgb(155, 208, 252);"><!--2-->
+                    <div class="num A">1</div>
+                    <div class="유형1">나는 여러 친구들과 많이 사귀는 편이다.</div>
+                    <div class="표시 A">
+                        <input type="checkbox" class="box";>
+                    </div>
+                    <div class="유형2">나는 몇 명의 친구들과 깊이 사귀는 편이다.</div>
+                    <div class="표시 A">
+                        <input type="checkbox" class="box">
+                    </div>
+                </li>
+                <li class="board_cont1"><!--3-->
+                    <div class="num A">2</div>
+                    <div class="유형1">계발활동을 갈 때 새로운 친구들을 만나는 것이 신난다.</div>
+                    <div class="표시 A">
+                        <input type="checkbox" class="box">
+                    </div>
+                    <div class="유형2">새로운 계발활동 부서에 갈 때 처음 보는 친구들과 앞으로 어떻게 지낼까 걱정이다.</div>
+                    <div class="표시 A">
+                        <input type="checkbox" class="box">
+                    </div>
+                </li>
+                <li class="board_cont1"style="background-color: rgb(155, 208, 252);"><!--4-->
+                    <div class="num A">3</div>
+                    <div class="유형1">처음 보는 친구들을 만나면 내가 먼저 말한다.</div>
+                    <div class="표시 A">
+                        <input type="checkbox" class="box">
+                    </div>
+                    <div class="유형2">처음 보는 친구들을 만나면 다른 친구가 나에게 먼저 말한다.</div>
+                    <div class="표시 A">
+                        <input type="checkbox" class="box">
+                    </div>
+                </li>
+                <li class="board_cont1"><!--4-->
+                    <div class="num A">4</div>
+                    <div class="유형1">나의 생각이나 느낌을 다른 사람에게 이야기하는 편이다.</div>
+                    <div class="표시 A">
+                        <input type="checkbox" class="box">
+                    </div>
+                    <div class="유형2">나의 생각이나 느낌을 내 마음 속에 간직하는 편이다.</div>
+                    <div class="표시 A">
+                        <input type="checkbox" class="box">
+                    </div>
+                </li>
+                
+                <li class="board_cont1"style="background-color: rgb(155, 208, 252);"><!--5-->
+                    <div class="num A">5</div>
+                    <div class="유형1">나는 친구들과 함께 하는 놀이가 좋다.</div>
+                    <div class="표시 A">
+                        <input type="checkbox" class="box">
+                    </div>
+                    <div class="유형2">나는 나 혼자 재미있게 하는 놀이가 좋다.</div>
+                    <div class="표시 A">
+                        <input type="checkbox" class="box">
+                    </div>
+                </li>
+                <li class="board_cont1"><!--6-->
+                    <div class="num A">6</div>
+                    <div class="유형1">나는 많은 친구들에게 이야기하길 좋아한다.</div>
+                    <div class="표시 A">
+                        <input type="checkbox" class="box">
+                    </div>
+                    <div class="유형2">나는 친한 친구들에게 이야기하기를 좋아한다.</div>
+                    <div class="표시 A">
+                        <input type="checkbox" class="box">
+                    </div>
+                </li>
+                <li class="board_cont1"style="background-color: rgb(155, 208, 252);"><!--7-->
+                    <div class="num A">7</div>
+                    <div class="유형1">친구들과 함께 공부하면 잘된다.</div>
+                    <div class="표시 A">
+                        <input type="checkbox" class="box">
+                    </div>
+                    <div class="유형2">나 혼자 공부하면 더 잘 된다.</div>
+                    <div class="표시 A">
+                        <input type="checkbox" class="box">
+                    </div>
+                </li>
+                <li class="board_cont1"><!--8-->
+                    <div class="num A">8</div>
+                    <div class="유형1">나는 나의 생각과 느낌을 말로 표현하는 것이 편하다.  </div>
+                    <div class="표시 A">
+                        <input type="checkbox" class="box">
+                    </div>
+                    <div class="유형2">나는 나의 생각과 느낌을 글로 표현하는 것이 편하다.</div>
+                    <div class="표시 A">
+                        <input type="checkbox" class="box">
+                    </div>
+                </li>
+                <li class="board_cont1"style="background-color: rgb(155, 208, 252);"><!--9-->
+                    <div class="num A">9</div>
+                    <div class="유형1">주위 사람들은 내가 활발하다고 말한다.</div>
+                    <div class="표시 A">
+                        <input type="checkbox" class="box">
+                    </div>
+                    <div class="유형2">주위 사람들은 내가 얌전하다고 말한다.</div>
+                    <div class="표시 A">
+                        <input type="checkbox" class="box">
+                    </div>
+                </li>
+                <li class="board_cont1 board" ><!--9-->
+                    <div class="num A B">합계</div>
+                    <div class="유형1"></div>
+                    <div class="표시 A">
+                        <input type="checkbox" class="box">
+                    </div>
+                    <div class="유형2 B">합계</div>
+                    <div class="표시 A">
+                        <input type="checkbox" class="box">
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li class="eng_list"style="background-color: rgb(155, 208, 252);">
+                    <div class="eng">나의 에너지 방향은?</div>
+                    <input type="text-box" class="box2">
+                </li>
+                <div class="여백"></div>
+                <div>
+                    <li class="board_cont"style="background-color: rgb(155, 208, 252);"><!--1-->
+                        <div class="num text">번<br>호</div>
+                        <div class="유형1 text E">S 유형</div>
+                        <div class="표시 text">표<br>시</div>
+                        <div class="유형2 text E">N 유형</div>
+                        <div class="표시 text">표<br>시</div>
+                    </li>
+                    <li class="board_cont1"><!--9-->
+                        <div class="num A">1</div>
+                        <div class="유형1">나는 친구들에게 내가 직접 보고 들은 것에 대 해 얘기하는 것을 좋아한다. </div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                        <div class="유형2">난 친구들에게 내가 상상한 것을 이야기하는 것을 좋아한다.</div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                    </li>
+                    <li class="board_cont1"style="background-color: rgb(155, 208, 252);"><!--9-->
+                        <div class="num A">2</div>
+                        <div class="유형1">나는 실제로 있었던 사람이나 사실에 대한 책을 좋아한다. </div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                        <div class="유형2">나는 상상으로 지어낸 이야기를 좋아한다.</div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                    </li>
+                    <li class="board_cont1"><!--9-->
+                        <div class="num A">3</div>
+                        <div class="유형1">어려운 일에 부딪히면 하던 일을 잘못 한다. </div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                        <div class="유형2">어려운 일에 부딪히면 도전하고 싶은 마음이 생긴다.</div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                    </li>
+                    <li class="board_cont1"style="background-color: rgb(155, 208, 252);"><!--9-->
+                        <div class="num A">4</div>
+                        <div class="유형1">나는 무엇을 할 때 전에 배웠던 대로 하는 것이 편하다.. </div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                        <div class="유형2">나는 무엇을 할 때 새로운 방법을 생각해서 해 볼 때 더 재미있다.</div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                    </li>
+                    <li class="board_cont1"><!--9-->
+                        <div class="num A">5</div>
+                        <div class="유형1">나는 그려진 그림에 색칠하기를 좋아한다. </div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                        <div class="유형2">나는 이야기 지어내기를 좋아한다.</div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                    </li>
+                    <li class="board_cont1"style="background-color: rgb(155, 208, 252);"><!--9-->
+                        <div class="num A">6</div>
+                        <div class="유형1">나는 현재에 최선을 다하는 것이 중요하다고 생 각한다. </div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                        <div class="유형2">난 친구들에게 내가 상상한 것을 이야기하는 것을 좋아한다.</div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                    </li>
+                    <li class="board_cont1"><!--9-->
+                        <div class="num A">7</div>
+                        <div class="유형1">나는 친구들에게 내가 직접 보고 들은 것에 대 해 얘기하는 것을 좋아한다. </div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                        <div class="유형2">나는 미래에 대한 꿈을 갖는 것이 중요하다고 생각한다.</div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                    </li>
+                    <li class="board_cont1"style="background-color: rgb(155, 208, 252);"><!--9-->
+                        <div class="num A">8</div>
+                        <div class="유형1">나는 선생님이 가르쳐 주신 방법대로 하는 편이다. </div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                        <div class="유형2">나는 나 스스로 나만의 방법을 만들어서 하는 편이다.</div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                    </li>
+                    <li class="board_cont1"><!--9-->
+                        <div class="num A">9</div>
+                        <div class="유형1">내가 좋아하는 책은 읽은 것이라도 또 읽는다.  </div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                        <div class="유형2">나는 새로운 다른 책을 읽는 것이 좋다.</div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                    </li>
+                    <li class="board_cont1"style="background-color: rgb(155, 208, 252);"><!--9-->
+                        <div class="num A">10</div>
+                        <div class="유형1">나는 부지런하고 성실하다는 얘기를 듣는 편이다 </div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                        <div class="유형2">나는 기발하고 엉뚱하다는 얘기를 듣는 편이다</div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                    </li>
+                    <li class="board_cont1" ><!--9-->
+                        <div class="num A boarda">합계</div>
+                        <div class="유형1"></div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                        <div class="유형2 boarda">합계</div>
+                        <div class="표시 A">
+                            <input type="checkbox" class="box">
+                        </div>
+                    </li>
+                    <li class="eng_list"style="background-color: rgb(155, 208, 252);">
+                        <div class="eng">나의 에너지 방향은?</div>
+                        <input type="text-box" class="box2">
+                    </li>
+                </ul>
+                </div>
+            <div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

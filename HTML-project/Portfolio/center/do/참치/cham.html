@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>상원참치</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="banner"></div>
+      <div class="nav">
+        <ul>
+          <li onclick="menu(1)" id="menu1">전체 메뉴</li>
+          <li onclick="menu(2)" id="menu2">오늘의 메뉴</li>
+          <li onclick="menu(3)" id="menu3">베스트 메뉴</li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <div class="menu-wrapper">
+        <div class="menu">
+          <img src="image/img_con01.jpg" />
+          <div class="menu-info">
+            <h6>참다랑어 뱃살</h6>
+            <p>숙성 : <span>8일 숙성</span></p>
+            <p>가격 : <span>22,000</span></p>
+            <a id="fattyTuna8" href="#" onclick="clicks(this)">담기</a>
+          </div>
+        </div>
+        <div class="menu">
+          <img src="image/img_con02.jpg" />
+          <div class="menu-info">
+            <h6>참다랑어 뱃살</h6>
+            <p>숙성 : <span>2일 숙성</span></p>
+            <p>가격 : <span>10,000</span></p>
+            <a id="fattyTuna2" href="#" onclick="clicks(this)">담기</a>
+          </div>
+        </div>
+        <div class="menu">
+          <img src="image/img_con03.jpg" />
+          <div class="menu-info">
+            <h6>참다랑어 등살</h6>
+            <p>숙성 : <span>3일 숙성</span></p>
+            <p>가격 : <span>12,000</span></p>
+            <a id="bestPartOfRed3" href="#" onclick="clicks(this)">담기</a>
+          </div>
+        </div>
+        <div class="menu">
+          <img src="image/img_con04.jpg" />
+          <div class="menu-info">
+            <h6>참다랑어 뱃살</h6>
+            <p>숙성 : <span>5일 숙성</span></p>
+            <p>가격 : <span>16,000</span></p>
+            <a id="fattyTuna5" href="#" onclick="clicks(this)">담기</a>
+          </div>
+        </div>
+        <div class="menu">
+          <img src="image/img_con06.jpg" />
+          <div class="menu-info">
+            <h6>참다랑어 스페셜 세트</h6>
+            <p>숙성 : <span>5일 숙성</span></p>
+            <p>가격 : <span>32,000</span></p>
+            <a id="specialSet" href="#" style="color: red" onclick="sold_out()">품절</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="order">
+        <button type="button" id="order" onclick="order_menu()">주문하기</button>
+        <p>총 주문 금액 : <span id="totalMoney">0</span></p>
+      </div>
+    </div>
+  </div>
+  <script>
+    /* 
+    맛좋은 상원참치에 오신걸 환영합니다. 👨‍🍳
+    아래 4문제를 10월 11일 17:30 까지 풀어주세요~!
+
+    1번 문제: 전체 메뉴, 오늘의 메뉴, 베스트 메뉴를 클릭하게 되면
+    클릭한 메뉴에 css 적용할 것 (background-color: #ffffff; color: #4e4e4e;)
+
+    2번 문제: 담기를 클릭하면 총 주문 금액에 클릭한 가격 표기할 것
+    단, 참다랑어 스페셜 세트는 품절이기 때문에 총 주문 금액에 포함될 수 없다.
+
+    3번 문제: 참다랑어 스페셜 세트를 클릭하면
+    "죄송합니다. 참다랑어 세트는 품절입니다." alert창 띄우기
+
+    4번 문제: 결제하기 버튼을 누르면 "주문 완료" alert창 띄우고,
+    총 주문 금액 0원으로 리셋하기
+    */
+    var price = 0;
+
+    function menu(b) { //1번
+      var menu = document.getElementById("menu" + b); // background,color 스타일이 변할 변수선언
+
+      for (var i = 1; i < 4; i++) { // background,color 스타일을 초기상태로 변환 시킬 for문
+        var num = document.getElementById("menu" + i);
+        num.style.background = "";
+        num.style.color = "";
+      }
+      menu.style.background = "#ffffff";
+      menu.style.color = "#4e4e4e";
+    }
+
+    function clicks(a) { //2번
+      var money = document.getElementById("totalMoney"); //총합금액을 계산할 변수선언
+      if (a.id == "fattyTuna8") { // 파라미터값을a로지정  a.id로 clicks라는 함수의 id를 호출 후 클릭된 id값과 해당칸에 id값이 일치하는지 확인
+        price += 22000;
+      }
+      if (a.id == "fattyTuna2") {// 파라미터값을a로지정  a.id로 clicks라는 함수의 id를 호출 후 클릭된 id값과 해당칸에 id값이 일치하는지 확인
+        price += 10000;
+      }
+      if (a.id == "bestPartOfRed3") { // 파라미터값을a로지정  a.id로 clicks라는 함수의 id를 호출 후 클릭된 id값과 해당칸에 id값이 일치하는지 확인
+        price += 12000;
+      }
+      if (a.id == "fattyTuna5") { // 파라미터값을a로지정  a.id로 clicks라는 함수의 id를 호출 후 클릭된 id값과 해당칸에 id값이 일치하는지 확인
+        price += 16000;
+      }
+      money.innerHTML = price.toLocaleString('ko-KR'); // 누적된 price 값을 한국화페기준에 맞게 콤마 자동삽입
+    }
+
+    function sold_out() { //3번
+      alert("죄송합니다. 참다랑어 세트는 품절입니다.");
+    }
+
+    function order_menu() { //4번
+      var money = document.getElementById("totalMoney");
+      if (money.innerHTML != "0") {
+        alert("주문완료입니다");
+        money.innerHTML = "0"; // 주문완료 후 새로운 주문을 받기위해 money.innerHTML을 0으로 리셋
+        price = 0; // 주문완료 후 새로운 주문을 받기위해 총합금액인 price를 0으로 리셋
+      }
+      else {
+        alert("담기 후 주문하기버튼을 눌러주세요")
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DnB_code</title>
+    <link rel="stylesheet" href="contact_us.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <article id="dm_wrap">
+        <div class="main_head">
+            <h1 class="logo">
+                <a href="main.html" class="inbox">
+                    <img src="img/logo1.png" alt="DnB_code, 디엔비코드, 웹 프로덕션 전문">
+                </a>
+            </h1>
+            <div class="main_title">
+                <h2>디엔비코드</h2>
+                <p>Online Inquiry</p>
+            </div>
+            <div class="top_menu">
+                <div class="all_header">
+                    <div class="header0">
+                        <button class="Inquiry bt1"><a href="contact_us.html">Inquiry</a></button>
+                    </div>
+                    <div>
+                        <button class="home bt1"><a href="main.html">HOME</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="content">
+                <!-- 내용 -->
+                <div class="text_cont">
+                    <div class="mid">
+                        <div class="order_ipt">
+                            <h2>온라인 문의</h2>
+                            <div class="ipt">
+                                <div class="i_div"><i class="bi bi-person-fill"></i></div>
+                                <div>
+                                    <input id="name" name="name" type="text" placeholder="이름">
+                                </div>
+                            </div>
+                            <div class="ipt">
+                                <div class="i_div"><i class="bi bi-telephone"></i></div>
+                                <div>
+                                    <input type="text" name="cellPhone" id="cellPhone" placeholder="연락처"
+                                        maxlength="13" />
+                                </div>
+                            </div>
+                            <div class="ipt">
+                                <div class="i_div"><i class="bi bi-envelope"></i></div>
+                                <div>
+                                    <input type="email" name="mail" id="mail" placeholder="이메일">
+                                </div>
+                            </div>
+                            <div class="ipt order_val">
+                                <div class="i_div"><i class="bi bi-pen"></i></div>
+                                <div>
+                                    <textarea name="order" id="order" cols="55" placeholder="문의사항" rows="10"></textarea>
+                                </div>
+                            </div>
+                            <div class="bt">
+                                <button id="bt">문의하기</button>
+                                <div id="res_div">
+                                    <i class="bi bi-exclamation-triangle i_class" id="i"></i>
+                                    <div id="res" class="res"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+    <!-- footer -->
+    <footer id="footwrap">
+        <div id="foot">
+            <address>
+                <strong>디엔비코드</strong>
+                <span>대전광역시 중구 중앙로121번길 20 방산빌딩 2층 |</span>
+                <span>TEL.042) 2383-9817 |</span>
+                <span>E-MAIL.dnbcode@naver.com |</span>
+                <span>사업자번호 : 777-77-77777</span>
+            </address>
+            <p class="copyright">Copyrightⓒ 2022 dnbcode All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+<script src="contact_us.js"></script>
+
+<script>
+    function autoHypenPhone(str) {
+        str = str.replace(/[^0-9]/g, '');
+        var tmp = '';
+        if (str.length < 4) {
+            return str;
+        } else if (str.length < 7) {
+            tmp += str.substr(0, 3);
+            tmp += '-';
+            tmp += str.substr(3);
+            return tmp;
+        } else if (str.length < 11) {
+            tmp += str.substr(0, 3);
+            tmp += '-';
+            tmp += str.substr(3, 3);
+            tmp += '-';
+            tmp += str.substr(6);
+            return tmp;
+        } else {
+            tmp += str.substr(0, 3);
+            tmp += '-';
+            tmp += str.substr(3, 4);
+            tmp += '-';
+            tmp += str.substr(7);
+            return tmp;
+        }
+        return str;
+    }
+
+    var cellPhone = document.getElementById('cellPhone');
+    cellPhone.onkeyup = function (event) {
+        event = event || window.event;
+        var _val = this.value.trim();
+        this.value = autoHypenPhone(_val);
+    }
+
+
+</script>
+
+</html>

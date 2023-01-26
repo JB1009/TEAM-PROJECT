@@ -1,0 +1,50 @@
+## 개발모드와 운영모드 나누기
+spring:
+  profiles:
+    active: dev
+
+aws:
+  s3:
+    access-id:
+    access-pw:
+    bucket: jukery.pro    
+
+---
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.0.11:3306/camping
+    username: project
+    password: '12341234'
+  jpa:
+    database: mysql
+    generate-ddl: true
+    hibernate.ddl.auto: update
+    show-sql: true
+---
+spring:
+  profiles: env
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.0.11:3306/camping
+    username: project
+    password: '12341234'
+  jpa:
+    database: mysql
+    generate-ddl: true
+    hibernate.ddl.auto: update
+    show-sql: true
+---
+spring:
+  profiles: home
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/camping
+    username: project
+    password: '12341234'
+  jpa:
+    database: mysql
+    generate-ddl: true
+    hibernate.ddl.auto: update
+    show-sql: true

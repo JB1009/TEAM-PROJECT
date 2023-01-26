@@ -1,0 +1,51 @@
+
+/* 답변 */
+.questionMyInquiry {
+  width: 100%;
+  height: 200px;
+  margin: 5px 0;
+}
+.answerMyInquiry {
+  width: 100%;
+  border: 1px solid lightgray;
+  color: #363434;
+}
+.answerMyInquiryTitle {
+  padding: 5%;
+  background-color: lightgray;
+}
+.answerMyInquiryText {
+  padding: 5%;
+  width: 90%;
+}
+
+/* 문의 테이블 */
+
+.inquiryTable{
+  border: none;
+}
+
+.inquiryTable tr{
+  width: 100%;
+}
+
+.inquiryNumber{
+  width: 15%;
+  text-align: center;
+}
+
+.inquiryTitle{
+  width: 55%;
+  text-align: center;
+}
+
+.inquiryDate{
+  width: 15%;
+  text-align: center;
+}
+
+.answerStatus{
+  width: 15%;
+  text-align: center;
+}
+

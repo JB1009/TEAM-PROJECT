@@ -1,0 +1,43 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 1400px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.top{
+  width: 80%;
+  height: 200px;
+  margin: 100px auto;
+  /* background: black; */
+}
+
+.top_img{
+  width: 200px;
+  height: 180px;
+  background: blue;
+  margin: 0 auto;
+}
+
+.mid-row{
+  width: 80%;
+  height: 400px;
+  display: flex;
+  margin: 200px auto;
+
+}
+
+.menu{
+  /* justify-content: space-between; */
+  width: 200px;
+  justify-content: space-between;
+  height: 380px;
+  background: black;
+  flex-basis: 25%;
+  border-radius: 10px;
+}

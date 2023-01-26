@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DnB_code</title>
+    <link rel="stylesheet" href="directions.css">
+</head>
+
+<body>
+    <article id="dm_wrap">
+        <div class="main_head">
+            <h1 class="logo">
+                <a href="main.html" class="inbox">
+                    <img src="img/logo1.png" alt="DnB_code, 디엔비코드, 웹 프로덕션 전문">
+                </a>
+            </h1>
+            <div class="main_title">
+                <h2>디엔비코드</h2>
+                <p>Directions for coming to DNB Code</p>
+            </div>
+            <div class="top_menu">
+                <div class="all_header">
+                    <div class="header0">
+                        <button class="About_us bt1"><a href="about_us.html">About us</a></button>
+                        <button class="member bt1"><a href="member.html">Introduce the members</a></button>
+                        <button class="directions bt1"><a href="directions.html">Directions</a></button>
+                    </div>
+                    <div>
+                        <button class="home bt1"><a href="main.html">HOME</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="content">
+                <div class="text_cont">
+                    <h1>We are always welcome</h1>
+                    <!-- * 카카오맵 - 지도퍼가기 -->
+                    <!-- 1. 지도 노드 -->
+                    <div id="daumRoughmapContainer1667289722024" class="root_daum_roughmap root_daum_roughmap_landing"
+                    style="width: 100%;"></div>
+
+                    <!--
+                        2. 설치 스크립트
+                        * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                    -->
+                    <script charset="UTF-8" class="daum_roughmap_loader_script"
+                        src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                    <!-- 3. 실행 스크립트 -->
+                    <script charset="UTF-8">
+                        new daum.roughmap.Lander({
+                            "timestamp": "1667289722024",
+                            "key": "2cbxx",
+                            "mapHeight": "460"
+                        }).render();
+                    </script>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer id="footwrap">
+        <div id="foot">
+            <address>
+                <strong>디엔비코드</strong>
+                <span>대전광역시 중구 중앙로121번길 20 방산빌딩 2층 |</span>
+                <span>TEL.042) 2383-9817 |</span>
+                <span>E-MAIL.dnbcode@naver.com |</span>
+                <span>사업자번호 : 777-77-77777</span>
+            </address>
+            <p class="copyright">Copyrightⓒ 2022 dnbcode All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>

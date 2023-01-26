@@ -1,0 +1,100 @@
+.LoginSection {
+  width: 1200px;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.LoginBox {
+  width: 40%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #85c89a;
+  border-radius: 10px;
+}
+.LoginForm {
+  width: 70%;
+  height: 50vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 18px;
+}
+.LoginForm label {
+  text-align: left;
+}
+.LoginForm input {
+  height: 30px;
+  border: 1px solid #85c89a;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+.LoginButton {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+}
+.LoginForm button {
+  width: 60%;
+  height: 30px;
+  background-color: #85c89a;
+  border: 1px solid #85c89a;
+  border-radius: 10px;
+  margin: 0 auto;
+  transition: all 0.5s;
+}
+.LoginForm button:hover {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+}
+.LoginBox span:hover {
+  cursor: pointer;
+  color: red;
+  transition: 0.3s;
+}
+.loginmenu {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.loginbutton {
+  width: 60%;
+  height: 30px;
+  background-color: #85c89a;
+  border: 1px solid #85c89a;
+  border-radius: 10px;
+  margin: 0 auto;
+  transition: all 0.5s;
+}
+.loginbutton:hover {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+}
+@media only screen and (max-width: 620px) {
+  .loginmenu {
+    justify-content: space-between;
+  }
+
+  .LoginSection {
+    width: 390px;
+  }
+  .LoginBox {
+    width: 80%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #85c89a;
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,145 @@
+.boardWriteSection {
+  width: 50%;
+  height: 80vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.boardWriteContainer {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.writeBox {
+  width: 60%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ck-editor__editable {
+  height: 550px;
+}
+
+.form-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-color: #85c89a;
+  border-left: 0;
+  border-right: 0;
+  justify-content: center;
+}
+
+.title {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.title-option {
+  width: 20%;
+  height: 44px;
+  border-color: #85c89a;
+  padding-left: 15px;
+}
+
+.title-input {
+  width: 100%;
+  height: 100%;
+  margin: 0 0 10px 0px;
+  border: 1px solid #85c89a;
+  border-right: 0;
+  border-color: #85c89a;
+  padding-left: 20px;
+}
+
+.text-area {
+  min-height: 500px;
+}
+
+.submit-button {
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  border: none;
+  background: #85c89a;
+  border-radius: 5px;
+  margin: 2% auto;
+  transition: all 0.5s;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+}
+
+@media only screen and (max-width: 798px) {
+  .boardWriteSection {
+    width: 90%;
+  }
+
+  .title-input {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 10px 0px;
+    border: 1px solid #85c89a;
+    border-color: #85c89a;
+    padding-left: 20px;
+  }
+
+  .ck-editor__editable {
+    height: 450px;
+  }
+
+  .boardWriteContainer {
+    border-top: 0;
+  }
+  .title-option {
+    width: 40%;
+    height: 44px;
+    border-color: #85c89a;
+    padding-left: 15px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .boardWriteSection {
+    width: 90%;
+    height: auto;
+  }
+
+  .title-input {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 10px 0px;
+    border: 1px solid #85c89a;
+    border-color: #85c89a;
+    padding-left: 20px;
+  }
+
+  .ck-editor__editable {
+    height: 450px;
+  }
+
+  .boardWriteContainer {
+    border-top: 0;
+  }
+  .title-option {
+    width: 25%;
+    height: 44px;
+    border-color: #85c89a;
+    padding-left: 15px;
+  }
+}

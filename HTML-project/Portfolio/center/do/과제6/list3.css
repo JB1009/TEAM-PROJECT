@@ -1,0 +1,127 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1300px;
+    height: 100vh;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.tong{
+    display: flex;
+}
+.header{
+    flex-basis: 10%;
+    color: #fff;
+    height: 0 auto;
+    margin-top: 40px;
+    text-align: center;
+}
+.logo{
+    flex-basis: 20%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    color: black;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    padding-top: 30px;
+}
+.logo img{
+    width: 100%;
+}
+.header_img{
+    flex-basis: 80%;
+    color: black;
+    width: 100%;
+}
+.header_img img{
+    width: 1000px;
+    padding-left: 40px;
+    padding-top: 5px;
+}
+.center{
+    flex-basis: 100%;
+    /* 아이템도 flex가 될 수 있다. */
+    display: flex;
+    justify-content: space-between;
+    height: 706px;
+    margin-top: 40px;
+    width: 1200px;    
+}
+.nav{
+    background-color: rgb(186, 196, 216);
+    flex-basis: 20%;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-left: 10px;
+    height: 573px;
+}
+.nav ul{
+    margin-right: 30px;
+    margin-left: 20px;
+    padding: 0;
+}
+.nav ul li{
+    list-style-type: none;
+    background-color: lightgreen;
+    border: 1px solid lightgreen;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 25px;
+    color: white;
+}
+.nav ul li a{
+    text-decoration-line: none;
+    color: white;
+}
+.id{
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 20px;
+    color: black;
+}
+.my{
+    margin-bottom: 20px;
+}
+input{
+    width: 130px;
+}
+button{
+    width: 200px;
+    border-radius: 5px;
+    background-color: lightgreen;
+    border: 1px solid lightgreen;
+    color: white;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    margin-right: 26px;
+}
+button:hover{
+    cursor: pointer;
+}
+.my a{
+    text-decoration-line: none;
+    color: black;
+    font-weight: 700;
+}
+.section{
+    flex-basis: 100%;  
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+.article{
+    flex-basis: 100%;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.article img{
+    width: 750px;
+}

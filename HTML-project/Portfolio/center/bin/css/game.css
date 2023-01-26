@@ -1,0 +1,110 @@
+#main_wrap{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+.rsp_wrap{
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 50px;
+}
+.rsp_title{
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 50px;
+    margin: 30px auto;
+}
+.rsp_img{
+    width: 300px;
+    height: 300px;
+    line-height: 250px;
+    
+    border-radius: 300px;
+    text-align: center;
+    font-size: 220px;
+}
+.rsp_img img{width: 300px;
+             height: 300px;}
+
+.com_wrap{
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    margin: 0 auto;
+}
+#result1{
+    margin-right: 50px;
+}
+#result2{
+    margin-left: 50px;
+}
+#result1, #result2{
+    width: 300px;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+    font-size: 60px;
+}
+.user_rsp{
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    margin: 0 auto;
+}
+.rock{
+    width: 300px;
+    height: 300px;
+    margin-right: 50px;
+    border-radius: 300px;
+}
+.scissors{
+    width: 300px;
+    height: 300px;
+    margin-right: 50px;
+    border-radius: 300px;
+}
+.paper{
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+}
+.user_rsp button{
+    width: 300px;
+    height: 300px;
+    line-height: 300px;
+    margin: 0;
+    padding: 0;
+    border-radius: 300px;
+    border: 0;
+    font-size: 220px;
+    cursor: pointer;
+}
+#rock_bt img{width: 300px;
+             height: 300px;
+   
+}
+#scissors_bt img{width: 300px;
+    height: 300px;
+    
+}
+#paper_bt img{width: 300px;
+    height: 300px;
+   
+}
+
+@keyframes rsp {
+    0%{
+        content: "✊";
+    }   
+    50%{
+        content: "✌";
+    } 
+    100%{
+        content: "🖐";
+    }
+}

@@ -1,0 +1,45 @@
+.App {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Link 스타일 제거 */
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+  }
+}

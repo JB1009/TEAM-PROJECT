@@ -1,0 +1,66 @@
+.JoinSection {
+  width: 95%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 18px;
+}
+.JoinSection h2 {
+  font-size: 25px;
+  font-weight: 400;
+  height: 50px;
+  line-height: 60px;
+}
+.JoinBox {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #85c89a;
+  border-radius: 10px;
+  padding: 10px;
+}
+.Joinform {
+  width: 90%;
+  height: 80vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.Joinform label {
+  text-align: left;
+}
+.Joinform input {
+  height: 30px;
+  border: 1px solid #85c89a;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+.Joinform button {
+  width: 100%;
+  height: 30px;
+  font-size: 18px;
+  background-color: #85c89a;
+  border: 1px solid #85c89a;
+  border-radius: 10px;
+  margin: 0 auto;
+  transition: all 0.5s;
+}
+.Joinform button:hover {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+}
+/* 
+@media only screen and (max-width: 620px) {
+  .JoinSection {
+    width: 390px;
+  }
+  .JoinBox {
+    width: 80%;
+  }
+} */

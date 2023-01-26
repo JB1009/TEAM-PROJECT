@@ -1,0 +1,426 @@
+body div input button{margin:0;
+      padding:0;}
+
+#main{width: 100%;
+height: auto;}
+
+#logo_main{font-weight: bold;
+display: flex;
+width: 100%;
+height: 50px;
+padding-top: 20px;}
+
+#sport{height: 50;
+margin-left: 25%;}
+
+.logo_prt{height: 22px;
+font-size: 20pt;
+font-weight: bold;
+background: blue;
+color: white;
+padding-left: 5px;
+padding-right: 5px;
+padding-bottom: 13px;
+margin-top: 10px;} 
+
+.logo_prt:hover{cursor: pointer;}         
+
+.logo_sport:hover{cursor: pointer;}
+
+.logo{width: 75px;
+font-size: 30pt;
+color: rgb(59, 59, 235);}    
+
+.search{width: 400px;
+height: 53px;
+border: 2px solid rgb(59, 59, 235);
+margin-top: 5px;
+margin-left: 55px;}
+
+.button{width: 75px;
+height: 48px;
+border: none;
+color: white;
+background: rgb(59, 59, 235);
+margin-top: 5px;
+text-align: center;}
+
+#menu_div{width: 1000px;
+height: 50px;
+margin-top: 20px;
+background:blue;
+color:white;
+margin-left: 25%;}
+
+#menu{width: 100%;
+height: 10px;
+display: flex; 
+list-style-type: none;
+padding:0;
+margin-top: 10px;
+font-size: 20px;
+color: rgb(223, 223, 223);
+padding: 10px;
+text-align: center;
+font-weight: bold;}
+
+.menu_li:hover{ font-weight:800px;
+color: black; cursor: pointer;}      
+
+.menu_li{margin-right:  1px;
+width:calc( 1000 / 8 * 1px);
+}
+
+#검색div{ width: 200px;
+height: 30px;
+display: flex;
+padding-left: 50px;
+}
+
+.sub_button{width: 15px;
+height: 30px;
+margin-bottom:30px;
+
+padding-right: 25px;}
+
+.menu_input{width: 120px;
+height: 30px;}
+
+
+#wrap{width: auto; height: auto;
+margin-top: 25px;}
+
+
+#main_wrap{width: 1000px;
+height: 50px;
+background: white;
+padding: 0;
+text-align: center;
+border-top: 2px solid gray;
+border-bottom: 2px solid gray;}
+
+#sub_wrap{width: 100px;
+height: 500px;
+background: white;
+
+color: black;
+list-style-type: none;}
+
+#main_div{width: 100%;}
+
+.main_ul{display: flex;
+list-style-type: none;
+font-size: 10pt;
+color: black;
+width: 100%;
+text-align: left;
+margin-left: 10px;}         
+
+.main_td{width: 130px;
+}
+
+
+.main_td:hover{font-weight: bold;color: blue; cursor: pointer;} 
+
+.img{width: 100px;
+height: 75px;
+margin-top: 30%;}
+
+.img:hover{cursor: pointer;}
+
+#news_word{width:600px;
+           height: auto;
+}
+
+#메인div{display: flex;
+         width: 100%;
+         height: 650px;}
+
+.최신{width: 660px;
+height: 40px;
+border-bottom: 1px solid rgb(163, 161, 161);
+border-top: 1px solid rgb(163, 161, 161);
+padding-top: 15px;
+font-size: 10pt;
+margin-left: 5px;}   
+
+.최신순:hover{font-weight: bold;
+cursor: pointer;
+font-size: 12pt;
+color: blue;}
+
+.인기순{margin-left: 20px;}
+
+.인기순:hover{font-weight: bold;
+cursor: pointer;
+font-size: 12pt;
+color: blue;}
+
+
+.text1{width: 500px;
+height: 40px;
+margin: 25px 0 0  50px; 
+/* border: none; */
+color: black;
+font-size: 12px;
+opacity: 0.7;
+}
+
+.text6:hover{cursor: pointer; border-bottom:1px solid black; width: 435px;}
+.text7:hover{cursor: pointer;border-bottom:1px solid black; width: 490px;}
+.text8:hover{cursor: pointer;border-bottom:1px solid black; width: 463px;}
+.text9:hover{cursor: pointer;border-bottom:1px solid black; width: 448px;}
+.text0:hover{cursor: pointer;border-bottom:1px solid black; width: 335px;}
+
+.text2{width: 500px;
+height: 40px;
+color: black;
+margin-left: 50px;
+/* border: none;} */
+opacity: 0.7;
+font-size: 12px;}
+
+.text3{width: 500px;
+height: 40px;
+color: black;
+margin-left: 50px;
+/* border: none; */
+font-size: 12px;
+margin-top: 15px;
+opacity: 0.7;}
+
+.text4{width: 500px;
+height: 40px;
+color: black;
+margin-left: 50px;
+/* border: none; */
+font-size: 12px;
+margin-top: 15px;
+opacity: 0.7;}
+
+.text5{width: 500px;
+height: 40px;
+color: black;
+margin-left: 50px;
+margin-top: 15px;
+font-size: 12px;
+opacity: 0.7;}
+
+.text6{width: 500px;
+height: 20px;
+margin-left: 50px;
+margin-top: 100px;
+color: black;
+font-size: 12pt;
+font-weight: bold;}
+
+.text7{width: 500px;
+height: 20px;
+margin-left: 50px;
+margin-top: 30px;
+color: black;
+font-size: 11pt;
+font-weight: bold;}   
+
+.text8{width: 500px;
+height: 20px;
+font-size: 12pt;
+margin-top: 30px;
+color: black;
+margin-left: 50px;
+font-weight: bold;}     
+
+.text9{width: 500px;
+height: 20px;
+font-size: 12pt;
+margin-top: 33px;
+color: black;
+margin-left: 50px;
+font-weight: bold;}     
+
+.text0{width: 500px;
+height: 20px;
+font-size: 12pt;
+margin-top: 35px;
+color: black;
+margin-left: 50px;
+font-weight: bold;}    
+
+#text{color: black;
+width: 280px;
+height: 350px;
+margin-left: 20px;
+border: 1px solid rgb(163, 161, 161);
+text-align: center;
+margin-top: 15px;
+position: relative;}
+
+#text_야구{width: 140px;
+height: 30px;
+padding-top: 10px;
+text-align: center;
+padding-left: 5px;}
+
+#text_종합{width: 140px;
+height: 30px;
+padding-top: 10px;
+text-align:center;
+padding-right: 5px;}
+
+
+.현재뉴스{font-size: 14pt;
+font-weight: bold;
+text-align: center;
+}      
+
+
+.뉴스ul{font-size: 10pt;
+}
+
+.뉴스li{margin-top: 13px;}
+
+
+#text_야구:hover{background: rgb(59, 59, 235);
+ cursor: pointer;}
+
+#text_종합:hover{background: rgb(59, 59, 235);
+ cursor: pointer;}
+
+.뉴스li:hover{
+opacity: 0.7;
+cursor: pointer;} 
+
+#영상{border: 1px solid rgb(163, 161, 161);
+margin-top: 40px;
+width: 281px;
+height: 230px;
+}
+
+.영상{font-weight: bold;
+font-size: 14pt;
+margin-right: 50%;}
+
+.영상제목{
+      float: left;
+      width: 280px;
+      height: auto;
+      position:absolute;
+      display: flex;}
+
+.다운로드{height: 160px;
+width: 270px;
+color: black;}
+
+.다운로드:hover{opacity: 0.7;
+cursor: pointer;}    
+
+.돋보기{width: 27px;height: 25px;
+margin-right: 150px;}
+
+.뉴스ll{text-align: left;}
+
+#배너순위{display: block;
+          height: 180px;
+          width: 600px;}
+
+#배너{ border: 1px solid rgb(163, 161, 161);
+      width: 668px;
+      margin-left: 15px;display: flex;
+      height: 180px;}
+
+#배너:hover{cursor: pointer;}
+
+.배너2{width: 200px;
+       padding: 25px 0 25px 25px;
+       height: 130px;}
+
+.배너1{margin-left: 15px;
+      margin-top: 10px;
+      }
+
+.광고글{color: black;
+       height: 30px;
+       margin-top: 40px;
+       font-size: 14px;
+      font-weight: bold;}
+
+.광고글1{font-weight: 100;
+         width: 330px;
+         font-size: 11pt;}
+
+.게임{font-size: 12px;
+      opacity: 0.5;}
+
+.다운로드1{margin-left: 66%;
+         color: blue;
+         opacity: 1;}
+
+#팀순위{border: 1px solid rgb(163, 161, 161);
+       
+       font-weight: bold;
+      height: 500px;
+      width: 280px;
+      margin-top: 20px;}
+
+.더보기{margin-left: 40px;
+       font-size: 7pt;
+       font-weight: 100;}
+      
+
+.팀별{font-size: 9pt;
+     font-weight: 100;
+     color: gray;
+     border-top: 1px solid gray;
+     border-bottom: 1px solid gray;
+     height: 30px;
+     padding-top: 10px;}
+
+
+
+.팀명{margin-right: 40px;}
+
+.팀이름{text-align: left;
+       ;}
+
+.SSG1{padding-right: 18px;}       
+
+.SSG{font-size: 11pt;
+     font-weight: bold;
+     padding-right: 5%;}
+
+.마무리{color: black;
+       border-top: 2px solid black;
+       width: 1000px;
+       text-align: center;
+       margin-top: 25px;}
+
+.마무리줄{font-size: 10pt;
+         margin-top: 40px;}
+
+.마무리줄2{font-size: 8pt;
+          opacity: 0.8;
+          margin-top: 20px;}
+
+.마무리줄3{
+          margin-top: 12px;}
+
+.naver{margin-right: 15px;}
+
+.naver2{margin-right: 15px;}
+
+
+.copy{font-family: verdana,sans-serif;
+      font-size: 9px;}
+
+.corp{font-family: tahoma,sans-serif;
+      font-size: 9px;
+      font-weight: bold;}
+
+.all{font-family: verdana,sans-serif;
+      font-size: 9px;}
+
+.naver::after{margin-left: 11px;
+      content:'|'}
+
+.naver:hover{color: green;
+             cursor: pointer;}      

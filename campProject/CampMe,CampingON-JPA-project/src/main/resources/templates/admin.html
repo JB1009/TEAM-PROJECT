@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.108.0" />
+    <title>관리자 콘솔</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+          inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="/css/admin.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header
+      class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow"
+    >
+      <a
+        class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6"
+        href="/admin"
+        >관리자 콘솔</a
+      >
+      <button
+        class="navbar-toggler position-absolute d-md-none collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#sidebarMenu"
+        aria-controls="sidebarMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <input
+        class="form-control form-control-dark w-100 rounded-0 border-0"
+        type="text"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <div class="navbar-nav">
+        <div class="nav-item text-nowrap">
+          <a class="nav-link px-3" href="#">로그아웃</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row" id="section">
+        <nav
+          id="sidebarMenu"
+          class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
+        >
+          <div class="position-sticky pt-3 sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" onclick="getMainPage(this)">
+                  <span data-feather="layout" class="align-text-bottom"></span>
+                  메인화면
+                </a>
+              </li>
+            </ul>
+              <h6 class="sidebar-heading fs-5 align-items-center px-2 mt-4 mb-2 text-muted text-capitalize">
+                <span data-feather="database" class="align-text-bottom" style="width: 24px; height: 24px;"></span>
+                Management
+                <!--<a class="link-secondary" href="#" aria-label="Add a new report">
+                <span
+                  data-feather="plus-circle"
+                  class="align-text-bottom"
+                ></span>
+              </a>-->
+            </h6>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="getCampPage(this)">
+                  <span data-feather="home" class="align-text-bottom"></span>
+                  캠핑장관리
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="getReservationPage(this)">
+                  <span data-feather="file" class="align-text-bottom"></span>
+                  예약관리
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="getUserPage(this)">
+                  <span data-feather="users" class="align-text-bottom"></span>
+                  회원관리
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="getBoardPage(this)">
+                  <span data-feather="list" class="align-text-bottom"></span>
+                  게시판관리
+                </a>
+              </li>
+            </ul>
+
+            <h6 class="sidebar-heading fs-5 align-items-center px-2 mt-4 mb-2 text-muted text-capitalize">
+              <span data-feather="headphones" class="align-text-bottom" style="width: 24px; height: 24px;"></span>
+              Service
+              <!--<a class="link-secondary" href="#" aria-label="Add a new report">
+                <span
+                  data-feather="plus-circle"
+                  class="align-text-bottom"
+                ></span>
+              </a>-->
+            </h6>
+            <ul class="nav flex-column mb-2">
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="getInquiryPage(this)">
+                  <span
+                    data-feather="message-circle"
+                    class="align-text-bottom"
+                  ></span>
+                  문의사항
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <main id="main-section" class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">월별 통계</h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <div class="btn-group me-2">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  내보내기
+                </button>
+              </div>
+              <button
+                type="button"
+                class="btn btn-sm btn-outline-secondary dropdown-toggle"
+              >
+                <span data-feather="calendar" class="align-text-bottom"></span>
+                월
+              </button>
+            </div>
+          </div>
+
+          <canvas
+            class="my-4 w-100"
+            id="myChart"
+            width="1200"
+            height="200"
+          ></canvas>
+        </main>
+        <div class="modal modal-signin position-absolute d-none bg-secondary bg-opacity-75 py-5" tabindex="-1" role="dialog" id="campModal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-4 shadow">
+              <div class="modal-header p-5 pb-4 border-bottom-0">
+                <h1 class="fw-bold mb-0 fs-2">상세조회</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="closeCampModal()"></button>
+              </div>
+              <div class="modal-body p-5 pt-0">
+                <form class="">
+                  <div class="form-floating mb-2">
+                    <input id="campsiteIndex" type="text" hidden>
+                    <input id="campsiteUserNumber" type="text" hidden>
+                    <input type="text" class="form-control rounded-3" id="campsiteName" placeholder="캠핑장 이름">
+                    <label for="campsiteName">캠핑장 이름</label>
+                  </div>
+                  <div class="form-floating mb-2">
+                    <input type="text" class="form-control rounded-3" id="campsiteAddress" placeholder="캠핑장 주소">
+                    <label for="campsiteAddress">캠핑장 주소</label>
+                  </div>
+                  <div class="row g-2">
+                    <div class="col-md">
+                      <div class="form-floating mb-2">
+                        <select class="form-select rounded-3" id="campingType" aria-label="Floating label select">
+                        <option value="1">캠핑장</option>
+                        <option value="2">카라반</option>
+                        <option value="3">글램핑</option>
+                        <option value="4">차박</option>
+                        </select>
+                        <label for="campingType">유형</label>
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="form-floating mb-2">
+                        <select class="form-select rounded-3" id="campsiteLocal" aria-label="Floating label select">
+                        <option value="서울">서울</option>
+                        <option value="경기도">경기도</option>
+                        <option value="강원도">강원도</option>
+                        <option value="충청도">충청도</option>
+                        <option value="전라도">전라도</option>
+                        <option value="경상도">경상도</option>
+                        <option value="제주도">제주도</option>
+                        </select>
+                        <label for="campsiteLocal">캠핑장 지역</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-floating mb-2">
+                    <textarea class="form-control rounded-3" id="campsiteIntroduction" placeholder="캠핑장 소개" style="height: 100px; resize: none;"></textarea>
+                    <label for="campsiteIntroduction">캠핑장 소개</label>
+                  </div>
+                  <div class="form-floating mb-2">
+                    <textarea type="text" class="form-control rounded-3" id="campsiteGuide" placeholder="캠핑장 안내" style="height: 100px; resize: none;"></textarea>
+                    <label for="campsiteGuide">캠핑장 안내</label>
+                  </div>
+                  <div class="input-group mb-2">
+                    <input type="checkbox" class="btn-check" id="store" autocomplete="off">
+                    <label class="btn btn-outline-primary rounded-3 me-2 mb-2" for="store">편의점</label>
+                    <input type="checkbox" class="btn-check" id="barbecue" autocomplete="off">
+                    <label class="btn btn-outline-primary rounded-3 me-2 mb-2" for="barbecue">바베큐</label>
+                    <input type="checkbox" class="btn-check" id="parking" autocomplete="off">
+                    <label class="btn btn-outline-primary rounded-3 me-2 mb-2" for="parking">주차장</label>
+                    <input type="checkbox" class="btn-check" id="wifi" autocomplete="off">
+                    <label class="btn btn-outline-primary rounded-3 mb-2" for="wifi">와이파이</label>
+                    <input type="checkbox" class="btn-check" id="shower" autocomplete="off">
+                    <label class="btn btn-outline-primary rounded-3 me-2" for="shower">샤워장</label>
+                    <input type="checkbox" class="btn-check" id="pool" autocomplete="off">
+                    <label class="btn btn-outline-primary rounded-3 me-2" for="pool">수영장</label>
+                    <input type="checkbox" class="btn-check" id="pet" autocomplete="off">
+                    <label class="btn btn-outline-primary rounded-3 me-2" for="pet">반려동물</label>
+                    <input type="checkbox" class="btn-check" id="bathroom" autocomplete="off">
+                    <label class="btn btn-outline-primary rounded-3" for="bathroom">개인화장실</label>
+                  </div>
+                  <div class="row g-2">
+                    <div class="col-md">
+                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="button" onclick="doModifyCampsite()">수 정</button>
+                    </div>
+                    <div class="col-md">
+                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="button" onclick="doDeleteCampsite()">삭 제</button>
+                    </div>
+                  </div>
+                  <hr class="my-4">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal-signin position-absolute d-none bg-secondary bg-opacity-75 py-5" tabindex="-1" role="dialog" id="inquiryModal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-4 shadow">
+              <div class="modal-header p-5 pb-4 border-bottom-0">
+                <h1 class="fw-bold mb-0 fs-2">문의</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="closeInquiryModal()"></button>
+              </div>
+              <div class="modal-body p-5 pt-0">
+                <form class="">
+                  <div class="form-floating mb-2">
+                    <input id="inquiryNumber" type="text" hidden>
+                    <input id="inquiryUserNumber" type="text" hidden>
+                    <input type="text" class="form-control rounded-3" id="inquiryTitle" placeholder="문의 제목">
+                    <label for="inquiryTitle">문의 제목</label>
+                  </div>
+                  <div class="row g-2">
+                    <div class="col-md">
+                      <div class="form-floating mb-2">
+                        <input type="text" class="form-control rounded-3" id="inquiryUserName" placeholder="회원 이름">
+                        <label for="inquiryUserName">회원 이름</label>
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="form-floating mb-2">
+                        <input type="date" class="form-control rounded-3" id="inquiryDate" placeholder="문의 일자">
+                        <label for="inquiryDate">문의 일자</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-floating mb-2">
+                    <select class="form-select rounded-3" id="inquiryType" aria-label="Floating label select">
+                    <option value="로그인">로그인</option>
+                    <option value="결제/환불">결제/환불</option>
+                    </select>
+                    <label for="inquiryType">문의 유형</label>
+                  </div>
+                  <div class="form-floating mb-2">
+                    <textarea class="form-control rounded-3" id="inquiryText" placeholder="문의 내용" style="height: 100px; resize: none;"></textarea>
+                    <label for="inquiryText">문의 내용</label>
+                  </div>
+                  <div class="form-floating mb-2">
+                    <textarea type="text" class="form-control rounded-3" id="answerText" placeholder="답변 내용" style="height: 100px; resize: none;"></textarea>
+                    <label for="answerText">답변 내용</label>
+                  </div>
+                  <div class="row g-2">
+                    <div class="col-md">
+                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="button" onclick="doModifyInquiry()">수 정</button>
+                    </div>
+                    <div class="col-md">
+                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="button" onclick="doDeleteInquiry()">삭 제</button>
+                    </div>
+                  </div>
+                  <hr class="my-4">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal-signin position-absolute d-none bg-secondary bg-opacity-75 py-5" tabindex="-1" role="dialog" id="boardModal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-4 shadow">
+              <div class="modal-header p-5 pb-4 border-bottom-0">
+                <h1 class="fw-bold mb-0 fs-2">게시판</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="closeBoardModal()"></button>
+              </div>
+              <div class="modal-body p-5 pt-0">
+                <form class="">
+                  <div class="form-floating mb-2">
+                    <input id="postNumber" type="text" hidden>
+                    <input id="postUserNumber" type="text" hidden>
+                    <input type="text" class="form-control rounded-3" id="postTitle" placeholder="제목">
+                    <label for="postTitle">제목</label>
+                  </div>
+                  <div class="row g-2">
+                    <div class="col-md">
+                      <div class="form-floating mb-2">
+                        <input type="text" class="form-control rounded-3" id="postUserName" placeholder="작성자">
+                        <label for="postUserName">작성자</label>
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="form-floating mb-2">
+                        <input type="date" class="form-control rounded-3" id="postDate" placeholder="작성일">
+                        <label for="postDate">작성일</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-2">
+                    <div class="col-md">
+                      <div class="form-floating mb-2">
+                        <select class="form-select rounded-3" id="postType" aria-label="Floating label select">
+                          <option value="1">일반게시글</option>
+                          <option value="2">공지사항</option>
+                          </select>
+                          <label for="postType">게시글유형</label>
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="form-floating mb-2">
+                        <select class="form-select rounded-3" id="postKind" aria-label="Floating label select">
+                          <option value="1">후기게시판</option>
+                          <option value="2">지역별모임</option>
+                          </select>
+                          <label for="postKind">게시판종류</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-floating mb-2">
+                    <textarea class="form-control rounded-3" id="postText" placeholder="문의 내용" style="height: 200px; resize: none;"></textarea>
+                    <label for="postText">게시글 내용</label>
+                  </div>
+                  <div class="row g-2">
+                    <div class="col-md">
+                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="button" onclick="doModifyBoard()">수 정</button>
+                    </div>
+                    <div class="col-md">
+                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="button" onclick="doDeleteBoard()">삭 제</button>
+                    </div>
+                  </div>
+                  <hr class="my-4">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal-signin position-absolute d-none bg-secondary bg-opacity-75 py-5" tabindex="-1" role="dialog" id="userModal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-4 shadow">
+              <div class="modal-header p-5 pb-4 border-bottom-0">
+                <h1 class="fw-bold mb-0 fs-2">상세조회</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="closeUserModal()"></button>
+              </div>
+              <div class="modal-body p-5 pt-0">
+                <form class="">
+                  <div class="form-floating mb-2">
+                    <input id="userNumber" type="text" hidden>
+                    <input type="text" class="form-control rounded-3" id="userEmail" placeholder="이메일">
+                    <label for="userEmail">이메일</label>
+                  </div>
+                  <div class="row g-2">
+                    <div class="col-md">
+                      <div class="form-floating mb-2">
+                        <input type="text" class="form-control rounded-3" id="userName" placeholder="이름">
+                        <label for="userName">이름</label>
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="form-floating mb-2">
+                        <input type="text" class="form-control rounded-3" id="userNickname" placeholder="닉네임">
+                        <label for="userNickname">닉네임</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-2">
+                    <div class="col-md">
+                      <div class="form-floating mb-2">
+                        <select class="form-select rounded-3" id="userGrade" aria-label="Floating label select">
+                          <option value="0">일반사용자</option>
+                          <option value="1">캠핑장관리자</option>
+                          <option value="2">최고관리자</option>
+                          </select>
+                          <label for="userGrade">등급</label>
+                      </div>
+                    </div>
+                    <div class="col-md">
+                      <div class="form-floating mb-2">
+                        <input type="text" class="form-control rounded-3" id="userPoint" placeholder="포인트">
+                        <label for="userPoint">포인트</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-2">
+                    <div class="col-md">
+                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="button" onclick="doModifyUser()">수 정</button>
+                    </div>
+                    <div class="col-md">
+                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="button" onclick="doDeleteUser()">삭 제</button>
+                    </div>
+                  </div>
+                  <hr class="my-4">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+      integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+      integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  </html>
+  <script src="/js/admin.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/page.js"></script>

@@ -1,0 +1,250 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f3f3f3;
+}
+/* 메인 head , title */
+#dm_wrap {
+  width: 100%;
+  background: #f3f3f3;
+  overflow: hidden;
+}
+.main_head {
+  padding: 30px 0;
+  text-align: center;
+}
+.logo {
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+}
+.main_title {
+  position: relative;
+  padding-top: 10px;
+}
+.main_title::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  width: 100px;
+  height: 1px;
+  margin-left: -50px;
+  background: #455964;
+}
+.main_title h2 {
+  color: #455964;
+  font-size: 60px;
+  line-height: 1.2;
+  font-weight: 500;
+  font-family: "NanumSquare", sans-serif;
+}
+.main_title p {
+  display: block;
+  margin-top: 10px;
+  color: #aaa;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+  font-family: "NanumSquare", sans-serif;
+}
+
+/* 내용 */
+.section {
+  border-top: 1px solid #eee;
+  background: #fff;
+}
+.content {
+  height: 100%;
+}
+/* board_list.css */
+
+#board_mask {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  padding-bottom: 50px;
+}
+#board_wrap {
+  width: 1000px;
+  height: auto;
+  margin: 0 auto;
+}
+.btitle {
+  font-size: 25pt;
+  text-align: center;
+  width: 1000px;
+  height: 50px;
+  border-bottom: 2px solid #999;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  padding-bottom: 40px;
+}
+.board_list_wrap {
+  width: 1000px;
+  height: 450px;
+}
+.write a {
+  text-decoration: none;
+  color: black;
+  font-family: "NanumSquare", sans-serif;
+}
+.write {
+  height: 40px;
+  line-height: 40px;
+}
+#board_list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 1000px;
+  height: auto;
+}
+.bli {
+  display: flex;
+  width: 1000px;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid rgb(232, 232, 232);
+  text-align: center;
+}
+.bli a:hover{
+    color: blue;
+    font-weight: bold;
+}
+/* 첫번째 li태그 스타일 */
+.board_title {
+  font-weight: 700;
+  font-size: 13pt;
+  font-family: "NanumSquare", sans-serif;
+}
+.board_title div {
+  height: 45px;
+  line-height: 45px;
+}
+/* 게시판 각 항목별 스타일 */
+.num {
+  width: 10%;
+}
+.writer {
+  width: 22.5%;
+}
+.title a {
+  text-decoration: none;
+  color: black;
+}
+.phoneNum {
+  width: 22.5%;
+}
+.email {
+  width: 22.5%;
+}
+.order{
+    width: 22.5%;
+}
+
+/* 게시판 글목록 페이지번호 */
+.board_page {
+  width: 430px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+#page_num {
+  /* 리스트 스타일 없애는건 Ul태그에 입력 */
+  list-style-type: none;
+  width: 430px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+}
+.pnum {
+  width: 60px;
+  line-height: 40px;
+  text-align: center;
+  font-family: "NanumSquare", sans-serif;
+  /* 박스를 왼쪽으로 흐름, 배치하다 */
+  float: left;
+}
+.pnum a {
+  color: black;
+  text-decoration: none;
+  font-family: "NanumSquare", sans-serif;
+}
+/* foot */
+#footwrap {
+  border-top: 1px solid #455964;
+  background-color: #fff;
+}
+#foot {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px 15px 20px 15px;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#foot address {
+  color: #455964;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+  font-style: normal;
+}
+#foot address span {
+  display: inline-block;
+}
+#foot .copyright {
+  margin-top: 5px;
+  color: #090909;
+  font-size: 11px;
+  line-height: 13px;
+}
+.foot_logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+@media all and (max-width: 620px) {
+  #board_wrap{
+    width: 390px;
+  }
+  .btitle{
+    width: 390px;
+  }
+  .num {
+    width: 5%;
+  }
+  .title {
+    width: 55%;
+  }
+  .board_list_wrap{
+    width: 390px;
+  }
+  .write{
+    width: 390px;
+  }
+  #board_list{
+    width: 390px;
+  }
+  .bli{
+    width: 390px;
+    font-size: 10px;
+    height: auto;
+  }
+  .board_page{
+    width: 390px;
+  }
+  #page_num{
+    width: 290px;
+    font-size: 10px;
+    margin: 0 auto;
+  }
+  .pnum{
+    width: 40px;
+  }
+}

@@ -1,0 +1,196 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f3f3f3;
+}
+/* 메인 head , title */
+#dm_wrap {
+  width: 100%;
+  background: #f3f3f3;
+  overflow: hidden;
+}
+.main_head {
+  padding: 30px 0;
+  text-align: center;
+}
+.logo {
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+}
+.main_title {
+  position: relative;
+  padding-top: 10px;
+}
+.main_title::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  width: 100px;
+  height: 1px;
+  margin-left: -50px;
+  background: #455964;
+}
+.main_title h2 {
+  color: #455964;
+  font-size: 60px;
+  line-height: 1.2;
+  font-weight: 500;
+  font-family: "NanumSquare", sans-serif;
+}
+.main_title p {
+  display: block;
+  margin-top: 10px;
+  color: #aaa;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+  font-family: "NanumSquare", sans-serif;
+}
+.top_menu {
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.all_header {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header0 {
+  width: 100%;
+}
+.bt1 {
+  float: left;
+  width: 120px;
+  height: 30px;
+  border: 0px;
+  border-radius: 8px;
+  background-color: #464646;
+  opacity: 0.5;
+  font-weight: bold;
+  color: white;
+  margin-right: 10px;
+}
+.bt1 a {
+  text-decoration: none;
+  color: white;
+}
+.bt1:hover {
+  cursor: pointer;
+  opacity: 1;
+  transition: 1.2s
+}
+.About_us{
+    opacity: 1;
+}
+.home{
+    float: right;
+}
+/* 내용 */
+.section {
+  border-top: 1px solid #eee;
+  background: #fff;
+}
+.content {
+  height: 100%;
+}
+.text_cont {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0 10px 0px;
+  overflow: hidden;
+}
+.text_cont h1 {
+  margin: 20px 0 15px;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 500;
+  text-align: center;
+  font-family: "NanumSquare", sans-serif;
+}
+.text_cont .tc_item {
+  margin: 32px 0 15px;
+  padding-top: 32px;
+  border-top: 1px solid #eee;
+  overflow: hidden;
+  display: flex;
+}
+.text_cont .img {
+  float: left;
+  padding-right: 30px;
+  margin: 0 auto;
+}
+.text_cont .img img {
+  width: 100%;
+  max-width: 200px;
+}
+.text_cont .txt {
+    width: 100%;
+}
+.text_cont h2 {
+  padding: 5px 0;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+.text_cont p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+/* foot */
+#footwrap {
+  border-top: 1px solid #455964;
+  background-color: #fff;
+}
+#foot {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px 15px 20px 15px;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#foot address {
+  color: #455964;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+  font-style: normal;
+}
+#foot address span {
+  display: inline-block;
+}
+#foot .copyright {
+  margin-top: 5px;
+  color: #090909;
+  font-size: 11px;
+  line-height: 13px;
+}
+.foot_logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+@media all and (max-width: 1000px){
+    .tc_item{
+        height: auto;
+        flex-direction: column;
+        
+    }
+    .txt{
+        width: 100%;
+    }
+    .text_cont {
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 50px 42px 0px;
+        overflow: hidden;
+      }
+}

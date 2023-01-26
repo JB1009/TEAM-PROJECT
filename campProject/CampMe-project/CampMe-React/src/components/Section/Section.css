@@ -1,0 +1,249 @@
+h4 {
+  margin: 0;
+  padding: 0;
+}
+.Section {
+  width: 100%;
+  height: auto;
+}
+.MainSection {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  width: 100%;
+  height: 450px;
+  margin: 4% 0 2% 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top5Board {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  padding: 2px 0;
+}
+.top5Board thead {
+  /* border-top: 1px solid gray; */
+  border-bottom: 1px solid gray;
+}
+.top5Board thead th {
+  padding: 5px 0;
+}
+.top5Board tbody td {
+  border-bottom: 1px solid lightgray;
+  cursor: pointer;
+}
+.top5BoardTitle {
+  width: 60%;
+  height: 30px;
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+}
+
+.top5Writer {
+  width: 20%;
+}
+.top5WriteDate {
+  width: 20%;
+}
+
+.review,
+.meeting {
+  width: 49%;
+  height: 90%;
+  color: black;
+  text-align: center;
+  padding: 2% 0;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #85c89a;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+.reviewHeader,
+.meetingHeader {
+  display: flex;
+  width: 90%;
+  height: 50px;
+  justify-content: space-between;
+  line-height: 50px;
+  padding: 0 2%;
+  margin: 0 auto;
+}
+.information {
+  width: 100%;
+  height: 100px;
+  background-color: #85c89a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 5px 5px lightgreen;
+  font-size: 30px;
+}
+.reviewHeader button,
+.meetingHeader button {
+  width: 10%;
+  height: 30px;
+  border: none;
+  background: white;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+.reviewHeader button:hover,
+.meetingHeader button:hover {
+  cursor: pointer;
+  color: #85c89a;
+}
+
+/* Link 스타일 제거 */
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+  .Section {
+    width: 90%;
+    height: auto;
+  }
+  .MainSection {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slider {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 5px;
+  }
+
+  .review,
+  .meeting {
+    width: 100%;
+    height: 50%;
+    color: black;
+    text-align: center;
+    align-items: center;
+    border: 2px solid #85c89a;
+    border-radius: 10px;
+    margin: 10px 0;
+  }
+  .reviewHeader button,
+  .meetingHeader button {
+    width: 20%;
+  }
+  .information {
+    width: 100%;
+    height: 100px;
+    background-color: #85c89a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px lightgreen;
+    font-size: 20px;
+  }
+  .top5BoardTitle {
+    width: 70%;
+  }
+  .top5Writer {
+    width: 30%;
+  }
+  .top5WriteDate {
+    display: none;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .Section {
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slider {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 5px;
+  }
+
+  .review,
+  .meeting {
+    width: 49%;
+    height: 500px;
+    color: black;
+    text-align: center;
+    align-items: center;
+    border: 2px solid #85c89a;
+    border-radius: 10px;
+    margin: 10px 0;
+  }
+  .information {
+    width: 100%;
+    height: 100px;
+    background-color: #85c89a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px lightgreen;
+    font-size: 20px;
+  }
+  .top5BoardTitle {
+    width: 65%;
+  }
+  .top5Writer {
+    width: 25%;
+  }
+  .top5WriteDate {
+    display: none;
+  }
+  .reviewHeader button,
+  .meetingHeader button {
+    width: 22%;
+  }
+}

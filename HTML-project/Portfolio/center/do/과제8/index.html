@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo</title>
+</head>
+<style>
+    body{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background-image: url( "center.png" );
+    }
+    .header{
+        display: flex;
+        align-items: center;
+    }
+    .header img{
+        color: black;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .center{
+        color: white;
+        height: 100vh;
+    }
+    .section{
+        width: 1000px;
+        /* background-color: hotpink; */
+        color: white;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .bingo{
+        text-align: center;
+    }
+    .bingo img{
+        width: 700px;
+        height: 80px;
+    }
+    .game{
+        width: 800px;
+        height: 600px;
+        margin: 0 auto;
+        padding-top: 20px;
+        color: white;
+        padding-bottom: 20px;
+    }
+    .ingame{
+        display: flex;
+        font-size: 40px;
+        position: relative;
+    }
+    .game tr td{
+        border: 3px solid orange;
+        height: 50px;
+        width: 80px;
+    }
+    button{
+        height: 40px;
+        width: 200px;
+        font-size: 25px;
+        margin-top: 20px;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    audio {
+        display: block;
+        margin: 10px 0 0 5px
+    }
+    #gong{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    #gong img{
+        width: 1000px;
+        height: 900px;
+    }
+    .game tr td:hover{
+        cursor: pointer;
+    }
+    .play{
+        display: flex;
+        align-items: center;
+        margin-left: 160px;
+        font-size: 20px;
+        color: red;
+    }
+</style>
+    <body>
+        <div class="container">
+            <div class="header">
+                <a href="index.html"><img src="logo.png"></a>
+            </div>
+            <div class="center">
+                <div class="section">
+                    <div class="bingo">
+                        <div class="ingame">
+                            <table class="game">
+                                <tr id="game_1">
+                                    <td id="game1" onclick="user(1)"></td>
+                                    <td id="game2" onclick="user(2)"></td>
+                                    <td id="game3" onclick="user(3)"></td>
+                                    <td id="game4" onclick="user(4)"></td>
+                                    <td id="game5" onclick="user(5)"></td>
+                                </tr>
+                                <tr id="game_2">
+                                    <td id="game6" onclick="user(6)"></td>
+                                    <td id="game7" onclick="user(7)"></td>
+                                    <td id="game8" onclick="user(8)"></td>
+                                    <td id="game9" onclick="user(9)"></td>
+                                    <td id="game10" onclick="user(10)"></td>
+                                </tr>
+                                <tr id="game_3">
+                                    <td id="game11" onclick="user(11)"></td>
+                                    <td id="game12" onclick="user(12)"></td>
+                                    <td id="game13" onclick="user(13)"></td>
+                                    <td id="game14" onclick="user(14)"></td>
+                                    <td id="game15" onclick="user(15)"></td>
+                                </tr>
+                                <tr id="game_4">
+                                    <td id="game16" onclick="user(16)"></td>
+                                    <td id="game17" onclick="user(17)"></td>
+                                    <td id="game18" onclick="user(18)"></td>
+                                    <td id="game19" onclick="user(19)"></td>
+                                    <td id="game20" onclick="user(20)"></td>
+                                </tr>
+                                <tr id="game_5">
+                                    <td id="game21" onclick="user(21)"></td>
+                                    <td id="game22" onclick="user(22)"></td>
+                                    <td id="game23" onclick="user(23)"></td>
+                                    <td id="game24" onclick="user(24)"></td>
+                                    <td id="game25" onclick="user(25)"></td>
+                                </tr>
+                            </table>
+                            <div id="gong">
+                                <img src="" id="ggam" alt="" onclick="nol()">
+                            </div>
+                        </div>
+                        <button id="wow" onclick="start1()">시작하기</button>
+                        <button id="restart" onclick="restart()">다시하기</button>
+                        <a href="index.html"><button id="regame">초기화</button></a>
+                        <button onclick="start()" id="go">시작하기</button>
+                        <br>
+                        <div class="play">
+                            시작하기 버튼은 반드시 한번만 눌러주세요...흐흐
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script>
+    var video = document.querySelector('#asd');
+    // if(video.paused){
+    //     setTimeout(function(){
+    //         video.play();
+    //     },2000);
+    // }
+
+
+    document.getElementById('gong').style.display = "none"; //id가 gong인 태그를 숨기다.
+    var imgDiv = document.getElementById("gong");
+    var gongpo = document.getElementById("ggam");
+    var start_bt = document.getElementById("go");
+    var isNum = false;
+    var array = new Array();
+    var ad = false;
+    function start(){ //랜덤숫자 (중복 거르기)
+        ad = true
+        // if(ad == true){
+            var audio2 = new Audio('gongfor.mp3');
+            audio2.currentTime = 0;
+            audio2.play();
+            // ad = false;
+        // }
+        col_count = 0;
+        row_count = 0;
+        cross1 = 0;
+        cross2 = 0;
+        for(var i=1;i<26;i++){
+            isNum = false;
+            var game = document.getElementById("game"+i);
+            var bingo = Math.floor(Math.random()*100)+1;
+            for(var j=1; j<i; j++){
+                var bingoNum = document.getElementById("game"+j);
+                if(bingoNum.innerHTML == bingo){
+                    i--;
+                    isNum = true;
+                    break;
+                }
+            }
+            if(!isNum){
+                game.innerHTML = bingo;
+                array[i-1] = bingo;
+            }
+        }
+        for(var i=1; i<26; i++){
+            var game = document.getElementById("game"+i);
+            game.style.color="white"
+            game.style.background='none'
+        }
+    }
+    function user(a){//클릭시 반응
+        var score = 0;
+        var game = document.getElementById("game"+a);
+        
+        game.style.color="red"
+        game.style.background='red'
+        score = game.innerHTML;
+        for(var i=0; i<array.length; i++){
+            if(array[i] == score){
+                bingo_ck();
+            }
+        } 
+    }
+    var col_count = 0;
+    var row_count = 0;
+    function bingo_ck(){
+        var audio1= new Audio('scream.mp3');
+        audio1.currentTime = 0;
+
+        col_count = 0;
+        row_count = 0;
+        // 가로 줄 빙고
+        for(var i=1; i<6; i++){
+            color = document.getElementById("game"+i);
+            if(color.style.background == "red"){
+                col_count++;
+                if(col_count == 5){
+                    audio1.play();
+                    alert("1번 가로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        col_count = 0;
+
+        for(var i=6; i<11; i++){
+            color = document.getElementById("game"+i);
+            if(color.style.background == "red"){
+                col_count++;
+                if(col_count == 5){
+                    audio1.play();
+                    alert("2번 가로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        col_count = 0;
+
+        for(var i=11; i<16; i++){
+            color = document.getElementById("game"+i);
+            if(color.style.background == "red"){
+                col_count++;
+                if(col_count == 5){
+                    audio1.play();
+                    alert("3번 가로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        col_count = 0;
+        for(var i=16; i<21; i++){
+            color = document.getElementById("game"+i);
+            if(color.style.background == "red"){
+                col_count++;
+                if(col_count == 5){
+                    audio1.play();
+                    alert("4번 가로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        col_count = 0;
+        for(var i=21; i<26; i++){
+            color = document.getElementById("game"+i);
+            if(color.style.background == "red"){
+                col_count++;
+                if(col_count == 5){
+                    audio1.play();
+                    alert("5번 가로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        col_count = 0;
+        // 세로 줄 빙고
+        for(var i=1; i<26; i++){
+            color = document.getElementById("game"+i);
+            if(i % 5 == 1)
+            if(color.style.background == "red"){
+                row_count++;
+                if(row_count == 5){
+                    audio1.play();
+                    alert("1번 세로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        row_count = 0;
+        for(var i=1; i<26; i++){
+            color = document.getElementById("game"+i);
+            if(i % 5 == 2)
+            if(color.style.background == "red"){
+                row_count++;
+                if(row_count == 5){
+                    audio1.play();
+                    alert("2번 세로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        row_count = 0;
+        for(var i=1; i<26; i++){
+            color = document.getElementById("game"+i);
+            if(i % 5 == 3)
+            if(color.style.background == "red"){
+                row_count++;
+                if(row_count == 5){
+                    audio1.play();
+                    alert("3번 세로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        row_count = 0;
+        for(var i=1; i<26; i++){
+            color = document.getElementById("game"+i);
+            if(i % 5 == 4)
+            if(color.style.background == "red"){
+                row_count++;
+                if(row_count == 5){
+                    audio1.play();
+                    alert("4번 세로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        row_count = 0;
+        for(var i=1; i<26; i++){
+            color = document.getElementById("game"+i);
+            if(i % 5 == 0)
+            if(color.style.background == "red"){
+                row_count++;
+                if(row_count == 5){
+                    audio1.play();
+                    alert("5번 세로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        row_count = 0;
+        // 대각 줄 빙고
+        for(var i=1; i<26; i++){
+            color = document.getElementById("game"+i);
+            if(i % 6 == 1)
+            if(color.style.background == "red"){
+                cross1++;
+                if(cross1 == 5){
+                    audio1.play();
+                    alert("왼쪽 대각줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        cross1 = 0;
+
+        for(var i=1; i<26; i++){
+            color = document.getElementById("game"+i);
+            if(i % 4 == 1)
+            if(color.style.background == "red"){
+                cross2++;
+                if(i==1){
+                    cross2--;
+                } if (i==25){
+                    cross2--;
+                }
+                if(cross2 == 5){
+                    audio1.play();
+                    alert("오른쪽 대각줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        cross2 = 0;
+    }
+
+
+    function restart(){ // 색깔없애고 다시
+        for(var i=1; i<26; i++){
+            var game = document.getElementById("game"+i);
+            game.style.color="white"
+            game.style.background='none'
+        }
+    }
+    function bingo(){//게임 플레이 룰 반응
+        var game = document.getElementById("game"+i);
+    }
+    function start1(){ //깜놀사진
+        gongpo.src = "gongpo.png"
+        imgDiv.style.display = "block"
+        var audio1= new Audio('scream.mp3');
+        audio1.currentTime = 0;
+        audio1.play();
+    }
+    function nol(){//클릭시 사라짐 사진
+        document.getElementById('gong').style.display = "none";
+    } 
+</script>
+</html>

@@ -1,0 +1,96 @@
+.CustomerServiceCenter {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  margin: 0 auto;
+}
+.CScenterInfo {
+  width: 95%;
+  margin: 10% auto;
+  /* box-shadow: 0px 0px 1px 1px lightgray; */
+}
+.CScenterTitle {
+  font-size: 30px;
+  margin-bottom: 20px;
+  width: 120px;
+  border-bottom: 3px solid black;
+  border: 0;
+  background: none;
+}
+
+.seperateQuestion {
+  width: 31%;
+  height: 35px;
+  line-height: 35px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  margin: 5px 0;
+}
+.Change {
+  background-color: var(--secondary-color);
+}
+.showCSQuestion {
+  margin: 10px;
+  font-size: 17px;
+  border: 0;
+  background: none;
+}
+
+.boldFontCScenter {
+  width: 120px;
+  text-align: left;
+  font-weight: 600;
+}
+.rowFlexBoxCScenter {
+  width: 84%;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+}
+.numberCScenter {
+  width: 84%;
+  height: 30px;
+  line-height: 30px;
+  margin: 15px auto;
+  font-size: 25px;
+  text-align: left;
+}
+.boldGreen:hover {
+  font-weight: 600;
+}
+/* 문의내역 */
+.questionQnAList {
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+.questionQnATitle {
+  text-align: left;
+  font-size: 25px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  background-color: var(--secondary-color);
+}
+.questionQnA {
+  padding: 5px 25px;
+  border-bottom: 1px solid var(--secondary-color);
+}
+.answerQnA {
+  font-size: 15px;
+  padding: 5px 30px;
+  border-bottom: 1px solid var(--secondary-color);
+  display: none;
+}
+.block {
+  display: block;
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .CScenterInfo {
+    width: 700px;
+
+    /* box-shadow: 0px 0px 1px 1px lightgray; */
+  }
+}
