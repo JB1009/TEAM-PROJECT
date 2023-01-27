@@ -1,9 +1,12 @@
-# DnB Code
+DnB Code
 
-<img src="./img/logo1.png" style="max-width: 600px;">  
 
-- 주제 : 디엔비코드(가상 웹 페이지 제작업체)페이지 
-- 개요 : 디엔비코드라는 웹페이지 제작업체를 설립했다는 컨셉으로 진행한 프로젝트 입니다.
+<img src="./img/dnbcode.jpg" style="max-width: 600px;">  
+
+주제 : 디엔비코드(가상 웹 페이지 제작업체)페이지
+
+개요 : 디엔비코드라는 웹페이지 제작업체를 설립했다는 컨셉으로 진행한 프로젝트 입니다.
+
 - 프로젝트 기간 : 2주
 - 프로젝트 인원 : 2명(프론트 1, 백엔드 1)
 - 사용 기술 : Html, css, JavaScript, Node.js
