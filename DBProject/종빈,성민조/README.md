@@ -6,7 +6,7 @@ INNER JOIN customer AS c ON c.customer_id = r.customer_id
 INNER JOIN matching AS m ON m.league_number = e.league_number 
 WHERE  m.winner = "home"
 ```
-<img src='쿼리1.png'>
+<img src="./image/쿼리1.png"> 
 -- 22년8월13일 23시 경기인 클럽명 조회
 
 ```sql
@@ -16,7 +16,7 @@ INNER JOIN artist AS a ON a.club_number = c.club_number
 WHERE e.start_time  = "23:00" AND e.game_hiredate = "2022-08-13" 
 GROUP BY c.club_name 
 ```
-<img src='쿼리2.png'>
+<img src="./image/쿼리2.png"> 
 -- 팀별 전체인원과 선발제외대상 선수인원조회
 
 ```sql
@@ -29,7 +29,7 @@ INNER JOIN
 ON nr.cn = c.club_number 
 GROUP BY c.club_number 
 ```
-<img src='쿼리3.png'>
+<img src="./image/쿼리3.png"> 
 
 -- 포지션별 인원수 조회
 ```sql
@@ -40,5 +40,5 @@ SELECT count(*) AS "공격수" ,
 FROM artist
 WHERE POSITION IN("lw","rw","st","cf")
 ```
-<img src='쿼리4.png'>
+<img src="./image/쿼리4.png"> 
 
